@@ -3,12 +3,13 @@
 import { abstractTable } from "./abstract";
 import { cloneLeagues, leagueIndex, levelRank, rlClubs } from "./leagues";
 import { rngFor, type Rng } from "./rng";
-import { balanceOberligen } from "./setup";
+import { balanceOberligen, reserveAllowedInOberliga } from "./setup";
 import { competitionTable } from "./season";
 import { playPromotionRound, playTie } from "./ties";
 import type { ClubId, GameState, LeagueRef, Leagues, Level, Movement, PromotionRoundResult, TableRow, Tie } from "./types";
 import { GEBIETE } from "./types";
 import type { Entrant } from "../config/rules";
+import { hasHardDeficits } from "./licensing";
 
 export interface PromotionOutcome {
   leagues: Leagues;
@@ -211,11 +212,19 @@ export function resolvePromotion(state: GameState): PromotionOutcome {
   for (const o of state.oberligen) next.OL[o.id] = next.OL[o.id].filter((x) => !promotedFromOL.includes(x));
   for (const o of state.oberligen) next.VL[o.id] = [...next.VL[o.id]];
   for (const x of relegatedFromRL) next.OL[state.clubs[x].oberligaId].push(x);
-  // Verbandsliga-Meister rücken in ihre Oberliga auf (Ausgleich erfolgt in balanceOberligen)
+  // Austausch Oberliga ↔ Verbandsliga: Letzter der Oberliga (bei Aufstockung entsprechend mehr) gegen
+  // den Verbandsliga-Meister. Ausgleich auf Sollgröße erfolgt in balanceOberligen.
   for (const o of state.oberligen) {
+    const ot = ids(tables[o.id] ?? []).filter((x) => next.OL[o.id].includes(x) && !relegatedFromRL.includes(x));
+    const down = 1 + Math.max(0, old.OL[o.id].length - r.oberliga.poolSize);
+    for (const x of ot.slice(Math.max(0, ot.length - down))) {
+      next.OL[o.id] = next.OL[o.id].filter((y) => y !== x);
+      next.VL[o.id].push(x);
+      movements[x] = "RELEGATED";
+    }
     const vt = tables[`VL-${o.id}`];
-    if (vt?.length) {
-      const up = vt[0].clubId;
+    const up = vt?.map((x) => x.clubId).find((x) => reserveAllowedInOberliga(state, next, x));
+    if (up) {
       next.VL[o.id] = next.VL[o.id].filter((x) => x !== up);
       next.OL[o.id].push(up);
       movements[up] = "PROMOTED";
@@ -248,6 +257,9 @@ export function resolvePromotion(state: GameState): PromotionOutcome {
 
   // --- Ligagrößen ausgleichen (Nachrücker / zusätzliche Absteiger) ---
   rebalance(state, next, movements, specialCases, rankOf);
+  // Mutterverein kann durch zusätzliche Abstiege nachträglich gefallen sein
+  enforceReserves(state, next, movements, specialCases);
+  rebalance(state, next, movements, specialCases, rankOf);
 
   const enlargedOberligen = balanceOberligen(state, next, rng);
   for (const o of enlargedOberligen)
@@ -272,8 +284,10 @@ export function resolvePromotion(state: GameState): PromotionOutcome {
 
 function renounces(state: GameState, id: ClubId, _rng: Rng): boolean {
   const c = state.clubs[id];
-  // Kleine Vereine mit sehr kleinem Stadion verzichten häufiger
-  const p = c.stadium.capacity < 2000 ? 0.12 : 0.03;
+  // Ohne Aussicht auf die Regionalliga-Zulassung (Pflichtmängel) beantragen die meisten Vereine keinen Aufstieg;
+  // kleine Vereine mit sehr kleinem Stadion verzichten auch sonst häufiger.
+  const hard = hasHardDeficits(state, id, state.season + 1);
+  const p = hard ? (c.budget > 1_000_000 ? 0.5 : 0.85) : c.stadium.capacity < 2000 ? 0.12 : 0.03;
   return rngFor(state.seed, state.season, "renounce", id).chance(p);
 }
 

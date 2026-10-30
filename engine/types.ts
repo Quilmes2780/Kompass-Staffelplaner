@@ -2,6 +2,11 @@
 // keine Klassen, keine Maps, keine Dates – damit Export/Import verlustfrei ist.
 
 export type ClubId = string;
+
+export interface Concession {
+  blockId: string;
+  kind: "HARDSHIP" | "FUNDING";
+}
 export type Gebiet = "WEST" | "SUEDWEST" | "NORD" | "BAYERN" | "NORDOST";
 export type Regionalverband = "BFV" | "NOFV" | "NFV" | "WDFV" | "SW";
 export const GEBIETE: Gebiet[] = ["WEST", "SUEDWEST", "NORD", "BAYERN", "NORDOST"];
@@ -238,6 +243,8 @@ export interface GameEvent {
   text: string;
   clubId?: ClubId;
   options: EventOption[];
+  /** ereignisspezifischer Zahlenwert (z. B. Sponsorsumme) */
+  data?: number;
   chosen?: string;
   outcome?: string;
 }
@@ -369,11 +376,15 @@ export interface GameState {
   /** veröffentlichte Einteilung der laufenden Saison */
   allocation?: Allocation;
   previousAllocation?: Allocation;
+  /** Kennzahlen der veröffentlichten Einteilung der laufenden Saison */
+  currentMetrics?: AllocationMetrics;
   allocationDraft?: {
     working: Allocation;
+    proposal: Allocation;
     variants: Record<string, Allocation | undefined>;
     hardship: HardshipRequest[];
-    proposalSeed: number;
+    /** reines km-Optimum (ohne Derby-Gewichtung) als Referenz für das Präsidium */
+    optimumKm: number;
   };
   licensing?: { season: number; applications: LicenseApplication[] };
   pendingEvents: GameEvent[];
@@ -390,6 +401,8 @@ export interface GameState {
   achievements: { id: string; season: number }[];
   score: number;
   gameOver?: { season: number; reason: string };
-  prolog?: { won: boolean; model: string; votes: number };
+  prolog?: { concessions: Concession[]; won?: boolean; votes?: number; perBlock?: Record<string, number>; model: string };
+  /** Rettungs-Minispiel bei Rückabwicklungsantrag */
+  rescue?: { concessions: Concession[]; votesForReversal?: number; perBlock?: Record<string, number>; survived?: boolean };
   counters: { courtFreeSeasons: number; nextId: number };
 }

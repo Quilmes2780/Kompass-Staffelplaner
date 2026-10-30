@@ -100,6 +100,8 @@ export interface RulesConfig {
     marketingBase: number;
     travelCostPerKm: number;
     ticketPrice: number;
+    /** jährlicher DFB-Zuschuss in die Liga-Rücklage (deckt Garantie-/Verbandsfehlbeträge, Fördermaßnahmen) */
+    dfbAnnualBudget: number;
   };
   match: {
     baseGoals: number;
@@ -207,8 +209,8 @@ export const KOMPASS_RULES: RulesConfig = {
     infrastructureMandatoryFrom: 2030,
     economicStages: [
       { from: 2028, minBudget: 0, label: "Stufe 0: Selbstauskunft" },
-      { from: 2029, minBudget: 900_000, label: "Stufe 1: Liquiditätsnachweis" },
-      { from: 2031, minBudget: 1_300_000, label: "Stufe 2: Planbilanz und Mindestetat" },
+      { from: 2029, minBudget: 600_000, label: "Stufe 1: Liquiditätsnachweis" },
+      { from: 2031, minBudget: 900_000, label: "Stufe 2: Planbilanz und Mindestetat" },
     ],
   },
   finance: {
@@ -219,6 +221,7 @@ export const KOMPASS_RULES: RulesConfig = {
     marketingBase: 9_000_000,
     travelCostPerKm: 4,
     ticketPrice: 11,
+    dfbAnnualBudget: 2_500_000,
   },
   match: {
     baseGoals: 1.33,

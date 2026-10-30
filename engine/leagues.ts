@@ -79,7 +79,7 @@ export function checkLeagueInvariants(state: GameState): string[] {
   const idx = leagueIndex(l);
   for (const id of all) {
     const c = state.clubs[id];
-    if (c.parentId && idx[c.parentId] && levelRank(idx[id].level) <= levelRank(idx[c.parentId].level))
+    if (c.parentId && idx[c.parentId] && idx[id].level !== "VL" && levelRank(idx[id].level) <= levelRank(idx[c.parentId].level))
       errs.push(`${id} spielt nicht unterhalb von ${c.parentId}`);
     if (c.isReserve && levelRank(idx[id].level) < levelRank("L3")) errs.push(`${id}: Zweitvertretung oberhalb der 3. Liga`);
   }

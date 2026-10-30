@@ -122,7 +122,8 @@ export function balanceOberligen(state: GameState, l: Leagues, rng: Rng): string
     if (pool.length > r.poolSize) enlarged.push(o.id);
     vl.sort((a, b) => state.clubs[b].strength - state.clubs[a].strength);
     while (pool.length < r.poolSize) {
-      if (vl.length) pool.push(vl.shift()!);
+      const i = vl.findIndex((id) => reserveAllowedInOberliga(state, l, id));
+      if (i >= 0) pool.push(vl.splice(i, 1)[0]);
       else pool.push(newReservoirClub(state, o.id, rng).id);
     }
     while (vl.length < r.reservoirSize) vl.push(newReservoirClub(state, o.id, rng).id);
@@ -138,6 +139,14 @@ function newReservoirClub(state: GameState, oberligaId: string, rng: Rng): Club 
   state.clubs[id] = c;
   state.satisfaction[id] = 60;
   return c;
+}
+
+/** Darf ein Verein (ggf. Zweitvertretung) in einer Oberliga spielen? Mutterverein muss mindestens Regionalliga spielen. */
+export function reserveAllowedInOberliga(state: GameState, l: Leagues, id: ClubId): boolean {
+  const c = state.clubs[id];
+  if (!c.parentId) return true;
+  const p = leagueIndex(l)[c.parentId];
+  return !p || levelRank(p.level) < levelRank("OL");
 }
 
 /** Zweitvertretungen, die nicht unterhalb ihres Muttervereins spielen, werden zwangsweise eine Ebene unter den Mutterverein versetzt. */
