@@ -1,0 +1,19 @@
+{
+  "meta": { "version": 1, "note": "14 Oberligen der 5. Ebene mit Gebiet der bisherigen Regionalliga." },
+  "oberligen": [
+    { "id": "OL-NR", "name": "Oberliga Niederrhein", "short": "NR", "gebiet": "WEST" },
+    { "id": "OL-WF", "name": "Oberliga Westfalen", "short": "WF", "gebiet": "WEST" },
+    { "id": "OL-MR", "name": "Mittelrheinliga", "short": "MR", "gebiet": "WEST" },
+    { "id": "OL-HE", "name": "Hessenliga", "short": "HE", "gebiet": "SUEDWEST" },
+    { "id": "OL-BW", "name": "Oberliga Baden-Württemberg", "short": "BW", "gebiet": "SUEDWEST" },
+    { "id": "OL-RPS", "name": "Oberliga Rheinland-Pfalz/Saar", "short": "RPS", "gebiet": "SUEDWEST" },
+    { "id": "OL-NI", "name": "Oberliga Niedersachsen", "short": "NI", "gebiet": "NORD" },
+    { "id": "OL-HH", "name": "Oberliga Hamburg", "short": "HH", "gebiet": "NORD" },
+    { "id": "OL-SH", "name": "Oberliga Schleswig-Holstein", "short": "SH", "gebiet": "NORD" },
+    { "id": "OL-HB", "name": "Bremen-Liga", "short": "HB", "gebiet": "NORD" },
+    { "id": "OL-NOFV-N", "name": "NOFV-Oberliga Nord", "short": "NO-N", "gebiet": "NORDOST" },
+    { "id": "OL-NOFV-S", "name": "NOFV-Oberliga Süd", "short": "NO-S", "gebiet": "NORDOST" },
+    { "id": "OL-BYN", "name": "Bayernliga Nord", "short": "BY-N", "gebiet": "BAYERN" },
+    { "id": "OL-BYS", "name": "Bayernliga Süd", "short": "BY-S", "gebiet": "BAYERN" }
+  ]
+}

@@ -1,0 +1,10139 @@
+{
+ "meta": {
+  "version": 1,
+  "season": "2026/27",
+  "note": "Nach bestem Wissen (Stand Mitte 2026). Ligazugehörigkeit 2026/27 der 3. Liga, Regionalligen und Oberligen ist geschätzt (verified=false). Felder in 'estimated' sind Modellwerte und können frei korrigiert werden."
+ },
+ "clubs": [
+  {
+   "id": "fcb",
+   "name": "FC Bayern München",
+   "shortName": "Bayern",
+   "town": "München",
+   "lat": 48.219,
+   "lon": 11.625,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL"
+   },
+   "strength": 95,
+   "budget": 168630000,
+   "fanPotential": 75000,
+   "stadium": {
+    "capacity": 75000,
+    "seats": 22500,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#dc052d",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "b04",
+   "name": "Bayer 04 Leverkusen",
+   "shortName": "Leverkusen",
+   "town": "Leverkusen",
+   "lat": 51.038,
+   "lon": 7.002,
+   "landesverband": "FV Mittelrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-MR",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL"
+   },
+   "strength": 88,
+   "budget": 169510000,
+   "fanPotential": 30000,
+   "stadium": {
+    "capacity": 30200,
+    "seats": 9060,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#e32221",
+    "#000000"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "sge",
+   "name": "Eintracht Frankfurt",
+   "shortName": "Frankfurt",
+   "town": "Frankfurt am Main",
+   "lat": 50.069,
+   "lon": 8.645,
+   "landesverband": "Hessischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-HE",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL"
+   },
+   "strength": 84,
+   "budget": 186960000,
+   "fanPotential": 57000,
+   "stadium": {
+    "capacity": 58000,
+    "seats": 17400,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#e1000f",
+    "#000000"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "bvb",
+   "name": "Borussia Dortmund",
+   "shortName": "Dortmund",
+   "town": "Dortmund",
+   "lat": 51.493,
+   "lon": 7.452,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL"
+   },
+   "strength": 88,
+   "budget": 139050000,
+   "fanPotential": 81000,
+   "stadium": {
+    "capacity": 81365,
+    "seats": 24410,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#fde100",
+    "#000000"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "scf",
+   "name": "SC Freiburg",
+   "shortName": "Freiburg",
+   "town": "Freiburg im Breisgau",
+   "lat": 48.021,
+   "lon": 7.83,
+   "landesverband": "Südbadischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL"
+   },
+   "strength": 82,
+   "budget": 180970000,
+   "fanPotential": 34000,
+   "stadium": {
+    "capacity": 34700,
+    "seats": 10410,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#000000",
+    "#e2001a"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "m05",
+   "name": "1. FSV Mainz 05",
+   "shortName": "Mainz",
+   "town": "Mainz",
+   "lat": 49.984,
+   "lon": 8.224,
+   "landesverband": "Südwestdeutscher FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-RPS",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL"
+   },
+   "strength": 79,
+   "budget": 115930000,
+   "fanPotential": 33000,
+   "stadium": {
+    "capacity": 33305,
+    "seats": 9992,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#c3141e",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "rbl",
+   "name": "RB Leipzig",
+   "shortName": "Leipzig",
+   "town": "Leipzig",
+   "lat": 51.346,
+   "lon": 12.348,
+   "landesverband": "Sächsischer FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL"
+   },
+   "strength": 87,
+   "budget": 131380000,
+   "fanPotential": 46000,
+   "stadium": {
+    "capacity": 47069,
+    "seats": 14121,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#dd0741",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "svw",
+   "name": "SV Werder Bremen",
+   "shortName": "Bremen",
+   "town": "Bremen",
+   "lat": 53.066,
+   "lon": 8.838,
+   "landesverband": "Bremer FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HB",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL"
+   },
+   "strength": 78,
+   "budget": 180680000,
+   "fanPotential": 41000,
+   "stadium": {
+    "capacity": 42100,
+    "seats": 12630,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#1d9053",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "vfb",
+   "name": "VfB Stuttgart",
+   "shortName": "Stuttgart",
+   "town": "Stuttgart",
+   "lat": 48.792,
+   "lon": 9.232,
+   "landesverband": "Württembergischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL"
+   },
+   "strength": 84,
+   "budget": 162730000,
+   "fanPotential": 59000,
+   "stadium": {
+    "capacity": 60449,
+    "seats": 18135,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#e32219",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "bmg",
+   "name": "Borussia Mönchengladbach",
+   "shortName": "Gladbach",
+   "town": "Mönchengladbach",
+   "lat": 51.175,
+   "lon": 6.385,
+   "landesverband": "FV Niederrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-NR",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL"
+   },
+   "strength": 79,
+   "budget": 151320000,
+   "fanPotential": 53000,
+   "stadium": {
+    "capacity": 54042,
+    "seats": 16213,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#000000",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "wob",
+   "name": "VfL Wolfsburg",
+   "shortName": "Wolfsburg",
+   "town": "Wolfsburg",
+   "lat": 52.432,
+   "lon": 10.804,
+   "landesverband": "NFV Niedersachsen",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-NI",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL"
+   },
+   "strength": 79,
+   "budget": 121840000,
+   "fanPotential": 26000,
+   "stadium": {
+    "capacity": 28917,
+    "seats": 8675,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#65b32e",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fca",
+   "name": "FC Augsburg",
+   "shortName": "Augsburg",
+   "town": "Augsburg",
+   "lat": 48.323,
+   "lon": 10.886,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL"
+   },
+   "strength": 77,
+   "budget": 169680000,
+   "fanPotential": 30000,
+   "stadium": {
+    "capacity": 30660,
+    "seats": 9198,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#ba3733",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fcu",
+   "name": "1. FC Union Berlin",
+   "shortName": "Union",
+   "town": "Berlin",
+   "lat": 52.457,
+   "lon": 13.568,
+   "landesverband": "Berliner FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-N",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL"
+   },
+   "strength": 78,
+   "budget": 173900000,
+   "fanPotential": 22000,
+   "stadium": {
+    "capacity": 22012,
+    "seats": 6604,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#eb1923",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "stp",
+   "name": "FC St. Pauli",
+   "shortName": "St. Pauli",
+   "town": "Hamburg",
+   "lat": 53.555,
+   "lon": 9.968,
+   "landesverband": "Hamburger FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HH",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL"
+   },
+   "strength": 75,
+   "budget": 174010000,
+   "fanPotential": 29000,
+   "stadium": {
+    "capacity": 29546,
+    "seats": 8864,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#6e4c31",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "tsg",
+   "name": "TSG Hoffenheim",
+   "shortName": "Hoffenheim",
+   "town": "Sinsheim",
+   "lat": 49.239,
+   "lon": 8.888,
+   "landesverband": "Badischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL"
+   },
+   "strength": 79,
+   "budget": 169020000,
+   "fanPotential": 27000,
+   "stadium": {
+    "capacity": 30150,
+    "seats": 9045,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#1c63b7",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fch",
+   "name": "1. FC Heidenheim",
+   "shortName": "Heidenheim",
+   "town": "Heidenheim an der Brenz",
+   "lat": 48.669,
+   "lon": 10.139,
+   "landesverband": "Württembergischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL"
+   },
+   "strength": 74,
+   "budget": 166520000,
+   "fanPotential": 15000,
+   "stadium": {
+    "capacity": 15000,
+    "seats": 4500,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#e2001a",
+    "#003b79"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "koe",
+   "name": "1. FC Köln",
+   "shortName": "Köln",
+   "town": "Köln",
+   "lat": 50.933,
+   "lon": 6.875,
+   "landesverband": "FV Mittelrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-MR",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL"
+   },
+   "strength": 76,
+   "budget": 149990000,
+   "fanPotential": 50000,
+   "stadium": {
+    "capacity": 50000,
+    "seats": 15000,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#ed1c24",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "hsv",
+   "name": "Hamburger SV",
+   "shortName": "HSV",
+   "town": "Hamburg",
+   "lat": 53.587,
+   "lon": 9.899,
+   "landesverband": "Hamburger FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HH",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL"
+   },
+   "strength": 76,
+   "budget": 105200000,
+   "fanPotential": 56000,
+   "stadium": {
+    "capacity": 57000,
+    "seats": 17100,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#0a3f86",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "s04",
+   "name": "FC Schalke 04",
+   "shortName": "Schalke",
+   "town": "Gelsenkirchen",
+   "lat": 51.554,
+   "lon": 7.068,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL2"
+   },
+   "strength": 72,
+   "budget": 45810000,
+   "fanPotential": 61000,
+   "stadium": {
+    "capacity": 62271,
+    "seats": 18681,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#004d9d",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "bsc",
+   "name": "Hertha BSC",
+   "shortName": "Hertha",
+   "town": "Berlin",
+   "lat": 52.515,
+   "lon": 13.239,
+   "landesverband": "Berliner FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-N",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL2"
+   },
+   "strength": 72,
+   "budget": 39930000,
+   "fanPotential": 45000,
+   "stadium": {
+    "capacity": 74475,
+    "seats": 22343,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#005ca9",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "h96",
+   "name": "Hannover 96",
+   "shortName": "Hannover",
+   "town": "Hannover",
+   "lat": 52.36,
+   "lon": 9.731,
+   "landesverband": "NFV Niedersachsen",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-NI",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL2"
+   },
+   "strength": 71,
+   "budget": 51890000,
+   "fanPotential": 35000,
+   "stadium": {
+    "capacity": 49000,
+    "seats": 14700,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#00973b",
+    "#000000"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "scp",
+   "name": "SC Paderborn 07",
+   "shortName": "Paderborn",
+   "town": "Paderborn",
+   "lat": 51.731,
+   "lon": 8.711,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL2"
+   },
+   "strength": 71,
+   "budget": 52390000,
+   "fanPotential": 14000,
+   "stadium": {
+    "capacity": 15000,
+    "seats": 4500,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#005ca9",
+    "#000000"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "d98",
+   "name": "SV Darmstadt 98",
+   "shortName": "Darmstadt",
+   "town": "Darmstadt",
+   "lat": 49.858,
+   "lon": 8.672,
+   "landesverband": "Hessischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-HE",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL2"
+   },
+   "strength": 71,
+   "budget": 35280000,
+   "fanPotential": 17000,
+   "stadium": {
+    "capacity": 17810,
+    "seats": 5343,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#004e9e",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "sve",
+   "name": "SV 07 Elversberg",
+   "shortName": "Elversberg",
+   "town": "Spiesen-Elversberg",
+   "lat": 49.316,
+   "lon": 7.124,
+   "landesverband": "Saarländischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-RPS",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL2"
+   },
+   "strength": 70,
+   "budget": 55680000,
+   "fanPotential": 9000,
+   "stadium": {
+    "capacity": 10000,
+    "seats": 3000,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#000000",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fck",
+   "name": "1. FC Kaiserslautern",
+   "shortName": "Lautern",
+   "town": "Kaiserslautern",
+   "lat": 49.434,
+   "lon": 7.776,
+   "landesverband": "Südwestdeutscher FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-RPS",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL2"
+   },
+   "strength": 72,
+   "budget": 49850000,
+   "fanPotential": 43000,
+   "stadium": {
+    "capacity": 49327,
+    "seats": 14798,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "ksc",
+   "name": "Karlsruher SC",
+   "shortName": "KSC",
+   "town": "Karlsruhe",
+   "lat": 49.02,
+   "lon": 8.413,
+   "landesverband": "Badischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL2"
+   },
+   "strength": 71,
+   "budget": 44390000,
+   "fanPotential": 30000,
+   "stadium": {
+    "capacity": 34302,
+    "seats": 10291,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#004a99",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fcn",
+   "name": "1. FC Nürnberg",
+   "shortName": "Nürnberg",
+   "town": "Nürnberg",
+   "lat": 49.426,
+   "lon": 11.126,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYN",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL2"
+   },
+   "strength": 71,
+   "budget": 49320000,
+   "fanPotential": 38000,
+   "stadium": {
+    "capacity": 50000,
+    "seats": 15000,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#aa1124",
+    "#000000"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "f95",
+   "name": "Fortuna Düsseldorf",
+   "shortName": "Düsseldorf",
+   "town": "Düsseldorf",
+   "lat": 51.261,
+   "lon": 6.733,
+   "landesverband": "FV Niederrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-NR",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL2"
+   },
+   "strength": 72,
+   "budget": 56720000,
+   "fanPotential": 35000,
+   "stadium": {
+    "capacity": 54600,
+    "seats": 16380,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#da251d",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "boc",
+   "name": "VfL Bochum",
+   "shortName": "Bochum",
+   "town": "Bochum",
+   "lat": 51.49,
+   "lon": 7.236,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL2"
+   },
+   "strength": 71,
+   "budget": 45820000,
+   "fanPotential": 25000,
+   "stadium": {
+    "capacity": 26000,
+    "seats": 7800,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#005ca9",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "ksv",
+   "name": "Holstein Kiel",
+   "shortName": "Kiel",
+   "town": "Kiel",
+   "lat": 54.349,
+   "lon": 10.124,
+   "landesverband": "SHFV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-SH",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL2"
+   },
+   "strength": 70,
+   "budget": 43230000,
+   "fanPotential": 15000,
+   "stadium": {
+    "capacity": 15034,
+    "seats": 4510,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#004b9c",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fcm",
+   "name": "1. FC Magdeburg",
+   "shortName": "Magdeburg",
+   "town": "Magdeburg",
+   "lat": 52.125,
+   "lon": 11.671,
+   "landesverband": "FSA Sachsen-Anhalt",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL2"
+   },
+   "strength": 70,
+   "budget": 49640000,
+   "fanPotential": 24000,
+   "stadium": {
+    "capacity": 30098,
+    "seats": 9029,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "sgf",
+   "name": "SpVgg Greuther Fürth",
+   "shortName": "Fürth",
+   "town": "Fürth",
+   "lat": 49.487,
+   "lon": 10.999,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYN",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL2"
+   },
+   "strength": 68,
+   "budget": 55980000,
+   "fanPotential": 12000,
+   "stadium": {
+    "capacity": 16626,
+    "seats": 4988,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#009a3e",
+    "#ffffff"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "sgd",
+   "name": "SG Dynamo Dresden",
+   "shortName": "Dresden",
+   "town": "Dresden",
+   "lat": 51.04,
+   "lon": 13.748,
+   "landesverband": "Sächsischer FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL2"
+   },
+   "strength": 70,
+   "budget": 56190000,
+   "fanPotential": 30000,
+   "stadium": {
+    "capacity": 32066,
+    "seats": 9620,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#fcd116",
+    "#000000"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "dsc",
+   "name": "Arminia Bielefeld",
+   "shortName": "Bielefeld",
+   "town": "Bielefeld",
+   "lat": 52.031,
+   "lon": 8.517,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL2"
+   },
+   "strength": 69,
+   "budget": 51980000,
+   "fanPotential": 25000,
+   "stadium": {
+    "capacity": 26515,
+    "seats": 7955,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#004e95",
+    "#000000"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "ebs",
+   "name": "Eintracht Braunschweig",
+   "shortName": "Braunschweig",
+   "town": "Braunschweig",
+   "lat": 52.29,
+   "lon": 10.521,
+   "landesverband": "NFV Niedersachsen",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-NI",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL2"
+   },
+   "strength": 68,
+   "budget": 43040000,
+   "fanPotential": 21000,
+   "stadium": {
+    "capacity": 23325,
+    "seats": 6998,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#fcd116",
+    "#0055a5"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "scm",
+   "name": "SC Preußen Münster",
+   "shortName": "Münster",
+   "town": "Münster",
+   "lat": 51.935,
+   "lon": 7.633,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": false,
+   "league2026": {
+    "level": "PRO",
+    "group": "BL2"
+   },
+   "strength": 67,
+   "budget": 55240000,
+   "fanPotential": 12000,
+   "stadium": {
+    "capacity": 14300,
+    "seats": 4290,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#006b3f",
+    "#000000"
+   ],
+   "verified": true,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "aac",
+   "name": "Alemannia Aachen",
+   "shortName": "Aachen",
+   "town": "Aachen",
+   "lat": 50.794,
+   "lon": 6.097,
+   "landesverband": "FV Mittelrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-MR",
+   "isReserve": false,
+   "league2026": {
+    "level": "L3",
+    "group": "L3"
+   },
+   "strength": 64,
+   "budget": 7360000,
+   "fanPotential": 22000,
+   "stadium": {
+    "capacity": 32960,
+    "seats": 9888,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#fce300",
+    "#000000"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fce",
+   "name": "FC Energie Cottbus",
+   "shortName": "Cottbus",
+   "town": "Cottbus",
+   "lat": 51.752,
+   "lon": 14.344,
+   "landesverband": "FLB Brandenburg",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-N",
+   "isReserve": false,
+   "league2026": {
+    "level": "L3",
+    "group": "L3"
+   },
+   "strength": 65,
+   "budget": 10100000,
+   "fanPotential": 14000,
+   "stadium": {
+    "capacity": 22528,
+    "seats": 6758,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fca2",
+   "name": "FC Erzgebirge Aue",
+   "shortName": "Aue",
+   "town": "Aue-Bad Schlema",
+   "lat": 50.593,
+   "lon": 12.712,
+   "landesverband": "Sächsischer FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": false,
+   "league2026": {
+    "level": "L3",
+    "group": "L3"
+   },
+   "strength": 62,
+   "budget": 10100000,
+   "fanPotential": 9000,
+   "stadium": {
+    "capacity": 16485,
+    "seats": 4946,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#6e1e7a",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "msv",
+   "name": "MSV Duisburg",
+   "shortName": "Duisburg",
+   "town": "Duisburg",
+   "lat": 51.41,
+   "lon": 6.778,
+   "landesverband": "FV Niederrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-NR",
+   "isReserve": false,
+   "league2026": {
+    "level": "L3",
+    "group": "L3"
+   },
+   "strength": 64,
+   "budget": 10720000,
+   "fanPotential": 20000,
+   "stadium": {
+    "capacity": 31500,
+    "seats": 9450,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#1d4ba0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fcs",
+   "name": "1. FC Saarbrücken",
+   "shortName": "Saarbrücken",
+   "town": "Saarbrücken",
+   "lat": 49.23,
+   "lon": 7.013,
+   "landesverband": "Saarländischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-RPS",
+   "isReserve": false,
+   "league2026": {
+    "level": "L3",
+    "group": "L3"
+   },
+   "strength": 64,
+   "budget": 10480000,
+   "fanPotential": 11000,
+   "stadium": {
+    "capacity": 16003,
+    "seats": 4801,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#005ca9",
+    "#000000"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fch2",
+   "name": "FC Hansa Rostock",
+   "shortName": "Rostock",
+   "town": "Rostock",
+   "lat": 54.084,
+   "lon": 12.093,
+   "landesverband": "LFV Mecklenburg-Vorpommern",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-N",
+   "isReserve": false,
+   "league2026": {
+    "level": "L3",
+    "group": "L3"
+   },
+   "strength": 65,
+   "budget": 9550000,
+   "fanPotential": 21000,
+   "stadium": {
+    "capacity": 29000,
+    "seats": 8700,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#005ca9",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "svw2",
+   "name": "SV Waldhof Mannheim",
+   "shortName": "Mannheim",
+   "town": "Mannheim",
+   "lat": 49.479,
+   "lon": 8.503,
+   "landesverband": "Badischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": false,
+   "league2026": {
+    "level": "L3",
+    "group": "L3"
+   },
+   "strength": 62,
+   "budget": 7150000,
+   "fanPotential": 11000,
+   "stadium": {
+    "capacity": 24302,
+    "seats": 7291,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#0050a0",
+    "#000000"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "scv",
+   "name": "SC Verl",
+   "shortName": "Verl",
+   "town": "Verl",
+   "lat": 51.883,
+   "lon": 8.512,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": false,
+   "league2026": {
+    "level": "L3",
+    "group": "L3"
+   },
+   "strength": 61,
+   "budget": 10520000,
+   "fanPotential": 3500,
+   "stadium": {
+    "capacity": 5207,
+    "seats": 905,
+    "lux": 445,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#000000",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "vfl",
+   "name": "VfL Osnabrück",
+   "shortName": "Osnabrück",
+   "town": "Osnabrück",
+   "lat": 52.281,
+   "lon": 8.074,
+   "landesverband": "NFV Niedersachsen",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-NI",
+   "isReserve": false,
+   "league2026": {
+    "level": "L3",
+    "group": "L3"
+   },
+   "strength": 64,
+   "budget": 9470000,
+   "fanPotential": 14000,
+   "stadium": {
+    "capacity": 15741,
+    "seats": 4722,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#6a2c91",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "m60",
+   "name": "TSV 1860 München",
+   "shortName": "1860",
+   "town": "München",
+   "lat": 48.11,
+   "lon": 11.574,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "L3",
+    "group": "L3"
+   },
+   "strength": 63,
+   "budget": 6940000,
+   "fanPotential": 15000,
+   "stadium": {
+    "capacity": 15000,
+    "seats": 4500,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#0068b3",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "rwe",
+   "name": "Rot-Weiss Essen",
+   "shortName": "RW Essen",
+   "town": "Essen",
+   "lat": 51.486,
+   "lon": 6.977,
+   "landesverband": "FV Niederrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-NR",
+   "isReserve": false,
+   "league2026": {
+    "level": "L3",
+    "group": "L3"
+   },
+   "strength": 64,
+   "budget": 7100000,
+   "fanPotential": 17000,
+   "stadium": {
+    "capacity": 19962,
+    "seats": 5989,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#da251d",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fci",
+   "name": "FC Ingolstadt 04",
+   "shortName": "Ingolstadt",
+   "town": "Ingolstadt",
+   "lat": 48.746,
+   "lon": 11.484,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "L3",
+    "group": "L3"
+   },
+   "strength": 63,
+   "budget": 10010000,
+   "fanPotential": 6500,
+   "stadium": {
+    "capacity": 15200,
+    "seats": 4560,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#000000",
+    "#e30613"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "svww",
+   "name": "SV Wehen Wiesbaden",
+   "shortName": "Wiesbaden",
+   "town": "Wiesbaden",
+   "lat": 50.071,
+   "lon": 8.258,
+   "landesverband": "Hessischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-HE",
+   "isReserve": false,
+   "league2026": {
+    "level": "L3",
+    "group": "L3"
+   },
+   "strength": 62,
+   "budget": 11270000,
+   "fanPotential": 4500,
+   "stadium": {
+    "capacity": 15295,
+    "seats": 4589,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#e30613",
+    "#000000"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "vik",
+   "name": "FC Viktoria Köln",
+   "shortName": "Viktoria Köln",
+   "town": "Köln",
+   "lat": 50.946,
+   "lon": 7.033,
+   "landesverband": "FV Mittelrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-MR",
+   "isReserve": false,
+   "league2026": {
+    "level": "L3",
+    "group": "L3"
+   },
+   "strength": 60,
+   "budget": 8730000,
+   "fanPotential": 3000,
+   "stadium": {
+    "capacity": 8343,
+    "seats": 1117,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "vfb2",
+   "name": "VfB Stuttgart II",
+   "shortName": "Stuttgart II",
+   "town": "Aspach",
+   "lat": 48.973,
+   "lon": 9.4,
+   "landesverband": "Württembergischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": true,
+   "parentId": "vfb",
+   "league2026": {
+    "level": "L3",
+    "group": "L3"
+   },
+   "strength": 58,
+   "budget": 9050000,
+   "fanPotential": 1200,
+   "stadium": {
+    "capacity": 10001,
+    "seats": 3000,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#e32219",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "jah",
+   "name": "SSV Jahn Regensburg",
+   "shortName": "Regensburg",
+   "town": "Regensburg",
+   "lat": 48.991,
+   "lon": 12.107,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "L3",
+    "group": "L3"
+   },
+   "strength": 63,
+   "budget": 11110000,
+   "fanPotential": 10000,
+   "stadium": {
+    "capacity": 15210,
+    "seats": 4563,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#c3002f",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "tsg2",
+   "name": "TSG Hoffenheim II",
+   "shortName": "Hoffenheim II",
+   "town": "Sinsheim",
+   "lat": 49.252,
+   "lon": 8.88,
+   "landesverband": "Badischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": true,
+   "parentId": "tsg",
+   "league2026": {
+    "level": "L3",
+    "group": "L3"
+   },
+   "strength": 58,
+   "budget": 10050000,
+   "fanPotential": 800,
+   "stadium": {
+    "capacity": 6350,
+    "seats": 1037,
+    "lux": 424,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#1c63b7",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "s05",
+   "name": "1. FC Schweinfurt 05",
+   "shortName": "Schweinfurt",
+   "town": "Schweinfurt",
+   "lat": 50.047,
+   "lon": 10.226,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYN",
+   "isReserve": false,
+   "league2026": {
+    "level": "L3",
+    "group": "L3"
+   },
+   "strength": 58,
+   "budget": 9180000,
+   "fanPotential": 5000,
+   "stadium": {
+    "capacity": 15060,
+    "seats": 4518,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#00984a",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "ulm",
+   "name": "SSV Ulm 1846",
+   "shortName": "Ulm",
+   "town": "Ulm",
+   "lat": 48.398,
+   "lon": 9.997,
+   "landesverband": "Württembergischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": false,
+   "league2026": {
+    "level": "L3",
+    "group": "L3"
+   },
+   "strength": 63,
+   "budget": 7980000,
+   "fanPotential": 12000,
+   "stadium": {
+    "capacity": 17400,
+    "seats": 5220,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#000000",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "hav",
+   "name": "TSV Havelse",
+   "shortName": "Havelse",
+   "town": "Garbsen",
+   "lat": 52.415,
+   "lon": 9.596,
+   "landesverband": "NFV Niedersachsen",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-NI",
+   "isReserve": false,
+   "league2026": {
+    "level": "L3",
+    "group": "L3"
+   },
+   "strength": 56,
+   "budget": 11380000,
+   "fanPotential": 3000,
+   "stadium": {
+    "capacity": 3500,
+    "seats": 675,
+    "lux": 287,
+    "pressSeats": 5
+   },
+   "colors": [
+    "#0067b1",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fwk",
+   "name": "FC Würzburger Kickers",
+   "shortName": "Würzburg",
+   "town": "Würzburg",
+   "lat": 49.783,
+   "lon": 9.903,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYN",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-BY"
+   },
+   "strength": 55,
+   "budget": 2400000,
+   "fanPotential": 3500,
+   "stadium": {
+    "capacity": 10000,
+    "seats": 3000,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "uha",
+   "name": "SpVgg Unterhaching",
+   "shortName": "Unterhaching",
+   "town": "Unterhaching",
+   "lat": 48.064,
+   "lon": 11.611,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-BY"
+   },
+   "strength": 54,
+   "budget": 1810000,
+   "fanPotential": 2500,
+   "stadium": {
+    "capacity": 15053,
+    "seats": 4516,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#e30613",
+    "#0050a0"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fcb2",
+   "name": "FC Bayern München II",
+   "shortName": "Bayern II",
+   "town": "München",
+   "lat": 48.11,
+   "lon": 11.574,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": true,
+   "parentId": "fcb",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-BY"
+   },
+   "strength": 55,
+   "budget": 2380000,
+   "fanPotential": 800,
+   "stadium": {
+    "capacity": 15000,
+    "seats": 4500,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#dc052d",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fcn2",
+   "name": "1. FC Nürnberg II",
+   "shortName": "Nürnberg II",
+   "town": "Nürnberg",
+   "lat": 49.426,
+   "lon": 11.126,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYN",
+   "isReserve": true,
+   "parentId": "fcn",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-BY"
+   },
+   "strength": 50,
+   "budget": 2330000,
+   "fanPotential": 500,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 380,
+    "lux": 212,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#aa1124",
+    "#000000"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "byr",
+   "name": "SpVgg Bayreuth",
+   "shortName": "Bayreuth",
+   "town": "Bayreuth",
+   "lat": 49.957,
+   "lon": 11.59,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYN",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-BY"
+   },
+   "strength": 50,
+   "budget": 2070000,
+   "fanPotential": 2000,
+   "stadium": {
+    "capacity": 21500,
+    "seats": 6450,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#fcd116",
+    "#000000"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "wab",
+   "name": "SV Wacker Burghausen",
+   "shortName": "Burghausen",
+   "town": "Burghausen",
+   "lat": 48.171,
+   "lon": 12.831,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-BY"
+   },
+   "strength": 51,
+   "budget": 1750000,
+   "fanPotential": 1800,
+   "stadium": {
+    "capacity": 10000,
+    "seats": 3000,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#000000",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fca3",
+   "name": "FC Augsburg II",
+   "shortName": "Augsburg II",
+   "town": "Augsburg",
+   "lat": 48.367,
+   "lon": 10.876,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": true,
+   "parentId": "fca",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-BY"
+   },
+   "strength": 48,
+   "budget": 2460000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 820,
+    "lux": 425,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#ba3733",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "aub",
+   "name": "TSV Aubstadt",
+   "shortName": "Aubstadt",
+   "town": "Aubstadt",
+   "lat": 50.333,
+   "lon": 10.433,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYN",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-BY"
+   },
+   "strength": 47,
+   "budget": 1850000,
+   "fanPotential": 900,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 270,
+    "lux": 131,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "vil",
+   "name": "DJK Vilzing",
+   "shortName": "Vilzing",
+   "town": "Cham",
+   "lat": 49.215,
+   "lon": 12.63,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-BY"
+   },
+   "strength": 46,
+   "budget": 2140000,
+   "fanPotential": 700,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 336,
+    "lux": 180,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#00843d",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "ill",
+   "name": "FV Illertissen",
+   "shortName": "Illertissen",
+   "town": "Illertissen",
+   "lat": 48.224,
+   "lon": 10.106,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-BY"
+   },
+   "strength": 48,
+   "budget": 2330000,
+   "fanPotential": 800,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 456,
+    "lux": 212,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "ans",
+   "name": "SpVgg Ansbach 09",
+   "shortName": "Ansbach",
+   "town": "Ansbach",
+   "lat": 49.298,
+   "lon": 10.58,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYN",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-BY"
+   },
+   "strength": 45,
+   "budget": 1720000,
+   "fanPotential": 900,
+   "stadium": {
+    "capacity": 4000,
+    "seats": 384,
+    "lux": 283,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "buc",
+   "name": "TSV Buchbach",
+   "shortName": "Buchbach",
+   "town": "Buchbach",
+   "lat": 48.309,
+   "lon": 12.276,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-BY"
+   },
+   "strength": 45,
+   "budget": 2120000,
+   "fanPotential": 700,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 397,
+    "lux": 176,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#e30613",
+    "#000000"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "asc",
+   "name": "SV Viktoria Aschaffenburg",
+   "shortName": "Aschaffenburg",
+   "town": "Aschaffenburg",
+   "lat": 49.968,
+   "lon": 9.161,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYN",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-BY"
+   },
+   "strength": 48,
+   "budget": 1720000,
+   "fanPotential": 1600,
+   "stadium": {
+    "capacity": 10000,
+    "seats": 3000,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#00843d",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "tgm",
+   "name": "Türkgücü München",
+   "shortName": "Türkgücü",
+   "town": "München",
+   "lat": 48.183,
+   "lon": 11.555,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-BY"
+   },
+   "strength": 47,
+   "budget": 2340000,
+   "fanPotential": 700,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 459,
+    "lux": 214,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "mem",
+   "name": "FC Memmingen",
+   "shortName": "Memmingen",
+   "town": "Memmingen",
+   "lat": 47.98,
+   "lon": 10.182,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-BY"
+   },
+   "strength": 46,
+   "budget": 2590000,
+   "fanPotential": 900,
+   "stadium": {
+    "capacity": 5100,
+    "seats": 893,
+    "lux": 448,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "sgf2",
+   "name": "SpVgg Greuther Fürth II",
+   "shortName": "Fürth II",
+   "town": "Fürth",
+   "lat": 49.487,
+   "lon": 10.999,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYN",
+   "isReserve": true,
+   "parentId": "sgf",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-BY"
+   },
+   "strength": 46,
+   "budget": 2640000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 2000,
+    "seats": 360,
+    "lux": 263,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#009a3e",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "eic",
+   "name": "VfB Eichstätt",
+   "shortName": "Eichstätt",
+   "town": "Eichstätt",
+   "lat": 48.886,
+   "lon": 11.181,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-BY"
+   },
+   "strength": 45,
+   "budget": 2060000,
+   "fanPotential": 600,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 319,
+    "lux": 167,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "sau",
+   "name": "TSV Schwaben Augsburg",
+   "shortName": "Schwaben Augsburg",
+   "town": "Augsburg",
+   "lat": 48.343,
+   "lon": 10.898,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-BY"
+   },
+   "strength": 44,
+   "budget": 2640000,
+   "fanPotential": 800,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 540,
+    "lux": 263,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#7a2b3f",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "han",
+   "name": "SpVgg Hankofen-Hailing",
+   "shortName": "Hankofen",
+   "town": "Leiblfing",
+   "lat": 48.782,
+   "lon": 12.533,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-BY"
+   },
+   "strength": 43,
+   "budget": 2740000,
+   "fanPotential": 600,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 473,
+    "lux": 280,
+    "pressSeats": 5
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "lok",
+   "name": "1. FC Lokomotive Leipzig",
+   "shortName": "Lok Leipzig",
+   "town": "Leipzig",
+   "lat": 51.309,
+   "lon": 12.421,
+   "landesverband": "Sächsischer FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-NO"
+   },
+   "strength": 55,
+   "budget": 1850000,
+   "fanPotential": 4500,
+   "stadium": {
+    "capacity": 10900,
+    "seats": 3270,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#0050a0",
+    "#fcd116"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "bsg",
+   "name": "BSG Chemie Leipzig",
+   "shortName": "Chemie Leipzig",
+   "town": "Leipzig",
+   "lat": 51.356,
+   "lon": 12.311,
+   "landesverband": "Sächsischer FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-NO"
+   },
+   "strength": 50,
+   "budget": 1970000,
+   "fanPotential": 3500,
+   "stadium": {
+    "capacity": 4999,
+    "seats": 597,
+    "lux": 332,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#00843d",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fcc",
+   "name": "FC Carl Zeiss Jena",
+   "shortName": "Jena",
+   "town": "Jena",
+   "lat": 50.933,
+   "lon": 11.582,
+   "landesverband": "Thüringer FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-NO"
+   },
+   "strength": 56,
+   "budget": 2480000,
+   "fanPotential": 5000,
+   "stadium": {
+    "capacity": 15000,
+    "seats": 4500,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#3a2a7a",
+    "#fcd116"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "rwe2",
+   "name": "FC Rot-Weiß Erfurt",
+   "shortName": "Erfurt",
+   "town": "Erfurt",
+   "lat": 50.967,
+   "lon": 11.021,
+   "landesverband": "Thüringer FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-NO"
+   },
+   "strength": 53,
+   "budget": 2470000,
+   "fanPotential": 6000,
+   "stadium": {
+    "capacity": 18599,
+    "seats": 5580,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "bfc",
+   "name": "BFC Dynamo",
+   "shortName": "BFC Dynamo",
+   "town": "Berlin",
+   "lat": 52.553,
+   "lon": 13.408,
+   "landesverband": "Berliner FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-N",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-NO"
+   },
+   "strength": 54,
+   "budget": 2200000,
+   "fanPotential": 2500,
+   "stadium": {
+    "capacity": 19708,
+    "seats": 5912,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#8b1c24",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "bsc2",
+   "name": "Hertha BSC II",
+   "shortName": "Hertha II",
+   "town": "Berlin",
+   "lat": 52.517,
+   "lon": 13.235,
+   "landesverband": "Berliner FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-N",
+   "isReserve": true,
+   "parentId": "bsc",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-NO"
+   },
+   "strength": 48,
+   "budget": 1730000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 3500,
+    "seats": 342,
+    "lux": 112,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#005ca9",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fsv",
+   "name": "FSV Zwickau",
+   "shortName": "Zwickau",
+   "town": "Zwickau",
+   "lat": 50.705,
+   "lon": 12.465,
+   "landesverband": "Sächsischer FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-NO"
+   },
+   "strength": 52,
+   "budget": 2530000,
+   "fanPotential": 4500,
+   "stadium": {
+    "capacity": 10134,
+    "seats": 3040,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "cfc",
+   "name": "Chemnitzer FC",
+   "shortName": "Chemnitz",
+   "town": "Chemnitz",
+   "lat": 50.818,
+   "lon": 12.938,
+   "landesverband": "Sächsischer FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-NO"
+   },
+   "strength": 53,
+   "budget": 1680000,
+   "fanPotential": 5000,
+   "stadium": {
+    "capacity": 15000,
+    "seats": 4500,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#0089cf",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "vsg",
+   "name": "VSG Altglienicke",
+   "shortName": "Altglienicke",
+   "town": "Berlin",
+   "lat": 52.41,
+   "lon": 13.54,
+   "landesverband": "Berliner FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-N",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-NO"
+   },
+   "strength": 48,
+   "budget": 2200000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 4000,
+    "seats": 559,
+    "lux": 374,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "zfc",
+   "name": "ZFC Meuselwitz",
+   "shortName": "Meuselwitz",
+   "town": "Meuselwitz",
+   "lat": 51.044,
+   "lon": 12.294,
+   "landesverband": "Thüringer FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-NO"
+   },
+   "strength": 45,
+   "budget": 2400000,
+   "fanPotential": 600,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 790,
+    "lux": 413,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "gfc",
+   "name": "Greifswalder FC",
+   "shortName": "Greifswald",
+   "town": "Greifswald",
+   "lat": 54.092,
+   "lon": 13.393,
+   "landesverband": "LFV Mecklenburg-Vorpommern",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-N",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-NO"
+   },
+   "strength": 50,
+   "budget": 1790000,
+   "fanPotential": 2000,
+   "stadium": {
+    "capacity": 4500,
+    "seats": 463,
+    "lux": 298,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "hfc",
+   "name": "Hallescher FC",
+   "shortName": "Halle",
+   "town": "Halle (Saale)",
+   "lat": 51.49,
+   "lon": 11.98,
+   "landesverband": "FSA Sachsen-Anhalt",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-NO"
+   },
+   "strength": 55,
+   "budget": 2680000,
+   "fanPotential": 7000,
+   "stadium": {
+    "capacity": 15057,
+    "seats": 4517,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "sv3",
+   "name": "SV Babelsberg 03",
+   "shortName": "Babelsberg",
+   "town": "Potsdam",
+   "lat": 52.393,
+   "lon": 13.124,
+   "landesverband": "FLB Brandenburg",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-N",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-NO"
+   },
+   "strength": 47,
+   "budget": 2340000,
+   "fanPotential": 2000,
+   "stadium": {
+    "capacity": 10787,
+    "seats": 3236,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fsl",
+   "name": "FSV 63 Luckenwalde",
+   "shortName": "Luckenwalde",
+   "town": "Luckenwalde",
+   "lat": 52.088,
+   "lon": 13.168,
+   "landesverband": "FLB Brandenburg",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-N",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-NO"
+   },
+   "strength": 45,
+   "budget": 2590000,
+   "fanPotential": 800,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 875,
+    "lux": 448,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "bfp",
+   "name": "BFC Preussen",
+   "shortName": "Preussen",
+   "town": "Berlin",
+   "lat": 52.427,
+   "lon": 13.315,
+   "landesverband": "Berliner FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-N",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-NO"
+   },
+   "strength": 43,
+   "budget": 2110000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 330,
+    "lux": 175,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#000000",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "h03",
+   "name": "Hertha 03 Zehlendorf",
+   "shortName": "Zehlendorf",
+   "town": "Berlin",
+   "lat": 52.432,
+   "lon": 13.257,
+   "landesverband": "Berliner FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-N",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-NO"
+   },
+   "strength": 43,
+   "budget": 2480000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 414,
+    "lux": 237,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "eil",
+   "name": "FC Eilenburg",
+   "shortName": "Eilenburg",
+   "town": "Eilenburg",
+   "lat": 51.46,
+   "lon": 12.632,
+   "landesverband": "Sächsischer FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-NO"
+   },
+   "strength": 43,
+   "budget": 2060000,
+   "fanPotential": 800,
+   "stadium": {
+    "capacity": 2700,
+    "seats": 343,
+    "lux": 166,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "hal",
+   "name": "VfB Germania Halberstadt",
+   "shortName": "Halberstadt",
+   "town": "Halberstadt",
+   "lat": 51.89,
+   "lon": 11.04,
+   "landesverband": "FSA Sachsen-Anhalt",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-NO"
+   },
+   "strength": 42,
+   "budget": 2750000,
+   "fanPotential": 600,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 950,
+    "lux": 479,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#00843d",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "h962",
+   "name": "Hannover 96 II",
+   "shortName": "Hannover II",
+   "town": "Hannover",
+   "lat": 52.36,
+   "lon": 9.731,
+   "landesverband": "NFV Niedersachsen",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-NI",
+   "isReserve": true,
+   "parentId": "h96",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-N"
+   },
+   "strength": 48,
+   "budget": 2100000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 2000,
+    "seats": 261,
+    "lux": 173,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#00973b",
+    "#000000"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "svw3",
+   "name": "SV Werder Bremen II",
+   "shortName": "Bremen II",
+   "town": "Bremen",
+   "lat": 53.069,
+   "lon": 8.836,
+   "landesverband": "Bremer FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HB",
+   "isReserve": true,
+   "parentId": "svw",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-N"
+   },
+   "strength": 48,
+   "budget": 1740000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 5500,
+    "seats": 542,
+    "lux": 289,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#1d9053",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "hsv2",
+   "name": "Hamburger SV II",
+   "shortName": "HSV II",
+   "town": "Norderstedt",
+   "lat": 53.703,
+   "lon": 9.995,
+   "landesverband": "Hamburger FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HH",
+   "isReserve": true,
+   "parentId": "hsv",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-N"
+   },
+   "strength": 48,
+   "budget": 1550000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 405,
+    "lux": 252,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0a3f86",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "stp2",
+   "name": "FC St. Pauli II",
+   "shortName": "St. Pauli II",
+   "town": "Hamburg",
+   "lat": 53.555,
+   "lon": 9.968,
+   "landesverband": "Hamburger FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HH",
+   "isReserve": true,
+   "parentId": "stp",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-N"
+   },
+   "strength": 46,
+   "budget": 2240000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 359,
+    "lux": 196,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#6e4c31",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "vfl2",
+   "name": "VfB Lübeck",
+   "shortName": "Lübeck",
+   "town": "Lübeck",
+   "lat": 53.87,
+   "lon": 10.656,
+   "landesverband": "SHFV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-SH",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-N"
+   },
+   "strength": 53,
+   "budget": 2090000,
+   "fanPotential": 3500,
+   "stadium": {
+    "capacity": 17849,
+    "seats": 5355,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#00843d",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "emd",
+   "name": "BSV Kickers Emden",
+   "shortName": "Emden",
+   "town": "Emden",
+   "lat": 53.367,
+   "lon": 7.21,
+   "landesverband": "NFV Niedersachsen",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-NI",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-N"
+   },
+   "strength": 51,
+   "budget": 2180000,
+   "fanPotential": 3500,
+   "stadium": {
+    "capacity": 7200,
+    "seats": 996,
+    "lux": 372,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "mep",
+   "name": "SV Meppen",
+   "shortName": "Meppen",
+   "town": "Meppen",
+   "lat": 52.688,
+   "lon": 7.296,
+   "landesverband": "NFV Niedersachsen",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-NI",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-N"
+   },
+   "strength": 52,
+   "budget": 2650000,
+   "fanPotential": 5500,
+   "stadium": {
+    "capacity": 16500,
+    "seats": 4950,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "jed",
+   "name": "SSV Jeddeloh II",
+   "shortName": "Jeddeloh",
+   "town": "Edewecht",
+   "lat": 53.13,
+   "lon": 7.98,
+   "landesverband": "NFV Niedersachsen",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-NI",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-N"
+   },
+   "strength": 46,
+   "budget": 2570000,
+   "fanPotential": 600,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 434,
+    "lux": 252,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "wei",
+   "name": "SC Weiche Flensburg 08",
+   "shortName": "Flensburg",
+   "town": "Flensburg",
+   "lat": 54.776,
+   "lon": 9.433,
+   "landesverband": "SHFV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-SH",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-N"
+   },
+   "strength": 48,
+   "budget": 1570000,
+   "fanPotential": 700,
+   "stadium": {
+    "capacity": 3500,
+    "seats": 288,
+    "lux": 84,
+    "pressSeats": 1
+   },
+   "colors": [
+    "#0050a0",
+    "#e30613"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "phx",
+   "name": "1. FC Phönix Lübeck",
+   "shortName": "Phönix Lübeck",
+   "town": "Lübeck",
+   "lat": 53.85,
+   "lon": 10.69,
+   "landesverband": "SHFV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-SH",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-N"
+   },
+   "strength": 45,
+   "budget": 2050000,
+   "fanPotential": 700,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 316,
+    "lux": 165,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#fcd116",
+    "#000000"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "eno",
+   "name": "FC Eintracht Norderstedt",
+   "shortName": "Norderstedt",
+   "town": "Norderstedt",
+   "lat": 53.705,
+   "lon": 9.99,
+   "landesverband": "SHFV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HH",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-N"
+   },
+   "strength": 46,
+   "budget": 2040000,
+   "fanPotential": 600,
+   "stadium": {
+    "capacity": 5068,
+    "seats": 637,
+    "lux": 345,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "ksv2",
+   "name": "Holstein Kiel II",
+   "shortName": "Kiel II",
+   "town": "Kiel",
+   "lat": 54.349,
+   "lon": 10.124,
+   "landesverband": "SHFV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-SH",
+   "isReserve": true,
+   "parentId": "ksv",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-N"
+   },
+   "strength": 45,
+   "budget": 2090000,
+   "fanPotential": 200,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 324,
+    "lux": 171,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#004b9c",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "vfb3",
+   "name": "VfB Oldenburg",
+   "shortName": "Oldenburg",
+   "town": "Oldenburg",
+   "lat": 53.14,
+   "lon": 8.23,
+   "landesverband": "NFV Niedersachsen",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-NI",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-N"
+   },
+   "strength": 50,
+   "budget": 2210000,
+   "fanPotential": 2500,
+   "stadium": {
+    "capacity": 15200,
+    "seats": 4560,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "loh",
+   "name": "TuS Blau-Weiß Lohne",
+   "shortName": "Lohne",
+   "town": "Lohne (Oldenburg)",
+   "lat": 52.667,
+   "lon": 8.238,
+   "landesverband": "NFV Niedersachsen",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-NI",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-N"
+   },
+   "strength": 44,
+   "budget": 1830000,
+   "fanPotential": 800,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 319,
+    "lux": 128,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "alt",
+   "name": "Altonaer FC von 1893",
+   "shortName": "Altona 93",
+   "town": "Hamburg",
+   "lat": 53.577,
+   "lon": 9.927,
+   "landesverband": "Hamburger FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HH",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-N"
+   },
+   "strength": 45,
+   "budget": 1680000,
+   "fanPotential": 1500,
+   "stadium": {
+    "capacity": 8000,
+    "seats": 742,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#000000",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "dro",
+   "name": "SV Drochtersen/Assel",
+   "shortName": "Drochtersen",
+   "town": "Drochtersen",
+   "lat": 53.712,
+   "lon": 9.383,
+   "landesverband": "NFV Niedersachsen",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-NI",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-N"
+   },
+   "strength": 46,
+   "budget": 2770000,
+   "fanPotential": 800,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 575,
+    "lux": 285,
+    "pressSeats": 5
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "wob2",
+   "name": "VfL Wolfsburg II",
+   "shortName": "Wolfsburg II",
+   "town": "Wolfsburg",
+   "lat": 52.432,
+   "lon": 10.804,
+   "landesverband": "NFV Niedersachsen",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-NI",
+   "isReserve": true,
+   "parentId": "wob",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-N"
+   },
+   "strength": 48,
+   "budget": 2470000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 824,
+    "lux": 427,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#65b32e",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "bsv",
+   "name": "Bremer SV",
+   "shortName": "Bremer SV",
+   "town": "Bremen",
+   "lat": 53.08,
+   "lon": 8.81,
+   "landesverband": "Bremer FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HB",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-N"
+   },
+   "strength": 42,
+   "budget": 2050000,
+   "fanPotential": 800,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 632,
+    "lux": 347,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fko",
+   "name": "SC Fortuna Köln",
+   "shortName": "Fortuna Köln",
+   "town": "Köln",
+   "lat": 50.908,
+   "lon": 6.951,
+   "landesverband": "FV Mittelrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-MR",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-W"
+   },
+   "strength": 53,
+   "budget": 2580000,
+   "fanPotential": 2500,
+   "stadium": {
+    "capacity": 11748,
+    "seats": 3524,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "scp2",
+   "name": "SC Paderborn 07 II",
+   "shortName": "Paderborn II",
+   "town": "Paderborn",
+   "lat": 51.731,
+   "lon": 8.711,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": true,
+   "parentId": "scp",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-W"
+   },
+   "strength": 47,
+   "budget": 1720000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 241,
+    "lux": 110,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#005ca9",
+    "#000000"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "boh",
+   "name": "1. FC Bocholt",
+   "shortName": "Bocholt",
+   "town": "Bocholt",
+   "lat": 51.842,
+   "lon": 6.606,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-W"
+   },
+   "strength": 49,
+   "budget": 2200000,
+   "fanPotential": 1500,
+   "stadium": {
+    "capacity": 7000,
+    "seats": 983,
+    "lux": 376,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "rwo",
+   "name": "Rot-Weiß Oberhausen",
+   "shortName": "Oberhausen",
+   "town": "Oberhausen",
+   "lat": 51.494,
+   "lon": 6.863,
+   "landesverband": "FV Niederrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-NR",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-W"
+   },
+   "strength": 53,
+   "budget": 1770000,
+   "fanPotential": 4500,
+   "stadium": {
+    "capacity": 21318,
+    "seats": 6395,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "wsv",
+   "name": "Wuppertaler SV",
+   "shortName": "Wuppertal",
+   "town": "Wuppertal",
+   "lat": 51.248,
+   "lon": 7.149,
+   "landesverband": "FV Niederrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-NR",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-W"
+   },
+   "strength": 50,
+   "budget": 1720000,
+   "fanPotential": 2500,
+   "stadium": {
+    "capacity": 23067,
+    "seats": 6920,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#e30613",
+    "#0050a0"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fcg",
+   "name": "FC Gütersloh",
+   "shortName": "Gütersloh",
+   "town": "Gütersloh",
+   "lat": 51.903,
+   "lon": 8.375,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-W"
+   },
+   "strength": 48,
+   "budget": 2460000,
+   "fanPotential": 1800,
+   "stadium": {
+    "capacity": 12500,
+    "seats": 3750,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "rod",
+   "name": "SV Rödinghausen",
+   "shortName": "Rödinghausen",
+   "town": "Rödinghausen",
+   "lat": 52.25,
+   "lon": 8.48,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-W"
+   },
+   "strength": 49,
+   "budget": 1810000,
+   "fanPotential": 600,
+   "stadium": {
+    "capacity": 2489,
+    "seats": 261,
+    "lux": 126,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "bvb2",
+   "name": "Borussia Dortmund II",
+   "shortName": "Dortmund II",
+   "town": "Dortmund",
+   "lat": 51.495,
+   "lon": 7.457,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": true,
+   "parentId": "bvb",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-W"
+   },
+   "strength": 52,
+   "budget": 2680000,
+   "fanPotential": 1200,
+   "stadium": {
+    "capacity": 9999,
+    "seats": 1839,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#fde100",
+    "#000000"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "koe2",
+   "name": "1. FC Köln II",
+   "shortName": "Köln II",
+   "town": "Köln",
+   "lat": 50.93,
+   "lon": 6.874,
+   "landesverband": "FV Mittelrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-MR",
+   "isReserve": true,
+   "parentId": "koe",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-W"
+   },
+   "strength": 48,
+   "budget": 2810000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 977,
+    "lux": 490,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#ed1c24",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "s042",
+   "name": "FC Schalke 04 II",
+   "shortName": "Schalke II",
+   "town": "Gelsenkirchen",
+   "lat": 51.556,
+   "lon": 7.065,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": true,
+   "parentId": "s04",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-W"
+   },
+   "strength": 47,
+   "budget": 2330000,
+   "fanPotential": 600,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 456,
+    "lux": 212,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#004d9d",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "bmg2",
+   "name": "Borussia Mönchengladbach II",
+   "shortName": "Gladbach II",
+   "town": "Mönchengladbach",
+   "lat": 51.175,
+   "lon": 6.385,
+   "landesverband": "FV Niederrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-NR",
+   "isReserve": true,
+   "parentId": "bmg",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-W"
+   },
+   "strength": 48,
+   "budget": 1920000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 10000,
+    "seats": 3000,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#000000",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "sfl",
+   "name": "Sportfreunde Lotte",
+   "shortName": "Lotte",
+   "town": "Lotte",
+   "lat": 52.278,
+   "lon": 7.917,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-W"
+   },
+   "strength": 47,
+   "budget": 2510000,
+   "fanPotential": 1200,
+   "stadium": {
+    "capacity": 10059,
+    "seats": 3018,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "f952",
+   "name": "Fortuna Düsseldorf II",
+   "shortName": "Düsseldorf II",
+   "town": "Düsseldorf",
+   "lat": 51.252,
+   "lon": 6.781,
+   "landesverband": "FV Niederrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-NR",
+   "isReserve": true,
+   "parentId": "f95",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-W"
+   },
+   "strength": 46,
+   "budget": 2750000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 7200,
+    "seats": 1365,
+    "lux": 478,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#da251d",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "sgw",
+   "name": "SG Wattenscheid 09",
+   "shortName": "Wattenscheid",
+   "town": "Bochum",
+   "lat": 51.481,
+   "lon": 7.137,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-W"
+   },
+   "strength": 46,
+   "budget": 2650000,
+   "fanPotential": 1500,
+   "stadium": {
+    "capacity": 16233,
+    "seats": 4870,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#000000",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "sfs",
+   "name": "Sportfreunde Siegen",
+   "shortName": "Siegen",
+   "town": "Siegen",
+   "lat": 50.873,
+   "lon": 8.017,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-W"
+   },
+   "strength": 46,
+   "budget": 2670000,
+   "fanPotential": 1800,
+   "stadium": {
+    "capacity": 18700,
+    "seats": 5610,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "boc2",
+   "name": "VfL Bochum II",
+   "shortName": "Bochum II",
+   "town": "Bochum",
+   "lat": 51.49,
+   "lon": 7.236,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": true,
+   "parentId": "boc",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-W"
+   },
+   "strength": 44,
+   "budget": 1640000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 222,
+    "lux": 96,
+    "pressSeats": 1
+   },
+   "colors": [
+    "#005ca9",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "scw",
+   "name": "SC Wiedenbrück",
+   "shortName": "Wiedenbrück",
+   "town": "Rheda-Wiedenbrück",
+   "lat": 51.836,
+   "lon": 8.311,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-W"
+   },
+   "strength": 45,
+   "budget": 2570000,
+   "fanPotential": 800,
+   "stadium": {
+    "capacity": 4000,
+    "seats": 693,
+    "lux": 444,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "kfc",
+   "name": "KFC Uerdingen 05",
+   "shortName": "Uerdingen",
+   "town": "Krefeld",
+   "lat": 51.354,
+   "lon": 6.587,
+   "landesverband": "FV Niederrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-NR",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-W"
+   },
+   "strength": 46,
+   "budget": 1960000,
+   "fanPotential": 2000,
+   "stadium": {
+    "capacity": 34500,
+    "seats": 10350,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#e30613",
+    "#0050a0"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "ofc",
+   "name": "Kickers Offenbach",
+   "shortName": "Offenbach",
+   "town": "Offenbach am Main",
+   "lat": 50.11,
+   "lon": 8.746,
+   "landesverband": "Hessischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-HE",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-SW"
+   },
+   "strength": 55,
+   "budget": 2410000,
+   "fanPotential": 7000,
+   "stadium": {
+    "capacity": 20500,
+    "seats": 6150,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fsvf",
+   "name": "FSV Frankfurt",
+   "shortName": "FSV Frankfurt",
+   "town": "Frankfurt am Main",
+   "lat": 50.128,
+   "lon": 8.722,
+   "landesverband": "Hessischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-HE",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-SW"
+   },
+   "strength": 48,
+   "budget": 1780000,
+   "fanPotential": 1500,
+   "stadium": {
+    "capacity": 12542,
+    "seats": 3763,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#0050a0",
+    "#000000"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "tsv",
+   "name": "TSV Steinbach Haiger",
+   "shortName": "Steinbach",
+   "town": "Haiger",
+   "lat": 50.747,
+   "lon": 8.205,
+   "landesverband": "Hessischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-HE",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-SW"
+   },
+   "strength": 51,
+   "budget": 2390000,
+   "fanPotential": 900,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 787,
+    "lux": 411,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fch3",
+   "name": "FC 08 Homburg",
+   "shortName": "Homburg",
+   "town": "Homburg",
+   "lat": 49.322,
+   "lon": 7.333,
+   "landesverband": "Saarländischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-RPS",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-SW"
+   },
+   "strength": 52,
+   "budget": 2340000,
+   "fanPotential": 2500,
+   "stadium": {
+    "capacity": 16488,
+    "seats": 4946,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#00843d",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "kas",
+   "name": "KSV Hessen Kassel",
+   "shortName": "Kassel",
+   "town": "Kassel",
+   "lat": 51.297,
+   "lon": 9.473,
+   "landesverband": "Hessischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-HE",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-SW"
+   },
+   "strength": 50,
+   "budget": 2000000,
+   "fanPotential": 2500,
+   "stadium": {
+    "capacity": 18737,
+    "seats": 5621,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "bah",
+   "name": "Bahlinger SC",
+   "shortName": "Bahlingen",
+   "town": "Bahlingen am Kaiserstuhl",
+   "lat": 48.121,
+   "lon": 7.736,
+   "landesverband": "Südbadischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-SW"
+   },
+   "strength": 44,
+   "budget": 2020000,
+   "fanPotential": 600,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 370,
+    "lux": 160,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#000000",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "sgv",
+   "name": "SGV Freiberg",
+   "shortName": "Freiberg",
+   "town": "Freiberg am Neckar",
+   "lat": 48.933,
+   "lon": 9.196,
+   "landesverband": "Württembergischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-SW"
+   },
+   "strength": 46,
+   "budget": 2650000,
+   "fanPotential": 600,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 453,
+    "lux": 266,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "skk",
+   "name": "Stuttgarter Kickers",
+   "shortName": "Stuttg. Kickers",
+   "town": "Stuttgart",
+   "lat": 48.746,
+   "lon": 9.168,
+   "landesverband": "Württembergischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-SW"
+   },
+   "strength": 51,
+   "budget": 2510000,
+   "fanPotential": 3000,
+   "stadium": {
+    "capacity": 11410,
+    "seats": 3423,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "scf2",
+   "name": "SC Freiburg II",
+   "shortName": "Freiburg II",
+   "town": "Freiburg im Breisgau",
+   "lat": 48.021,
+   "lon": 7.83,
+   "landesverband": "Südbadischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": true,
+   "parentId": "scf",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-SW"
+   },
+   "strength": 50,
+   "budget": 1760000,
+   "fanPotential": 500,
+   "stadium": {
+    "capacity": 24000,
+    "seats": 7200,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#000000",
+    "#e2001a"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "sge2",
+   "name": "Eintracht Frankfurt II",
+   "shortName": "Frankfurt II",
+   "town": "Frankfurt am Main",
+   "lat": 50.069,
+   "lon": 8.645,
+   "landesverband": "Hessischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-HE",
+   "isReserve": true,
+   "parentId": "sge",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-SW"
+   },
+   "strength": 48,
+   "budget": 2670000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 4000,
+    "seats": 731,
+    "lux": 464,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#e1000f",
+    "#000000"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "m052",
+   "name": "1. FSV Mainz 05 II",
+   "shortName": "Mainz II",
+   "town": "Mainz",
+   "lat": 50,
+   "lon": 8.24,
+   "landesverband": "Südwestdeutscher FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-RPS",
+   "isReserve": true,
+   "parentId": "m05",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-SW"
+   },
+   "strength": 48,
+   "budget": 2320000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 755,
+    "lux": 398,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#c3141e",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "gsv",
+   "name": "1. Göppinger SV",
+   "shortName": "Göppingen",
+   "town": "Göppingen",
+   "lat": 48.7,
+   "lon": 9.65,
+   "landesverband": "Württembergischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-SW"
+   },
+   "strength": 43,
+   "budget": 1980000,
+   "fanPotential": 700,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 602,
+    "lux": 334,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "bar",
+   "name": "SG Barockstadt Fulda-Lehnerz",
+   "shortName": "Barockstadt",
+   "town": "Fulda",
+   "lat": 50.563,
+   "lon": 9.683,
+   "landesverband": "Hessischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-HE",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-SW"
+   },
+   "strength": 45,
+   "budget": 2150000,
+   "fanPotential": 900,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 678,
+    "lux": 366,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fcv",
+   "name": "FC 08 Villingen",
+   "shortName": "Villingen",
+   "town": "Villingen-Schwenningen",
+   "lat": 48.06,
+   "lon": 8.46,
+   "landesverband": "Südbadischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-SW"
+   },
+   "strength": 44,
+   "budget": 2540000,
+   "fanPotential": 1200,
+   "stadium": {
+    "capacity": 6000,
+    "seats": 1023,
+    "lux": 438,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#000000",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "svs",
+   "name": "SV Sandhausen",
+   "shortName": "Sandhausen",
+   "town": "Sandhausen",
+   "lat": 49.343,
+   "lon": 8.66,
+   "landesverband": "Badischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-SW"
+   },
+   "strength": 53,
+   "budget": 2670000,
+   "fanPotential": 2500,
+   "stadium": {
+    "capacity": 15414,
+    "seats": 4624,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#000000",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fca4",
+   "name": "FC Astoria Walldorf",
+   "shortName": "Walldorf",
+   "town": "Walldorf",
+   "lat": 49.305,
+   "lon": 8.641,
+   "landesverband": "Badischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-SW"
+   },
+   "strength": 45,
+   "budget": 2440000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 808,
+    "lux": 420,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "set",
+   "name": "SV Eintracht Trier 05",
+   "shortName": "Trier",
+   "town": "Trier",
+   "lat": 49.765,
+   "lon": 6.664,
+   "landesverband": "FV Rheinland",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-RPS",
+   "isReserve": false,
+   "league2026": {
+    "level": "RL",
+    "group": "RL-SW"
+   },
+   "strength": 48,
+   "budget": 2560000,
+   "fanPotential": 2500,
+   "stadium": {
+    "capacity": 10256,
+    "seats": 3077,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#000000",
+    "#0050a0"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fck2",
+   "name": "1. FC Kaiserslautern II",
+   "shortName": "Lautern II",
+   "town": "Kaiserslautern",
+   "lat": 49.434,
+   "lon": 7.776,
+   "landesverband": "Südwestdeutscher FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-RPS",
+   "isReserve": true,
+   "parentId": "fck",
+   "league2026": {
+    "level": "RL",
+    "group": "RL-SW"
+   },
+   "strength": 45,
+   "budget": 1810000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 261,
+    "lux": 125,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "sgv2",
+   "name": "SSVg Velbert",
+   "shortName": "Velbert",
+   "town": "Velbert",
+   "lat": 51.34,
+   "lon": 7.04,
+   "landesverband": "FV Niederrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-NR",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NR"
+   },
+   "strength": 40,
+   "budget": 540000,
+   "fanPotential": 500,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 599,
+    "lux": 333,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "vfh",
+   "name": "VfB Homberg",
+   "shortName": "Homberg",
+   "town": "Duisburg",
+   "lat": 51.459,
+   "lon": 6.7,
+   "landesverband": "FV Niederrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-NR",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NR"
+   },
+   "strength": 41,
+   "budget": 640000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 457,
+    "lux": 213,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "rat",
+   "name": "FC Ratingen 04/19",
+   "shortName": "Ratingen",
+   "town": "Ratingen",
+   "lat": 51.297,
+   "lon": 6.849,
+   "landesverband": "FV Niederrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-NR",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NR"
+   },
+   "strength": 40,
+   "budget": 510000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 6000,
+    "seats": 663,
+    "lux": 313,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "kle",
+   "name": "1. FC Kleve",
+   "shortName": "Kleve",
+   "town": "Kleve",
+   "lat": 51.79,
+   "lon": 6.14,
+   "landesverband": "FV Niederrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-NR",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NR"
+   },
+   "strength": 37,
+   "budget": 580000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 397,
+    "lux": 176,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "sch",
+   "name": "SpVg Schonnebeck",
+   "shortName": "Schonnebeck",
+   "town": "Essen",
+   "lat": 51.49,
+   "lon": 7.07,
+   "landesverband": "FV Niederrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-NR",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NR"
+   },
+   "strength": 38,
+   "budget": 730000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 552,
+    "lux": 271,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#000000",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "etb",
+   "name": "ETB Schwarz-Weiß Essen",
+   "shortName": "ETB SW Essen",
+   "town": "Essen",
+   "lat": 51.441,
+   "lon": 7.016,
+   "landesverband": "FV Niederrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-NR",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NR"
+   },
+   "strength": 37,
+   "budget": 620000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 20650,
+    "seats": 6195,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#000000",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "son",
+   "name": "SV Sonsbeck",
+   "shortName": "Sonsbeck",
+   "town": "Sonsbeck",
+   "lat": 51.61,
+   "lon": 6.38,
+   "landesverband": "FV Niederrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-NR",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NR"
+   },
+   "strength": 35,
+   "budget": 740000,
+   "fanPotential": 250,
+   "stadium": {
+    "capacity": 2000,
+    "seats": 370,
+    "lux": 273,
+    "pressSeats": 5
+   },
+   "colors": [
+    "#00843d",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "cro",
+   "name": "Cronenberger SC",
+   "shortName": "Cronenberg",
+   "town": "Wuppertal",
+   "lat": 51.208,
+   "lon": 7.141,
+   "landesverband": "FV Niederrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-NR",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NR"
+   },
+   "strength": 35,
+   "budget": 760000,
+   "fanPotential": 250,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 480,
+    "lux": 286,
+    "pressSeats": 5
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "lip",
+   "name": "SV Lippstadt 08",
+   "shortName": "Lippstadt",
+   "town": "Lippstadt",
+   "lat": 51.676,
+   "lon": 8.345,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-WF"
+   },
+   "strength": 40,
+   "budget": 520000,
+   "fanPotential": 800,
+   "stadium": {
+    "capacity": 4000,
+    "seats": 448,
+    "lux": 317,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "rhy",
+   "name": "SV Westfalia Rhynern",
+   "shortName": "Rhynern",
+   "town": "Hamm",
+   "lat": 51.64,
+   "lon": 7.88,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-WF"
+   },
+   "strength": 39,
+   "budget": 510000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 277,
+    "lux": 137,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "asd",
+   "name": "ASC 09 Dortmund",
+   "shortName": "ASC Dortmund",
+   "town": "Dortmund",
+   "lat": 51.48,
+   "lon": 7.52,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-WF"
+   },
+   "strength": 38,
+   "budget": 460000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 235,
+    "lux": 105,
+    "pressSeats": 1
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "enn",
+   "name": "TuS Ennepetal",
+   "shortName": "Ennepetal",
+   "town": "Ennepetal",
+   "lat": 51.3,
+   "lon": 7.36,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-WF"
+   },
+   "strength": 37,
+   "budget": 560000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 313,
+    "lux": 163,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "mei",
+   "name": "RSV Meinerzhagen",
+   "shortName": "Meinerzhagen",
+   "town": "Meinerzhagen",
+   "lat": 51.106,
+   "lon": 7.645,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-WF"
+   },
+   "strength": 37,
+   "budget": 710000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 442,
+    "lux": 258,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "ern",
+   "name": "TuS Erndtebrück",
+   "shortName": "Erndtebrück",
+   "town": "Erndtebrück",
+   "lat": 50.99,
+   "lon": 8.25,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-WF"
+   },
+   "strength": 38,
+   "budget": 600000,
+   "fanPotential": 500,
+   "stadium": {
+    "capacity": 3500,
+    "seats": 491,
+    "lux": 191,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "tsd",
+   "name": "Türkspor Dortmund",
+   "shortName": "Türkspor",
+   "town": "Dortmund",
+   "lat": 51.53,
+   "lon": 7.47,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-WF"
+   },
+   "strength": 40,
+   "budget": 670000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 410,
+    "lux": 234,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "scm2",
+   "name": "SC Preußen Münster II",
+   "shortName": "Münster II",
+   "town": "Münster",
+   "lat": 51.935,
+   "lon": 7.633,
+   "landesverband": "FLVW Westfalen",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-WF",
+   "isReserve": true,
+   "parentId": "scm",
+   "league2026": {
+    "level": "OL",
+    "group": "OL-WF"
+   },
+   "strength": 36,
+   "budget": 470000,
+   "fanPotential": 200,
+   "stadium": {
+    "capacity": 2000,
+    "seats": 191,
+    "lux": 108,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#006b3f",
+    "#000000"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "dur",
+   "name": "FC Düren",
+   "shortName": "Düren",
+   "town": "Düren",
+   "lat": 50.8,
+   "lon": 6.48,
+   "landesverband": "FV Mittelrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-MR",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-MR"
+   },
+   "strength": 40,
+   "budget": 710000,
+   "fanPotential": 500,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 534,
+    "lux": 260,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "bsc3",
+   "name": "Bonner SC",
+   "shortName": "Bonner SC",
+   "town": "Bonn",
+   "lat": 50.71,
+   "lon": 7.13,
+   "landesverband": "FV Mittelrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-MR",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-MR"
+   },
+   "strength": 41,
+   "budget": 470000,
+   "fanPotential": 800,
+   "stadium": {
+    "capacity": 10164,
+    "seats": 3049,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#e30613",
+    "#000000"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "hen",
+   "name": "FC Hennef 05",
+   "shortName": "Hennef",
+   "town": "Hennef (Sieg)",
+   "lat": 50.775,
+   "lon": 7.284,
+   "landesverband": "FV Mittelrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-MR",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-MR"
+   },
+   "strength": 38,
+   "budget": 430000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 210,
+    "lux": 87,
+    "pressSeats": 1
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "sie",
+   "name": "Siegburger SV 04",
+   "shortName": "Siegburg",
+   "town": "Siegburg",
+   "lat": 50.8,
+   "lon": 7.2,
+   "landesverband": "FV Mittelrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-MR",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-MR"
+   },
+   "strength": 37,
+   "budget": 720000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 450,
+    "lux": 263,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#00843d",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "weg",
+   "name": "FC Wegberg-Beeck",
+   "shortName": "Wegberg-Beeck",
+   "town": "Wegberg",
+   "lat": 51.14,
+   "lon": 6.29,
+   "landesverband": "FV Mittelrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-MR",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-MR"
+   },
+   "strength": 37,
+   "budget": 450000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 222,
+    "lux": 96,
+    "pressSeats": 1
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "bgl",
+   "name": "SV Bergisch Gladbach 09",
+   "shortName": "Bergisch Gladbach",
+   "town": "Bergisch Gladbach",
+   "lat": 50.99,
+   "lon": 7.13,
+   "landesverband": "FV Mittelrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-MR",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-MR"
+   },
+   "strength": 37,
+   "budget": 550000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 309,
+    "lux": 160,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "alf",
+   "name": "VfL Alfter",
+   "shortName": "Alfter",
+   "town": "Alfter",
+   "lat": 50.73,
+   "lon": 7.01,
+   "landesverband": "FV Mittelrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-MR",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-MR"
+   },
+   "strength": 35,
+   "budget": 440000,
+   "fanPotential": 200,
+   "stadium": {
+    "capacity": 2000,
+    "seats": 172,
+    "lux": 91,
+    "pressSeats": 1
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fre",
+   "name": "SpVg Frechen 20",
+   "shortName": "Frechen",
+   "town": "Frechen",
+   "lat": 50.91,
+   "lon": 6.81,
+   "landesverband": "FV Mittelrhein",
+   "regionalverband": "WDFV",
+   "gebiet": "WEST",
+   "oberligaId": "OL-MR",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-MR"
+   },
+   "strength": 35,
+   "budget": 690000,
+   "fanPotential": 250,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 425,
+    "lux": 245,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "sta",
+   "name": "TSV Eintracht Stadtallendorf",
+   "shortName": "Stadtallendorf",
+   "town": "Stadtallendorf",
+   "lat": 50.823,
+   "lon": 9.017,
+   "landesverband": "Hessischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-HE",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HE"
+   },
+   "strength": 40,
+   "budget": 670000,
+   "fanPotential": 500,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 825,
+    "lux": 427,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "gie",
+   "name": "FC Gießen",
+   "shortName": "Gießen",
+   "town": "Gießen",
+   "lat": 50.587,
+   "lon": 8.67,
+   "landesverband": "Hessischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-HE",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HE"
+   },
+   "strength": 41,
+   "budget": 560000,
+   "fanPotential": 800,
+   "stadium": {
+    "capacity": 6000,
+    "seats": 759,
+    "lux": 347,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "dre",
+   "name": "SC Hessen Dreieich",
+   "shortName": "Dreieich",
+   "town": "Dreieich",
+   "lat": 50.02,
+   "lon": 8.7,
+   "landesverband": "Hessischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-HE",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HE"
+   },
+   "strength": 39,
+   "budget": 750000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 566,
+    "lux": 280,
+    "pressSeats": 5
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "rwf",
+   "name": "SC Rot-Weiss Frankfurt",
+   "shortName": "RW Frankfurt",
+   "town": "Frankfurt am Main",
+   "lat": 50.09,
+   "lon": 8.64,
+   "landesverband": "Hessischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-HE",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HE"
+   },
+   "strength": 38,
+   "budget": 470000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 482,
+    "lux": 284,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "bau",
+   "name": "KSV Baunatal",
+   "shortName": "Baunatal",
+   "town": "Baunatal",
+   "lat": 51.256,
+   "lon": 9.418,
+   "landesverband": "Hessischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-HE",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HE"
+   },
+   "strength": 37,
+   "budget": 580000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 667,
+    "lux": 361,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "edd",
+   "name": "FC Eddersheim",
+   "shortName": "Eddersheim",
+   "town": "Hattersheim am Main",
+   "lat": 50.04,
+   "lon": 8.47,
+   "landesverband": "Hessischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-HE",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HE"
+   },
+   "strength": 37,
+   "budget": 560000,
+   "fanPotential": 250,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 320,
+    "lux": 168,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "tgf",
+   "name": "Türk Gücü Friedberg",
+   "shortName": "Friedberg",
+   "town": "Friedberg (Hessen)",
+   "lat": 50.336,
+   "lon": 8.755,
+   "landesverband": "Hessischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-HE",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HE"
+   },
+   "strength": 37,
+   "budget": 650000,
+   "fanPotential": 250,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 393,
+    "lux": 222,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "h93",
+   "name": "1. Hanauer FC 1893",
+   "shortName": "Hanau 93",
+   "town": "Hanau",
+   "lat": 50.13,
+   "lon": 8.91,
+   "landesverband": "Hessischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-HE",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HE"
+   },
+   "strength": 36,
+   "budget": 690000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 846,
+    "lux": 436,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "bal",
+   "name": "TSG Balingen",
+   "shortName": "Balingen",
+   "town": "Balingen",
+   "lat": 48.275,
+   "lon": 8.855,
+   "landesverband": "Württembergischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BW"
+   },
+   "strength": 40,
+   "budget": 540000,
+   "fanPotential": 500,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 365,
+    "lux": 156,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "pfo",
+   "name": "1. CfR Pforzheim",
+   "shortName": "Pforzheim",
+   "town": "Pforzheim",
+   "lat": 48.89,
+   "lon": 8.7,
+   "landesverband": "Badischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BW"
+   },
+   "strength": 40,
+   "budget": 530000,
+   "fanPotential": 700,
+   "stadium": {
+    "capacity": 4000,
+    "seats": 471,
+    "lux": 328,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "noe",
+   "name": "FC Nöttingen",
+   "shortName": "Nöttingen",
+   "town": "Remchingen",
+   "lat": 48.95,
+   "lon": 8.58,
+   "landesverband": "Badischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BW"
+   },
+   "strength": 38,
+   "budget": 500000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 323,
+    "lux": 130,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "obe",
+   "name": "SV Oberachern",
+   "shortName": "Oberachern",
+   "town": "Achern",
+   "lat": 48.63,
+   "lon": 8.08,
+   "landesverband": "Südbadischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BW"
+   },
+   "strength": 37,
+   "budget": 680000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 418,
+    "lux": 240,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "aal",
+   "name": "VfR Aalen",
+   "shortName": "Aalen",
+   "town": "Aalen",
+   "lat": 48.838,
+   "lon": 10.093,
+   "landesverband": "Württembergischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BW"
+   },
+   "strength": 41,
+   "budget": 500000,
+   "fanPotential": 1500,
+   "stadium": {
+    "capacity": 14500,
+    "seats": 4350,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#000000",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "bac",
+   "name": "TSG Backnang",
+   "shortName": "Backnang",
+   "town": "Backnang",
+   "lat": 48.946,
+   "lon": 9.43,
+   "landesverband": "Württembergischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BW"
+   },
+   "strength": 38,
+   "budget": 570000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 386,
+    "lux": 169,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "ksc2",
+   "name": "Karlsruher SC II",
+   "shortName": "KSC II",
+   "town": "Karlsruhe",
+   "lat": 49.02,
+   "lon": 8.413,
+   "landesverband": "Badischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": true,
+   "parentId": "ksc",
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BW"
+   },
+   "strength": 37,
+   "budget": 760000,
+   "fanPotential": 200,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 482,
+    "lux": 286,
+    "pressSeats": 5
+   },
+   "colors": [
+    "#004a99",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "dor",
+   "name": "Sportfreunde Dorfmerkingen",
+   "shortName": "Dorfmerkingen",
+   "town": "Neresheim",
+   "lat": 48.77,
+   "lon": 10.33,
+   "landesverband": "Württembergischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-BW",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BW"
+   },
+   "strength": 36,
+   "budget": 730000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 455,
+    "lux": 267,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "tko",
+   "name": "TuS Koblenz",
+   "shortName": "Koblenz",
+   "town": "Koblenz",
+   "lat": 50.345,
+   "lon": 7.587,
+   "landesverband": "FV Rheinland",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-RPS",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-RPS"
+   },
+   "strength": 41,
+   "budget": 690000,
+   "fanPotential": 1200,
+   "stadium": {
+    "capacity": 9500,
+    "seats": 1606,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#000000",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "eng",
+   "name": "FV Engers 07",
+   "shortName": "Engers",
+   "town": "Neuwied",
+   "lat": 50.42,
+   "lon": 7.54,
+   "landesverband": "FV Rheinland",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-RPS",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-RPS"
+   },
+   "strength": 38,
+   "budget": 570000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 388,
+    "lux": 171,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "wor",
+   "name": "Wormatia Worms",
+   "shortName": "Worms",
+   "town": "Worms",
+   "lat": 49.633,
+   "lon": 8.358,
+   "landesverband": "Südwestdeutscher FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-RPS",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-RPS"
+   },
+   "strength": 40,
+   "budget": 460000,
+   "fanPotential": 1000,
+   "stadium": {
+    "capacity": 6000,
+    "seats": 570,
+    "lux": 281,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fkp",
+   "name": "FK Pirmasens",
+   "shortName": "Pirmasens",
+   "town": "Pirmasens",
+   "lat": 49.2,
+   "lon": 7.6,
+   "landesverband": "Südwestdeutscher FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-RPS",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-RPS"
+   },
+   "strength": 40,
+   "budget": 680000,
+   "fanPotential": 800,
+   "stadium": {
+    "capacity": 10000,
+    "seats": 3000,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "smz",
+   "name": "TSV Schott Mainz",
+   "shortName": "Schott Mainz",
+   "town": "Mainz",
+   "lat": 49.99,
+   "lon": 8.23,
+   "landesverband": "Südwestdeutscher FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-RPS",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-RPS"
+   },
+   "strength": 38,
+   "budget": 720000,
+   "fanPotential": 250,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 449,
+    "lux": 262,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "gon",
+   "name": "SV Gonsenheim",
+   "shortName": "Gonsenheim",
+   "town": "Mainz",
+   "lat": 50.01,
+   "lon": 8.21,
+   "landesverband": "Südwestdeutscher FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-RPS",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-RPS"
+   },
+   "strength": 36,
+   "budget": 510000,
+   "fanPotential": 250,
+   "stadium": {
+    "capacity": 2000,
+    "seats": 218,
+    "lux": 133,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "voe",
+   "name": "SV Röchling Völklingen",
+   "shortName": "Völklingen",
+   "town": "Völklingen",
+   "lat": 49.25,
+   "lon": 6.85,
+   "landesverband": "Saarländischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-RPS",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-RPS"
+   },
+   "strength": 37,
+   "budget": 620000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 6000,
+    "seats": 888,
+    "lux": 392,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "aue",
+   "name": "SV Auersmacher",
+   "shortName": "Auersmacher",
+   "town": "Kleinblittersdorf",
+   "lat": 49.15,
+   "lon": 7.03,
+   "landesverband": "Saarländischer FV",
+   "regionalverband": "SW",
+   "gebiet": "SUEDWEST",
+   "oberligaId": "OL-RPS",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-RPS"
+   },
+   "strength": 35,
+   "budget": 510000,
+   "fanPotential": 250,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 275,
+    "lux": 135,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "ebs2",
+   "name": "Eintracht Braunschweig II",
+   "shortName": "Braunschweig II",
+   "town": "Braunschweig",
+   "lat": 52.29,
+   "lon": 10.521,
+   "landesverband": "NFV Niedersachsen",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-NI",
+   "isReserve": true,
+   "parentId": "ebs",
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NI"
+   },
+   "strength": 38,
+   "budget": 700000,
+   "fanPotential": 200,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 431,
+    "lux": 249,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#fcd116",
+    "#0055a5"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "lsk",
+   "name": "Lüneburger SK Hansa",
+   "shortName": "Lüneburg",
+   "town": "Lüneburg",
+   "lat": 53.25,
+   "lon": 10.41,
+   "landesverband": "NFV Niedersachsen",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-NI",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NI"
+   },
+   "strength": 38,
+   "budget": 490000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 312,
+    "lux": 124,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "hil",
+   "name": "VfV 06 Hildesheim",
+   "shortName": "Hildesheim",
+   "town": "Hildesheim",
+   "lat": 52.15,
+   "lon": 9.95,
+   "landesverband": "NFV Niedersachsen",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-NI",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NI"
+   },
+   "strength": 38,
+   "budget": 440000,
+   "fanPotential": 500,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 425,
+    "lux": 261,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "atl",
+   "name": "SV Atlas Delmenhorst",
+   "shortName": "Delmenhorst",
+   "town": "Delmenhorst",
+   "lat": 53.05,
+   "lon": 8.63,
+   "landesverband": "NFV Niedersachsen",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-NI",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NI"
+   },
+   "strength": 40,
+   "budget": 450000,
+   "fanPotential": 1000,
+   "stadium": {
+    "capacity": 7000,
+    "seats": 624,
+    "lux": 269,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#fcd116"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "reh",
+   "name": "BSV Rehden",
+   "shortName": "Rehden",
+   "town": "Rehden",
+   "lat": 52.61,
+   "lon": 8.48,
+   "landesverband": "NFV Niedersachsen",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-NI",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NI"
+   },
+   "strength": 38,
+   "budget": 520000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 281,
+    "lux": 139,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#000000",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "ege",
+   "name": "Germania Egestorf/Langreder",
+   "shortName": "Egestorf",
+   "town": "Barsinghausen",
+   "lat": 52.3,
+   "lon": 9.48,
+   "landesverband": "NFV Niedersachsen",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-NI",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NI"
+   },
+   "strength": 37,
+   "budget": 540000,
+   "fanPotential": 250,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 303,
+    "lux": 155,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#00843d",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "ber",
+   "name": "TuS Bersenbrück",
+   "shortName": "Bersenbrück",
+   "town": "Bersenbrück",
+   "lat": 52.55,
+   "lon": 7.94,
+   "landesverband": "NFV Niedersachsen",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-NI",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NI"
+   },
+   "strength": 36,
+   "budget": 550000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 311,
+    "lux": 161,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "wfb",
+   "name": "MTV Wolfenbüttel",
+   "shortName": "Wolfenbüttel",
+   "town": "Wolfenbüttel",
+   "lat": 52.16,
+   "lon": 10.53,
+   "landesverband": "NFV Niedersachsen",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-NI",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NI"
+   },
+   "strength": 36,
+   "budget": 460000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 235,
+    "lux": 106,
+    "pressSeats": 1
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "das",
+   "name": "TuS Dassendorf",
+   "shortName": "Dassendorf",
+   "town": "Dassendorf",
+   "lat": 53.5,
+   "lon": 10.37,
+   "landesverband": "Hamburger FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HH",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HH"
+   },
+   "strength": 40,
+   "budget": 730000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 456,
+    "lux": 268,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "teu",
+   "name": "FC Teutonia 05 Ottensen",
+   "shortName": "Teutonia 05",
+   "town": "Hamburg",
+   "lat": 53.553,
+   "lon": 9.917,
+   "landesverband": "Hamburger FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HH",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HH"
+   },
+   "strength": 40,
+   "budget": 660000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 397,
+    "lux": 224,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "vic",
+   "name": "SC Victoria Hamburg",
+   "shortName": "Victoria",
+   "town": "Hamburg",
+   "lat": 53.598,
+   "lon": 9.979,
+   "landesverband": "Hamburger FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HH",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HH"
+   },
+   "strength": 38,
+   "budget": 570000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 4000,
+    "seats": 521,
+    "lux": 355,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#fcd116"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "con",
+   "name": "SC Concordia Hamburg",
+   "shortName": "Concordia",
+   "town": "Hamburg",
+   "lat": 53.58,
+   "lon": 10.08,
+   "landesverband": "Hamburger FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HH",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HH"
+   },
+   "strength": 36,
+   "budget": 760000,
+   "fanPotential": 250,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 578,
+    "lux": 287,
+    "pressSeats": 5
+   },
+   "colors": [
+    "#000000",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "pal",
+   "name": "USC Paloma",
+   "shortName": "Paloma",
+   "town": "Hamburg",
+   "lat": 53.57,
+   "lon": 10.03,
+   "landesverband": "Hamburger FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HH",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HH"
+   },
+   "strength": 35,
+   "budget": 530000,
+   "fanPotential": 200,
+   "stadium": {
+    "capacity": 2000,
+    "seats": 236,
+    "lux": 150,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "nie",
+   "name": "Niendorfer TSV",
+   "shortName": "Niendorf",
+   "town": "Hamburg",
+   "lat": 53.62,
+   "lon": 9.95,
+   "landesverband": "Hamburger FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HH",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HH"
+   },
+   "strength": 35,
+   "budget": 450000,
+   "fanPotential": 200,
+   "stadium": {
+    "capacity": 2000,
+    "seats": 181,
+    "lux": 99,
+    "pressSeats": 1
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "sue",
+   "name": "FC Süderelbe",
+   "shortName": "Süderelbe",
+   "town": "Hamburg",
+   "lat": 53.47,
+   "lon": 9.86,
+   "landesverband": "Hamburger FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HH",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HH"
+   },
+   "strength": 35,
+   "budget": 720000,
+   "fanPotential": 200,
+   "stadium": {
+    "capacity": 2000,
+    "seats": 360,
+    "lux": 263,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "cur",
+   "name": "SV Curslack-Neuengamme",
+   "shortName": "Curslack",
+   "town": "Hamburg",
+   "lat": 53.45,
+   "lon": 10.23,
+   "landesverband": "Hamburger FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HH",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HH"
+   },
+   "strength": 35,
+   "budget": 770000,
+   "fanPotential": 200,
+   "stadium": {
+    "capacity": 2000,
+    "seats": 397,
+    "lux": 297,
+    "pressSeats": 5
+   },
+   "colors": [
+    "#00843d",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "tod",
+   "name": "SV Todesfelde",
+   "shortName": "Todesfelde",
+   "town": "Todesfelde",
+   "lat": 53.88,
+   "lon": 10.18,
+   "landesverband": "SHFV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-SH",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-SH"
+   },
+   "strength": 39,
+   "budget": 630000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 372,
+    "lux": 206,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "eut",
+   "name": "Eutin 08",
+   "shortName": "Eutin",
+   "town": "Eutin",
+   "lat": 54.14,
+   "lon": 10.62,
+   "landesverband": "SHFV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-SH",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-SH"
+   },
+   "strength": 37,
+   "budget": 600000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 346,
+    "lux": 187,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "psv",
+   "name": "PSV Neumünster",
+   "shortName": "Neumünster",
+   "town": "Neumünster",
+   "lat": 54.07,
+   "lon": 9.98,
+   "landesverband": "SHFV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-SH",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-SH"
+   },
+   "strength": 37,
+   "budget": 540000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 303,
+    "lux": 155,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#00843d",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "hei",
+   "name": "Heider SV",
+   "shortName": "Heide",
+   "town": "Heide",
+   "lat": 54.19,
+   "lon": 9.1,
+   "landesverband": "SHFV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-SH",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-SH"
+   },
+   "strength": 37,
+   "budget": 440000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 3500,
+    "seats": 306,
+    "lux": 93,
+    "pressSeats": 1
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "kil",
+   "name": "FC Kilia Kiel",
+   "shortName": "Kilia Kiel",
+   "town": "Kiel",
+   "lat": 54.33,
+   "lon": 10.13,
+   "landesverband": "SHFV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-SH",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-SH"
+   },
+   "strength": 35,
+   "budget": 580000,
+   "fanPotential": 200,
+   "stadium": {
+    "capacity": 2000,
+    "seats": 270,
+    "lux": 181,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "hus",
+   "name": "Husumer SV",
+   "shortName": "Husum",
+   "town": "Husum",
+   "lat": 54.48,
+   "lon": 9.05,
+   "landesverband": "SHFV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-SH",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-SH"
+   },
+   "strength": 35,
+   "budget": 770000,
+   "fanPotential": 250,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 488,
+    "lux": 291,
+    "pressSeats": 5
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "osv",
+   "name": "Oldenburger SV",
+   "shortName": "Oldenburg i. H.",
+   "town": "Oldenburg in Holstein",
+   "lat": 54.29,
+   "lon": 10.88,
+   "landesverband": "SHFV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-SH",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-SH"
+   },
+   "strength": 34,
+   "budget": 660000,
+   "fanPotential": 200,
+   "stadium": {
+    "capacity": 2000,
+    "seats": 322,
+    "lux": 229,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "tsb",
+   "name": "TSB Flensburg",
+   "shortName": "TSB Flensburg",
+   "town": "Flensburg",
+   "lat": 54.79,
+   "lon": 9.43,
+   "landesverband": "SHFV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-SH",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-SH"
+   },
+   "strength": 34,
+   "budget": 670000,
+   "fanPotential": 200,
+   "stadium": {
+    "capacity": 2000,
+    "seats": 326,
+    "lux": 232,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "blu",
+   "name": "Blumenthaler SV",
+   "shortName": "Blumenthal",
+   "town": "Bremen",
+   "lat": 53.185,
+   "lon": 8.56,
+   "landesverband": "Bremer FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HB",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HB"
+   },
+   "strength": 37,
+   "budget": 590000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 406,
+    "lux": 181,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "obn",
+   "name": "FC Oberneuland",
+   "shortName": "Oberneuland",
+   "town": "Bremen",
+   "lat": 53.1,
+   "lon": 8.92,
+   "landesverband": "Bremer FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HB",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HB"
+   },
+   "strength": 37,
+   "budget": 690000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 515,
+    "lux": 248,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "has",
+   "name": "BSC Hastedt",
+   "shortName": "Hastedt",
+   "town": "Bremen",
+   "lat": 53.07,
+   "lon": 8.87,
+   "landesverband": "Bremer FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HB",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HB"
+   },
+   "strength": 35,
+   "budget": 750000,
+   "fanPotential": 200,
+   "stadium": {
+    "capacity": 2000,
+    "seats": 383,
+    "lux": 284,
+    "pressSeats": 5
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "scw2",
+   "name": "TuS Schwachhausen",
+   "shortName": "Schwachhausen",
+   "town": "Bremen",
+   "lat": 53.09,
+   "lon": 8.85,
+   "landesverband": "Bremer FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HB",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HB"
+   },
+   "strength": 34,
+   "budget": 660000,
+   "fanPotential": 150,
+   "stadium": {
+    "capacity": 2000,
+    "seats": 318,
+    "lux": 225,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "osc",
+   "name": "OSC Bremerhaven",
+   "shortName": "Bremerhaven",
+   "town": "Bremerhaven",
+   "lat": 53.55,
+   "lon": 8.58,
+   "landesverband": "Bremer FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HB",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HB"
+   },
+   "strength": 35,
+   "budget": 690000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 3500,
+    "seats": 595,
+    "lux": 245,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "lts",
+   "name": "Leher TS",
+   "shortName": "Leher TS",
+   "town": "Bremerhaven",
+   "lat": 53.57,
+   "lon": 8.6,
+   "landesverband": "Bremer FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HB",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HB"
+   },
+   "strength": 33,
+   "budget": 540000,
+   "fanPotential": 150,
+   "stadium": {
+    "capacity": 2000,
+    "seats": 238,
+    "lux": 152,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "u60",
+   "name": "FC Union 60 Bremen",
+   "shortName": "Union 60",
+   "town": "Bremen",
+   "lat": 53.06,
+   "lon": 8.78,
+   "landesverband": "Bremer FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HB",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HB"
+   },
+   "strength": 33,
+   "budget": 590000,
+   "fanPotential": 150,
+   "stadium": {
+    "capacity": 2000,
+    "seats": 271,
+    "lux": 181,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "hab",
+   "name": "Habenhauser FV",
+   "shortName": "Habenhausen",
+   "town": "Bremen",
+   "lat": 53.04,
+   "lon": 8.85,
+   "landesverband": "Bremer FV",
+   "regionalverband": "NFV",
+   "gebiet": "NORD",
+   "oberligaId": "OL-HB",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-HB"
+   },
+   "strength": 33,
+   "budget": 730000,
+   "fanPotential": 150,
+   "stadium": {
+    "capacity": 2000,
+    "seats": 367,
+    "lux": 270,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#00843d",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "teb",
+   "name": "Tennis Borussia Berlin",
+   "shortName": "TeBe",
+   "town": "Berlin",
+   "lat": 52.508,
+   "lon": 13.274,
+   "landesverband": "Berliner FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-N",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NOFV-N"
+   },
+   "strength": 40,
+   "budget": 670000,
+   "fanPotential": 700,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 815,
+    "lux": 423,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#6a2c91",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "bak",
+   "name": "Berliner AK 07",
+   "shortName": "BAK 07",
+   "town": "Berlin",
+   "lat": 52.54,
+   "lon": 13.34,
+   "landesverband": "Berliner FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-N",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NOFV-N"
+   },
+   "strength": 39,
+   "budget": 550000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 4000,
+    "seats": 499,
+    "lux": 343,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "l47",
+   "name": "SV Lichtenberg 47",
+   "shortName": "Lichtenberg 47",
+   "town": "Berlin",
+   "lat": 52.512,
+   "lon": 13.51,
+   "landesverband": "Berliner FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-N",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NOFV-N"
+   },
+   "strength": 38,
+   "budget": 440000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 10000,
+    "seats": 3000,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fch4",
+   "name": "FC Hansa Rostock II",
+   "shortName": "Rostock II",
+   "town": "Rostock",
+   "lat": 54.084,
+   "lon": 12.093,
+   "landesverband": "LFV Mecklenburg-Vorpommern",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-N",
+   "isReserve": true,
+   "parentId": "fch2",
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NOFV-N"
+   },
+   "strength": 37,
+   "budget": 640000,
+   "fanPotential": 200,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 387,
+    "lux": 217,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#005ca9",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "ufw",
+   "name": "FSV Union Fürstenwalde",
+   "shortName": "Fürstenwalde",
+   "town": "Fürstenwalde/Spree",
+   "lat": 52.36,
+   "lon": 14.06,
+   "landesverband": "FLB Brandenburg",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-N",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NOFV-N"
+   },
+   "strength": 38,
+   "budget": 500000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 535,
+    "lux": 306,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "rat2",
+   "name": "FSV Optik Rathenow",
+   "shortName": "Rathenow",
+   "town": "Rathenow",
+   "lat": 52.6,
+   "lon": 12.34,
+   "landesverband": "FLB Brandenburg",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-N",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NOFV-N"
+   },
+   "strength": 37,
+   "budget": 550000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 614,
+    "lux": 339,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "tor",
+   "name": "Torgelower FC Greif",
+   "shortName": "Torgelow",
+   "town": "Torgelow",
+   "lat": 53.63,
+   "lon": 14.01,
+   "landesverband": "LFV Mecklenburg-Vorpommern",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-N",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NOFV-N"
+   },
+   "strength": 36,
+   "budget": 660000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 478,
+    "lux": 225,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "dsn",
+   "name": "FC Mecklenburg Schwerin",
+   "shortName": "Schwerin",
+   "town": "Schwerin",
+   "lat": 53.63,
+   "lon": 11.4,
+   "landesverband": "LFV Mecklenburg-Vorpommern",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-N",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NOFV-N"
+   },
+   "strength": 36,
+   "budget": 710000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 4000,
+    "seats": 705,
+    "lux": 450,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "vfa",
+   "name": "VfB Auerbach",
+   "shortName": "Auerbach",
+   "town": "Auerbach/Vogtl.",
+   "lat": 50.51,
+   "lon": 12.4,
+   "landesverband": "Sächsischer FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NOFV-S"
+   },
+   "strength": 39,
+   "budget": 650000,
+   "fanPotential": 500,
+   "stadium": {
+    "capacity": 3500,
+    "seats": 544,
+    "lux": 219,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "vfc",
+   "name": "VFC Plauen",
+   "shortName": "Plauen",
+   "town": "Plauen",
+   "lat": 50.5,
+   "lon": 12.13,
+   "landesverband": "Sächsischer FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NOFV-S"
+   },
+   "strength": 40,
+   "budget": 650000,
+   "fanPotential": 800,
+   "stadium": {
+    "capacity": 12000,
+    "seats": 3600,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "bud",
+   "name": "FSV Budissa Bautzen",
+   "shortName": "Bautzen",
+   "town": "Bautzen",
+   "lat": 51.18,
+   "lon": 14.43,
+   "landesverband": "Sächsischer FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NOFV-S"
+   },
+   "strength": 38,
+   "budget": 580000,
+   "fanPotential": 500,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 664,
+    "lux": 360,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "rud",
+   "name": "FC Einheit Rudolstadt",
+   "shortName": "Rudolstadt",
+   "town": "Rudolstadt",
+   "lat": 50.72,
+   "lon": 11.33,
+   "landesverband": "Thüringer FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NOFV-S"
+   },
+   "strength": 37,
+   "budget": 470000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 3500,
+    "seats": 334,
+    "lux": 108,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "fcm2",
+   "name": "1. FC Magdeburg II",
+   "shortName": "Magdeburg II",
+   "town": "Magdeburg",
+   "lat": 52.125,
+   "lon": 11.671,
+   "landesverband": "FSA Sachsen-Anhalt",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": true,
+   "parentId": "fcm",
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NOFV-S"
+   },
+   "strength": 37,
+   "budget": 480000,
+   "fanPotential": 200,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 251,
+    "lux": 118,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "gri",
+   "name": "FC Grimma",
+   "shortName": "Grimma",
+   "town": "Grimma",
+   "lat": 51.24,
+   "lon": 12.72,
+   "landesverband": "Sächsischer FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NOFV-S"
+   },
+   "strength": 37,
+   "budget": 550000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 374,
+    "lux": 162,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "wis",
+   "name": "BSG Wismut Gera",
+   "shortName": "Gera",
+   "town": "Gera",
+   "lat": 50.88,
+   "lon": 12.08,
+   "landesverband": "Thüringer FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NOFV-S"
+   },
+   "strength": 37,
+   "budget": 470000,
+   "fanPotential": 500,
+   "stadium": {
+    "capacity": 15000,
+    "seats": 4500,
+    "lux": 1000,
+    "pressSeats": 40
+   },
+   "colors": [
+    "#0050a0",
+    "#fcd116"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "nor",
+   "name": "FSV Wacker 90 Nordhausen",
+   "shortName": "Nordhausen",
+   "town": "Nordhausen",
+   "lat": 51.5,
+   "lon": 10.79,
+   "landesverband": "Thüringer FV",
+   "regionalverband": "NOFV",
+   "gebiet": "NORDOST",
+   "oberligaId": "OL-NOFV-S",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-NOFV-S"
+   },
+   "strength": 36,
+   "budget": 470000,
+   "fanPotential": 500,
+   "stadium": {
+    "capacity": 8000,
+    "seats": 774,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "sel",
+   "name": "SV Seligenporten",
+   "shortName": "Seligenporten",
+   "town": "Pyrbaum",
+   "lat": 49.29,
+   "lon": 11.29,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYN",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BYN"
+   },
+   "strength": 39,
+   "budget": 690000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 423,
+    "lux": 243,
+    "pressSeats": 4
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "atse",
+   "name": "ATSV Erlangen",
+   "shortName": "Erlangen",
+   "town": "Erlangen",
+   "lat": 49.6,
+   "lon": 11,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYN",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BYN"
+   },
+   "strength": 37,
+   "budget": 770000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 495,
+    "lux": 296,
+    "pressSeats": 5
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "geb",
+   "name": "DJK Gebenbach",
+   "shortName": "Gebenbach",
+   "town": "Gebenbach",
+   "lat": 49.52,
+   "lon": 11.8,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYN",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BYN"
+   },
+   "strength": 38,
+   "budget": 560000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 315,
+    "lux": 164,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#00843d",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "wfv",
+   "name": "Würzburger FV",
+   "shortName": "Würzburger FV",
+   "town": "Würzburg",
+   "lat": 49.8,
+   "lon": 9.94,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYN",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BYN"
+   },
+   "strength": 37,
+   "budget": 450000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 265,
+    "lux": 95,
+    "pressSeats": 1
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "gro",
+   "name": "TSV Großbardorf",
+   "shortName": "Großbardorf",
+   "town": "Großbardorf",
+   "lat": 50.27,
+   "lon": 10.36,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYN",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BYN"
+   },
+   "strength": 37,
+   "budget": 550000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 309,
+    "lux": 160,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "cob",
+   "name": "FC Coburg",
+   "shortName": "Coburg",
+   "town": "Coburg",
+   "lat": 50.26,
+   "lon": 10.96,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYN",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BYN"
+   },
+   "strength": 37,
+   "budget": 750000,
+   "fanPotential": 500,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 954,
+    "lux": 481,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "elt",
+   "name": "SC Eltersdorf",
+   "shortName": "Eltersdorf",
+   "town": "Erlangen",
+   "lat": 49.54,
+   "lon": 10.99,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYN",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BYN"
+   },
+   "strength": 37,
+   "budget": 560000,
+   "fanPotential": 250,
+   "stadium": {
+    "capacity": 2000,
+    "seats": 256,
+    "lux": 168,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "hof",
+   "name": "SpVgg Bayern Hof",
+   "shortName": "Bayern Hof",
+   "town": "Hof",
+   "lat": 50.32,
+   "lon": 11.91,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYN",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BYN"
+   },
+   "strength": 37,
+   "budget": 760000,
+   "fanPotential": 500,
+   "stadium": {
+    "capacity": 10000,
+    "seats": 3000,
+    "lux": 600,
+    "pressSeats": 15
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "lan",
+   "name": "TSV Landsberg",
+   "shortName": "Landsberg",
+   "town": "Landsberg am Lech",
+   "lat": 48.05,
+   "lon": 10.88,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BYS"
+   },
+   "strength": 38,
+   "budget": 540000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 361,
+    "lux": 154,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "kir",
+   "name": "SV Kirchanschöring",
+   "shortName": "Kirchanschöring",
+   "town": "Kirchanschöring",
+   "lat": 47.95,
+   "lon": 12.84,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BYS"
+   },
+   "strength": 37,
+   "budget": 570000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 325,
+    "lux": 172,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "pip",
+   "name": "FC Pipinsried",
+   "shortName": "Pipinsried",
+   "town": "Altomünster",
+   "lat": 48.39,
+   "lon": 11.3,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BYS"
+   },
+   "strength": 37,
+   "budget": 540000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 300,
+    "lux": 153,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#fcd116",
+    "#0050a0"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "sha",
+   "name": "SV Schalding-Heining",
+   "shortName": "Schalding",
+   "town": "Passau",
+   "lat": 48.58,
+   "lon": 13.38,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BYS"
+   },
+   "strength": 37,
+   "budget": 750000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 478,
+    "lux": 284,
+    "pressSeats": 5
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "ros",
+   "name": "TSV 1860 Rosenheim",
+   "shortName": "Rosenheim",
+   "town": "Rosenheim",
+   "lat": 47.86,
+   "lon": 12.12,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BYS"
+   },
+   "strength": 37,
+   "budget": 520000,
+   "fanPotential": 400,
+   "stadium": {
+    "capacity": 5000,
+    "seats": 569,
+    "lux": 320,
+    "pressSeats": 6
+   },
+   "colors": [
+    "#0068b3",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "hst",
+   "name": "SV Heimstetten",
+   "shortName": "Heimstetten",
+   "town": "Kirchheim bei München",
+   "lat": 48.16,
+   "lon": 11.76,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BYS"
+   },
+   "strength": 37,
+   "budget": 780000,
+   "fanPotential": 250,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 498,
+    "lux": 299,
+    "pressSeats": 5
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "kot",
+   "name": "TSV Kottern",
+   "shortName": "Kottern",
+   "town": "Kempten",
+   "lat": 47.73,
+   "lon": 10.32,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BYS"
+   },
+   "strength": 36,
+   "budget": 580000,
+   "fanPotential": 250,
+   "stadium": {
+    "capacity": 2500,
+    "seats": 332,
+    "lux": 177,
+    "pressSeats": 3
+   },
+   "colors": [
+    "#0050a0",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  },
+  {
+   "id": "son2",
+   "name": "1. FC Sonthofen",
+   "shortName": "Sonthofen",
+   "town": "Sonthofen",
+   "lat": 47.52,
+   "lon": 10.28,
+   "landesverband": "Bayerischer FV",
+   "regionalverband": "BFV",
+   "gebiet": "BAYERN",
+   "oberligaId": "OL-BYS",
+   "isReserve": false,
+   "league2026": {
+    "level": "OL",
+    "group": "OL-BYS"
+   },
+   "strength": 36,
+   "budget": 510000,
+   "fanPotential": 300,
+   "stadium": {
+    "capacity": 3000,
+    "seats": 328,
+    "lux": 134,
+    "pressSeats": 2
+   },
+   "colors": [
+    "#e30613",
+    "#ffffff"
+   ],
+   "verified": false,
+   "estimated": [
+    "strength",
+    "budget",
+    "fanPotential",
+    "stadium.seats",
+    "stadium.lux",
+    "stadium.pressSeats"
+   ]
+  }
+ ]
+}
