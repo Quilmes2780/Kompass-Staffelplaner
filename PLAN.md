@@ -1,6 +1,6 @@
 # KOMPASS – Der Staffelplaner · Projektplan
 
-Stand: 30.10.2026 · Status: **In Umsetzung** (Entscheidungen siehe Abschnitt 7)
+Stand: 31.10.2026 · Status: **M1–M8 umgesetzt** (Entscheidungen siehe Abschnitt 7, Dokumentation in README.md)
 
 ---
 
