@@ -325,6 +325,9 @@ export interface SeasonSummary {
   revenue: number;
   grade?: number;
   specialCases: string[];
+  streaks?: { label: string; clubId: ClubId; length: number }[];
+  /** Ergebnisse aller Derbys der Saison (für Rivalen-Bilanzen) */
+  derbyResults?: { home: ClubId; away: ClubId; hg: number; ag: number }[];
 }
 
 // ---------- Spielzustand ----------

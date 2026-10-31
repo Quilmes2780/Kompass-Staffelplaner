@@ -14,7 +14,8 @@ import { allLicensesDecided, decideLicense as decideLicenseRaw, finishLicensing,
 import { addNews } from "./news";
 import { resolvePromotion } from "./promotion";
 import { hashKeys } from "./rng";
-import { isSeasonComplete, matchStats, playMatchdays, playToEnd, playWeek, startSeason } from "./season";
+import { isSeasonComplete, matchStats, pairKey, playMatchdays, playToEnd, playWeek, startSeason } from "./season";
+import { computeStreaks } from "./stats";
 import { newGame as newGameRaw, type NewGameOptions } from "./setup";
 import { acceptance, adjust, reactToAllocation, seasonEndDrift } from "./stakeholders";
 import type {
@@ -357,6 +358,8 @@ export function finishSeason(state: GameState): GameState {
       acceptance: acceptance(s),
       revenue: fin.revenue,
       specialCases: out.specialCases,
+      streaks: computeStreaks(Object.values(s.competitions)),
+      derbyResults: derbyResultsOf(s),
     };
     summary.grade = seasonGrade(summary);
     s.history.seasons.push(summary);
@@ -376,6 +379,14 @@ export function finishSeason(state: GameState): GameState {
     s.currentMetrics = undefined;
     s.phase = "WRAPUP";
   });
+}
+
+function derbyResultsOf(s: GameState): NonNullable<SeasonSummary["derbyResults"]> {
+  const keys = new Set(s.derbies.map((d) => pairKey(d.a, d.b)));
+  const out: NonNullable<SeasonSummary["derbyResults"]> = [];
+  for (const c of Object.values(s.competitions))
+    for (const f of c.fixtures) if (f.hg !== undefined && keys.has(pairKey(f.home, f.away))) out.push({ home: f.home, away: f.away, hg: f.hg, ag: f.ag! });
+  return out;
 }
 
 function playoffFor(id: ClubId, out: ReturnType<typeof resolvePromotion>): ClubSeasonRecord["playoff"] {
