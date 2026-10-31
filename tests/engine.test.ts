@@ -160,8 +160,11 @@ describe("Saisonsimulation und Auf-/Abstieg", () => {
     const reserve = "fcb2";
     const parent = "fcb";
     const l3Club = s.leagues.L3.find((id) => !s.clubs[id].isReserve)!;
+    // Bayern II mit einem Drittligisten tauschen – egal, ob sie zum Start in der RL oder einer Oberliga stehen
+    const swapIn = (ids: string[]) => ids.map((x) => (x === reserve ? l3Club : x));
+    s.leagues.RL.POOL = swapIn(s.leagues.RL.POOL);
+    for (const k of Object.keys(s.leagues.OL)) s.leagues.OL[k] = swapIn(s.leagues.OL[k]);
     s.leagues.L3 = [...s.leagues.L3.filter((x) => x !== l3Club), reserve];
-    s.leagues.RL.POOL = [...s.leagues.RL.POOL.filter((x) => x !== reserve), l3Club];
     s.clubs[parent].strength = 1;
     s.clubs[reserve].strength = 95; // sportlich sicher
     if (s.leagues.BL.includes(parent)) {

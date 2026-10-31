@@ -40,7 +40,6 @@
     { "a": "mep", "b": "vfl", "weight": 2, "verified": false },
     { "a": "h962", "b": "ebs2", "weight": 2, "verified": false },
     { "a": "h962", "b": "hav", "weight": 1, "verified": false },
-    { "a": "wob2", "b": "ebs2", "weight": 1, "verified": false },
     { "a": "loh", "b": "jed", "weight": 1, "verified": false },
     { "a": "fwk", "b": "s05", "weight": 3, "name": "Unterfranken-Derby", "verified": true },
     { "a": "aub", "b": "s05", "weight": 2, "verified": false },
@@ -49,7 +48,6 @@
     { "a": "fcb2", "b": "m60", "weight": 3, "name": "Münchner Stadtderby", "verified": true },
     { "a": "fcb2", "b": "uha", "weight": 2, "verified": false },
     { "a": "m60", "b": "uha", "weight": 2, "verified": false },
-    { "a": "tgm", "b": "uha", "weight": 1, "verified": false },
     { "a": "fcn2", "b": "sgf2", "weight": 3, "name": "Frankenderby", "verified": true },
     { "a": "byr", "b": "fcn2", "weight": 1, "verified": false },
     { "a": "byr", "b": "hof", "weight": 2, "verified": false },
@@ -76,7 +74,6 @@
     { "a": "svs", "b": "fca4", "weight": 2, "verified": false },
     { "a": "skk", "b": "vfb2", "weight": 3, "name": "Stuttgarter Stadtderby", "verified": true },
     { "a": "skk", "b": "sgv", "weight": 1, "verified": false },
-    { "a": "skk", "b": "gsv", "weight": 1, "verified": false },
     { "a": "scf2", "b": "bah", "weight": 2, "verified": false },
     { "a": "fcv", "b": "bah", "weight": 1, "verified": false },
     { "a": "m052", "b": "sge2", "weight": 1, "verified": false },
@@ -103,7 +100,6 @@
     { "a": "fko", "b": "koe2", "weight": 2, "verified": false },
     { "a": "fko", "b": "vik", "weight": 2, "verified": false },
     { "a": "aac", "b": "dur", "weight": 1, "verified": false },
-    { "a": "sfs", "b": "ern", "weight": 1, "verified": false },
     { "a": "bsc3", "b": "fko", "weight": 1, "verified": false }
   ]
 }

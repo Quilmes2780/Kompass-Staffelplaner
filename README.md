@@ -121,18 +121,21 @@ Ausschüttung gehen an 1. Mannschaften. Das 22/5-Modell ist als 5 × 18 mit Meis
   "strength": 55,                    // 0–100
   "budget": 2530000,                 // € p. a.
   "fanPotential": 4500,              // erwarteter Zuschauerschnitt in der Regionalliga
-  "stadium": { "capacity": 10900, "seats": 3270, "lux": 600, "pressSeats": 15 },
+  "stadium": { "name": "Bruno-Plache-Stadion", "capacity": 12321, "seats": 3270, "lux": 600, "pressSeats": 15 },
   "colors": ["#0050a0", "#fcd116"],
-  "verified": false,                 // false = Werte unsicher, bitte prüfen
-  "estimated": ["strength", "budget", "…"] // Modellwerte
+  "verified": true,                  // true = Liga 2026/27 und Kapazität belegt, false = bitte prüfen
+  "estimated": ["strength", "budget", "…"], // Modellwerte
+  "source": { "liga": "Wikipedia: RL-NO 2026/27", "stadion": "Saisonartikel RL-NO 2026/27", "abgerufen": "2026-10-31" }
 }
 ```
 
 ### Stammdaten korrigieren
 
-1. `data/clubs.json` bzw. `data/derbies.json` direkt bearbeiten. Einträge mit `"verified": false` sind nach bestem
-   Wissen (Stand Mitte 2026) erfasst. Die Ligazugehörigkeit 2026/27, Sitzplätze, Lux, Presseplätze, Etat und Stärke
-   sind Schätzungen. Nach der Prüfung `verified` auf `true` setzen und das Feld aus `estimated` entfernen.
+1. `data/clubs.json` bzw. `data/derbies.json` direkt bearbeiten. Ligazugehörigkeit 2026/27 und Stadionkapazität sind mit
+   Wikipedia abgeglichen (Stand 31.10.2026): Bundesligen, 3. Liga und Regionalligen aus den Stadion-/Zuschauertabellen der
+   Saisonartikel, Oberligen aus der Infobox des Vereinsartikels; die Quelle steht je Verein unter `source`. Sitzplätze, Lux,
+   Presseplätze, Etat, Stärke und Fanpotenzial bleiben Modellwerte (`estimated`). Vereine mit `"verified": false` haben
+   keine belegte Kapazität (u. a. Oberliga-Zweitvertretungen, deren Infobox nur das Stadion des Muttervereins nennt).
 2. Für neue Vereine eine neue eindeutige `id` vergeben. Zweitvertretungen brauchen `isReserve: true` und `parentId`.
    Derbys verweisen auf `id`s.
 3. `npm test` ausführen: Der Test „Echtwelt ist valide“ prüft eindeutige IDs, Koordinaten in Deutschland, bekannte
