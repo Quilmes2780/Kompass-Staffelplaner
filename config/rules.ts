@@ -138,8 +138,9 @@ export const KOMPASS_RULES: RulesConfig = {
   description: "4 Staffeln à 20, 4 direkte Aufsteiger, 16 Absteiger, Kontingente West 4 / Südwest 4 / Nord 3 / Bayern 2,5 / Nordost 2,5.",
   startSeason: 2028,
   rl: {
-    groupIds: ["Nord", "Ost", "Süd", "West"],
-    groupBearings: [0, 90, 180, 270],
+    // Richtung = typische Lage des Staffelschwerpunkts; West umfasst Niedersachsen, Hamburg/Bremen und Westfalen
+    groupIds: ["West", "Nordost", "Südost", "Südwest"],
+    groupBearings: [350, 75, 170, 260],
     groupSize: 20,
     relegatedPerGroup: 4,
     promotedToL3: 4,
@@ -198,7 +199,8 @@ export const KOMPASS_RULES: RulesConfig = {
     weights: {
       derbySplitPerWeight: 150,
       reserveOverLimit: 5000,
-      groupChange: 0,
+      // km-Äquivalent je Staffelwechsler: verhindert, dass ein gewährter Härtefall die ganze Einteilung umwirft
+      groupChange: 100,
       strengthImbalance: 0,
     },
     localSearchPasses: 40,

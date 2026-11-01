@@ -15,7 +15,7 @@ export const GROUP_COLORS: Record<string, string> = {
 };
 // Staffelfarben: regionale Namen (aktuelle Regelwerke) und Buchstaben (ältere Spielstände)
 export const GROUP_HEX: Record<string, string> = {
-  Nord: "#0072b2", Ost: "#e69f00", "Süd": "#009e73", West: "#cc79a7", Nordost: "#e69f00", "Südwest": "#56b4e9",
+  West: "#0072b2", Nordost: "#e69f00", "Südost": "#009e73", "Südwest": "#cc79a7", Nord: "#0072b2", Ost: "#e69f00", "Süd": "#009e73",
   A: "#0072b2", B: "#e69f00", C: "#009e73", D: "#cc79a7", E: "#56b4e9", POOL: "#8892a0",
 };
 

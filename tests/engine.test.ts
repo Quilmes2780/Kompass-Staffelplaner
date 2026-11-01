@@ -80,38 +80,38 @@ describe("Staffeleinteilung (Optimierer)", () => {
     }
   });
   it("respektiert fixierte Vereine", () => {
-    const fixed = { [clubs[0]]: "West", [clubs[1]]: "West", [clubs[2]]: "Nord" };
+    const fixed = { [clubs[0]]: "Südwest", [clubs[1]]: "Südwest", [clubs[2]]: "West" };
     const a = optimizeAllocation({ clubs, clubData: s.clubs, derbies: s.derbies, dm, rules: s.rules, seed: 2, fixed });
     expectValidPartition(a, clubs);
-    expect(a.groups.West).toContain(clubs[0]);
-    expect(a.groups.West).toContain(clubs[1]);
-    expect(a.groups.Nord).toContain(clubs[2]);
+    expect(a.groups.Südwest).toContain(clubs[0]);
+    expect(a.groups.Südwest).toContain(clubs[1]);
+    expect(a.groups.West).toContain(clubs[2]);
   });
-  it("benennt die Staffeln nach ihrer Lage (Nord, Ost, Süd, West)", () => {
+  it("benennt die Staffeln nach ihrer Lage (West, Nordost, Südost, Südwest)", () => {
     const a = allocate(s);
     const mean = (g: string, k: "lat" | "lon") => a.groups[g].reduce((x, id) => x + s.clubs[id][k], 0) / a.groups[g].length;
-    expect(Object.keys(a.groups).sort()).toEqual(["Nord", "Ost", "Süd", "West"]);
-    expect(mean("Nord", "lat")).toBeGreaterThan(mean("Süd", "lat"));
-    expect(mean("Ost", "lon")).toBeGreaterThan(mean("West", "lon"));
+    expect(Object.keys(a.groups).sort()).toEqual(["Nordost", "Südost", "Südwest", "West"]);
+    expect(mean("West", "lat")).toBeGreaterThan(mean("Südost", "lat"));
+    expect(mean("Nordost", "lon")).toBeGreaterThan(mean("Südwest", "lon"));
   });
   it("zählt Staffelwechsel nach Vereinsüberschneidung, nicht nach Bezeichnung", () => {
     const prev = allocate(s);
-    const renamed: Allocation = { groups: { Nord: prev.groups.Ost, Ost: prev.groups.Süd, Süd: prev.groups.West, West: prev.groups.Nord }, fixed: [] };
+    const renamed: Allocation = { groups: { West: prev.groups.Nordost, Nordost: prev.groups.Südost, Südost: prev.groups.Südwest, Südwest: prev.groups.West }, fixed: [] };
     expect(groupChangers(prev.groups, renamed.groups)).toEqual([]);
     const moved: Allocation = structuredClone(renamed);
-    const a = moved.groups.Nord.pop()!;
-    const b = moved.groups.Ost.pop()!;
-    moved.groups.Nord.push(b);
-    moved.groups.Ost.push(a);
+    const a = moved.groups.West.pop()!;
+    const b = moved.groups.Nordost.pop()!;
+    moved.groups.West.push(b);
+    moved.groups.Nordost.push(a);
     expect(groupChangers(prev.groups, moved.groups).sort()).toEqual([a, b].sort());
     expect(computeMetrics({ allocation: moved, previous: prev, expectedClubs: clubs, clubs: s.clubs, derbies: s.derbies, dm, rules: s.rules }).groupChanges).toBe(2);
   });
   it("Neuoptimierung mit Härtefällen behält die Staffeln des Vorjahres im Wesentlichen bei", () => {
     const prev = allocate(s, 1);
-    // gewährte Härtefälle: je ein Verein aus Nord und Süd soll in die Staffel Ost
-    const fixed = { [prev.groups.Nord[0]]: "Ost", [prev.groups.Süd[0]]: "Ost", [prev.groups.West[0]]: "West" };
+    // gewährte Härtefälle: je ein Verein aus West und Südost soll in die Staffel Nordost
+    const fixed = { [prev.groups.West[0]]: "Nordost", [prev.groups.Südost[0]]: "Nordost", [prev.groups.Südwest[0]]: "Südwest" };
     const a = optimizeAllocation({ clubs, clubData: s.clubs, derbies: s.derbies, dm, rules: s.rules, seed: 9, fixed, previous: prev });
-    expect(a.groups.Ost).toContain(prev.groups.Nord[0]);
+    expect(a.groups.Nordost).toContain(prev.groups.West[0]);
     const m = computeMetrics({ allocation: a, previous: prev, expectedClubs: clubs, clubs: s.clubs, derbies: s.derbies, dm, rules: s.rules });
     expect(m.groupChanges).toBeLessThan(15);
     // Bezeichnungen folgen den Vereinen: mehr als die Hälfte jeder Staffel stammt aus der gleichnamigen Vorjahresstaffel
@@ -124,8 +124,8 @@ describe("Staffeleinteilung (Optimierer)", () => {
   it("eine ungültige Einteilung lässt sich nicht veröffentlichen und nennt die Regel", () => {
     let g = newGame({ seed: 3 });
     const w = g.allocationDraft!.working;
-    const moved = w.groups.Nord.pop()!;
-    w.groups.Ost.push(moved);
+    const moved = w.groups.West.pop()!;
+    w.groups.Nordost.push(moved);
     expect(metricsFor(g, w).violations.map((v) => v.rule)).toContain("Staffelgröße");
     expect(() => publishAllocation(g)).toThrow(/Staffelgröße/);
     g = newGame({ seed: 3 });
@@ -264,9 +264,9 @@ describe("Oberligen-Simulation und Statistiken", () => {
   });
   it("ewige Tabelle je Staffel, 3. Liga und Oberliga", () => {
     const rl = eternalTable(s, "RL");
-    const nord = eternalTable(s, "RL-Nord");
-    expect(nord.length).toBeGreaterThan(19);
-    expect(nord.length).toBeLessThan(rl.length);
+    const west = eternalTable(s, "RL-West");
+    expect(west.length).toBeGreaterThan(19);
+    expect(west.length).toBeLessThan(rl.length);
     expect(eternalTable(s, "L3").length).toBeGreaterThanOrEqual(20);
     const ol = s.oberligen[0].id;
     const t = eternalTable(s, ol);
