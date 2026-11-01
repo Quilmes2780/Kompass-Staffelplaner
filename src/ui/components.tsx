@@ -310,6 +310,25 @@ export function Modal({ children, onClose }: { children: ReactNode; onClose: () 
   );
 }
 
+/** Rückfrage im Spiel statt window.confirm (in eingebetteten Seiten, v. a. mobil, blockiert) */
+export function Confirm({ text, ok, danger, onOk, onCancel }: { text: ReactNode; ok: string; danger?: boolean; onOk: () => void; onCancel: () => void }) {
+  return (
+    <Modal onClose={onCancel}>
+      <div className="confirm">
+        <p>{text}</p>
+        <div className="row mt">
+          <button className={`btn ${danger ? "danger" : "primary"}`} onClick={onOk}>
+            {ok}
+          </button>
+          <button className="btn" onClick={onCancel}>
+            Abbrechen
+          </button>
+        </div>
+      </div>
+    </Modal>
+  );
+}
+
 export function NewsFeed({ g, limit = 30 }: { g: GameState; limit?: number }) {
   const items = [...g.news].reverse().slice(0, limit);
   return (

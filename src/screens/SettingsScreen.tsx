@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { cloneRules, KOMPASS_RULES, MODEL_22_5_RULES, seasonLabel, type RulesConfig } from "../../config/rules";
 import { exportMasterData, exportState, importState } from "../../engine/persistence";
 import type { GameState, Settings } from "../../engine/types";
-import { useStore } from "../store";
-import { Tip } from "../ui/components";
+import { useStore, type SaveMeta } from "../store";
+import { Confirm, Tip } from "../ui/components";
 import { download, fmt } from "../ui/format";
 
 export function SettingsScreen() {
@@ -32,8 +32,9 @@ function NewGameCard() {
   const [mode, setMode] = useState<"CLUSTER" | "COMPASS">("CLUSTER");
   const [compass, setCompass] = useState<"N" | "O" | "S" | "W">("N");
   const [difficulty, setDifficulty] = useState<Settings["difficulty"]>("NORMAL");
+  const [asking, setAsking] = useState(false);
   const go = () => {
-    if (g && g.phase !== "GAME_OVER" && !confirm("Laufendes Spiel verwerfen? (Es bleibt als automatischer Spielstand erhalten, bis Sie weiterspielen.)")) return;
+    setAsking(false);
     const rules: RulesConfig = cloneRules(preset === "KOMPASS" ? KOMPASS_RULES : MODEL_22_5_RULES);
     rules.prolog.enabled = prolog;
     rules.allocation.roadFactor = roadFactor;
@@ -119,9 +120,18 @@ function NewGameCard() {
           </select>
         </label>
       </div>
-      <button className="btn primary mt" onClick={go}>
+      <button className="btn primary mt" onClick={() => (g && g.phase !== "GAME_OVER" ? setAsking(true) : go())}>
         Spiel starten
       </button>
+      {asking && (
+        <Confirm
+          text="Laufendes Spiel verwerfen? Es bleibt als automatischer Spielstand erhalten, bis Sie im neuen Spiel weiterspielen."
+          ok="Neues Spiel starten"
+          danger
+          onOk={go}
+          onCancel={() => setAsking(false)}
+        />
+      )}
     </div>
   );
 }
@@ -218,6 +228,7 @@ function SavesCard() {
   const load = useStore((s) => s.load);
   const notify = useStore((s) => s.notify);
   const [name, setName] = useState("");
+  const [deleting, setDeleting] = useState<SaveMeta | null>(null);
   const file = useRef<HTMLInputElement>(null);
   useEffect(() => {
     void refresh();
@@ -274,7 +285,7 @@ function SavesCard() {
                 <button className="btn small" onClick={() => void loadSave(s.key)}>
                   Laden
                 </button>{" "}
-                <button className="btn small danger" onClick={() => confirm(`„${s.name}“ löschen?`) && void deleteSave(s.key)}>
+                <button className="btn small danger" onClick={() => setDeleting(s)}>
                   Löschen
                 </button>
               </td>
@@ -289,6 +300,18 @@ function SavesCard() {
           )}
         </tbody>
       </table>
+      {deleting && (
+        <Confirm
+          text={`Spielstand „${deleting.name}“ löschen?`}
+          ok="Löschen"
+          danger
+          onOk={() => {
+            void deleteSave(deleting.key);
+            setDeleting(null);
+          }}
+          onCancel={() => setDeleting(null)}
+        />
+      )}
     </div>
   );
 }
