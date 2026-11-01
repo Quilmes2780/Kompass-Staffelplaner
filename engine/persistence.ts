@@ -1,5 +1,5 @@
 // JSON-Export/-Import von Spielständen und Stammdaten (UI-unabhängig).
-import { validateRules } from "../config/rules";
+import { upgradeRules, validateRules } from "../config/rules";
 import { STATE_VERSION } from "./setup";
 import type { Club, Derby, GameState, Oberliga } from "./types";
 import { validateWorld } from "./world";
@@ -30,7 +30,7 @@ export function importState(json: string): GameState {
   const errs = [...validateRules(s.rules)];
   if (!s.clubs || !s.leagues || !s.history) errs.push("Spielstand unvollständig.");
   if (errs.length) throw new Error(`Spielstand ungültig: ${errs.join("; ")}`);
-  return s;
+  return { ...s, rules: upgradeRules(s.rules) };
 }
 
 export interface MasterDataFile {

@@ -38,6 +38,11 @@ export interface RulesConfig {
     groupIds: string[];
     /** Kompassrichtung je Staffel (0 = Nord, im Uhrzeigersinn) für die erste Benennung ohne Vorjahr */
     groupBearings?: number[];
+    /**
+     * Ankerregionen je Staffel (Staffel → Heim-Oberligen): Vereine dieser Oberligen gehören zu der
+     * Staffel, damit sie über die Jahre nicht „wandert“ und ihre Bezeichnung zur Lage passt
+     */
+    groupAnchors?: Record<string, string[]>;
     groupSize: number;
     relegatedPerGroup: number;
     /** Aufsteiger in die 3. Liga; bei mehr Staffeln als Plätzen spielen überzählige Meister eine Relegation */
@@ -78,6 +83,8 @@ export interface RulesConfig {
       derbySplitPerWeight: number;
       reserveOverLimit: number;
       groupChange: number;
+      /** je Verein einer Ankerregion, der nicht in seiner Ankerstaffel spielt */
+      anchorMiss?: number;
       strengthImbalance: number;
     };
     localSearchPasses: number;
@@ -131,6 +138,27 @@ export interface RulesConfig {
   };
 }
 
+/** Ankerregionen der vier Staffeln: Hamburg, Berlin, Stuttgart/München, Köln */
+const DEFAULT_ANCHORS: Record<string, string[]> = {
+  Nord: ["OL-HH"],
+  Ost: ["OL-NOFV-N"],
+  "Süd": ["OL-BW", "OL-BYN", "OL-BYS"],
+  West: ["OL-MR"],
+};
+// faktisch eine feste Regel; nur wenn eine Ankerregion mehr Vereine stellt als die Staffel fasst
+// (Bayern + Baden-Württemberg), weichen die am günstigsten gelegenen in die Nachbarstaffel aus
+const DEFAULT_ANCHOR_MISS = 10_000;
+
+/** Ältere Spielstände ohne Ankerregionen nachrüsten, sofern sie die vier Regionalstaffeln nutzen */
+export function upgradeRules(r: RulesConfig): RulesConfig {
+  if (r.rl.groupAnchors || !Object.keys(DEFAULT_ANCHORS).every((g) => r.rl.groupIds.includes(g))) return r;
+  return {
+    ...r,
+    rl: { ...r.rl, groupAnchors: DEFAULT_ANCHORS },
+    allocation: { ...r.allocation, weights: { ...r.allocation.weights, anchorMiss: r.allocation.weights.anchorMiss ?? DEFAULT_ANCHOR_MISS } },
+  };
+}
+
 /** Kompassmodell laut DFB-Antrag vom 30.10.2026 */
 export const KOMPASS_RULES: RulesConfig = {
   id: "KOMPASS",
@@ -141,6 +169,7 @@ export const KOMPASS_RULES: RulesConfig = {
     // Richtung = typische Lage des Staffelschwerpunkts (Nord umfasst auch Westfalen, West auch Hessen und das Saarland)
     groupIds: ["Nord", "Ost", "Süd", "West"],
     groupBearings: [350, 75, 170, 260],
+    groupAnchors: DEFAULT_ANCHORS,
     groupSize: 20,
     relegatedPerGroup: 4,
     promotedToL3: 4,
@@ -201,6 +230,8 @@ export const KOMPASS_RULES: RulesConfig = {
       reserveOverLimit: 5000,
       // km-Äquivalent je Staffelwechsler: verhindert, dass ein gewährter Härtefall die ganze Einteilung umwirft
       groupChange: 100,
+      // hält die Staffeln an ihrem Ort (Hamburg im Norden, Köln im Westen …)
+      anchorMiss: DEFAULT_ANCHOR_MISS,
       strengthImbalance: 0,
     },
     localSearchPasses: 40,
@@ -256,7 +287,7 @@ export const MODEL_22_5_RULES: RulesConfig = {
   id: "MODEL_22_5",
   name: "22/5-Modell",
   description: "5 Staffeln à 18, 4 Aufsteiger (Meister-Rotation + Relegation), 15 Absteiger, 3 Aufsteiger je Gebiet.",
-  rl: { ...KOMPASS_RULES.rl, groupIds: ["Nord", "Nordost", "Südwest", "Süd", "West"], groupBearings: [0, 60, 220, 140, 290], groupSize: 18, relegatedPerGroup: 3, maxReservesPerGroup: 6 },
+  rl: { ...KOMPASS_RULES.rl, groupIds: ["Nord", "Nordost", "Südwest", "Süd", "West"], groupBearings: [0, 60, 220, 140, 290], groupAnchors: { Nord: ["OL-HH"], Nordost: ["OL-NOFV-N"], "Südwest": ["OL-BW"], "Süd": ["OL-BYN", "OL-BYS"], West: ["OL-MR"] }, groupSize: 18, relegatedPerGroup: 3, maxReservesPerGroup: 6 },
   quotas: {
     WEST: { slots: 3, direct: [{ oberligaId: "OL-NR", rank: 1 }, { oberligaId: "OL-WF", rank: 1 }, { oberligaId: "OL-MR", rank: 1 }], rounds: [] },
     SUEDWEST: { slots: 3, direct: [{ oberligaId: "OL-HE", rank: 1 }, { oberligaId: "OL-BW", rank: 1 }, { oberligaId: "OL-RPS", rank: 1 }], rounds: [] },

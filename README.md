@@ -73,13 +73,13 @@ Der komplette Spielstand ist ein JSON-Objekt `GameState` (`engine/types.ts`), oh
 
 | Bereich | Parameter (Standard) |
 |---|---|
-| `rl` | Staffeln `Nord`, `Ost`, `Süd`, `West` (mit `groupBearings` für die erste Benennung), `groupSize` 20, `relegatedPerGroup` 4, `promotedToL3` 4, `maxReservesPerGroup` 7 |
+| `rl` | Staffeln `Nord`, `Ost`, `Süd`, `West` (mit `groupBearings` für die erste Benennung und `groupAnchors` als feste Ankerregionen: Nord = Oberliga Hamburg, Ost = NOFV-Oberliga Nord, Süd = Oberliga Baden-Württemberg und Bayernligen, West = Mittelrheinliga), `groupSize` 20, `relegatedPerGroup` 4, `promotedToL3` 4, `maxReservesPerGroup` 7 |
 | `l3` | 20 Teams, 4 Absteiger, 3 Aufsteiger in die 2. BL, vereinfachte Drittliga-Zulassung (Kapazität 5.000, Etat 1,8 Mio. €) |
 | `quotas` | je Gebiet: direkte Plätze (Oberliga-Meister), Aufstiegsrunden, Kandidaten für den halben Platz |
 | `halfSlotPlayoff` | Relegation Bayern/Nordost, Modus `TWO_LEGS` / `SINGLE_NEUTRAL` / `ALTERNATING_SINGLE` |
 | `maxFallbackRank` | bis zu welchem Platz in derselben Oberliga nachgerückt wird (5) |
 | `oberliga` | `poolSize` 10, `maxTemporaryExtra` 4 (temporäre Aufstockung), `reservoirSize` 6 |
-| `allocation` | `roadFactor` 1,25; `mode` CLUSTER/COMPASS; `compassStart` N/O/S/W; Strafgewichte (Derby je Gewichtspunkt 150 km, Zweitvertretungs-Überhang, Staffelwechsel, Leistungsbalance) |
+| `allocation` | `roadFactor` 1,25; `mode` CLUSTER/COMPASS; `compassStart` N/O/S/W; Strafgewichte (Derby je Gewichtspunkt 150 km, Zweitvertretungs-Überhang, Staffelwechsel, Verein außerhalb seiner Ankerstaffel 10.000 km, Leistungsbalance). Ältere Spielstände erhalten die Ankerregionen beim Laden. |
 | `licensing` | ≥ 2.500 Plätze, ≥ 100 Sitzplätze, ≥ 200 lx (Ziel 400), ≥ 3 Presseplätze; Kapazität/Flutlicht Pflicht ab 2030; wirtschaftliche Stufen |
 | `finance` | Garantie 40.000 € bis 2031/32, 90 % Ausschüttung, ≥ 500.000 € je Regionalverband, Vermarktungsbasis, Reisekosten, Ticketpreis, DFB-Zuschuss |
 | `match` | Torbasis, Heimvorteil, Stärkeskala, Reise-Ermüdung, Derby-Bonus, Form, Dixon-Coles-ρ |

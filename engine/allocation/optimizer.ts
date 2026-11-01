@@ -34,9 +34,11 @@ interface Ctx {
   strength: Float64Array;
   prevGroup: Int32Array; // −1 = kein Vorjahr
   fixed: Int32Array; // −1 = frei
+  anchor: Int32Array; // Ankerstaffel der Heim-Oberliga, −1 = keine
   maxReserves: number;
   wReserve: number;
   wChange: number;
+  wAnchor: number;
   wBalance: number;
 }
 
@@ -69,7 +71,7 @@ function buildCtx(inp: OptimizeInput): Ctx {
     strength[i] = inp.clubData[id].strength;
   });
   if (inp.previous)
-    for (const [g, list] of Object.entries(inp.previous.groups)) {
+    for (const [g, list] of Object.entries(alignPrevious(inp))) {
       const gIdx = r.rl.groupIds.indexOf(g);
       for (const id of list) if (local[id] !== undefined && gIdx >= 0) prevGroup[local[id]] = gIdx;
     }
@@ -77,6 +79,9 @@ function buildCtx(inp: OptimizeInput): Ctx {
     const gIdx = r.rl.groupIds.indexOf(g);
     if (local[id] !== undefined && gIdx >= 0) fixed[local[id]] = gIdx;
   }
+  const anchorOf = anchorGroups(r);
+  const anchor = new Int32Array(n).fill(-1);
+  ids.forEach((id, i) => (anchor[i] = anchorOf[inp.clubData[id].oberligaId] ?? -1));
   return {
     n,
     G,
@@ -88,11 +93,57 @@ function buildCtx(inp: OptimizeInput): Ctx {
     strength,
     prevGroup,
     fixed,
+    anchor,
     maxReserves: r.rl.maxReservesPerGroup,
     wReserve: r.allocation.weights.reserveOverLimit,
     wChange: r.allocation.weights.groupChange,
+    wAnchor: r.allocation.weights.anchorMiss ?? 0,
     wBalance: r.allocation.weights.strengthImbalance,
   };
+}
+
+/** Heim-Oberliga → Index der Ankerstaffel */
+function anchorGroups(r: RulesConfig): Record<string, number> {
+  const out: Record<string, number> = {};
+  for (const [g, ols] of Object.entries(r.rl.groupAnchors ?? {})) {
+    const gIdx = r.rl.groupIds.indexOf(g);
+    if (gIdx >= 0) for (const ol of ols) out[ol] = gIdx;
+  }
+  return out;
+}
+
+/**
+ * Vorjahresstaffeln so umbenennen, dass möglichst viele Ankervereine in ihrer Ankerstaffel stehen.
+ * Ist eine Staffel in einem älteren Spielstand weggewandert, zählt die Stabilitätsstrafe dann gegen
+ * die richtig benannte Vorgängerin statt die Fehlbenennung festzuschreiben.
+ */
+function alignPrevious(inp: OptimizeInput): Record<string, ClubId[]> {
+  const prev = inp.previous!.groups;
+  const ids = inp.rules.rl.groupIds;
+  const anchorOf = anchorGroups(inp.rules);
+  if (!Object.keys(anchorOf).length || ids.some((g) => !prev[g])) return prev;
+  // hits[src][dst] = Ankervereine der Vorjahresstaffel src, deren Ankerstaffel dst ist
+  const hits = ids.map((g) => {
+    const h = new Array(ids.length).fill(0);
+    for (const id of prev[g]) {
+      const a = inp.clubData[id] ? anchorOf[inp.clubData[id].oberligaId] : undefined;
+      if (a !== undefined) h[a]++;
+    }
+    return h;
+  });
+  let best = ids.map((_, i) => i);
+  let bestScore = -Infinity;
+  for (const p of permutations(ids.map((_, i) => i))) {
+    // bei Gleichstand die bisherige Benennung behalten
+    const s = p.reduce((a, src, dst) => a + hits[src][dst] * 10 + (src === dst ? 1 : 0), 0);
+    if (s > bestScore) {
+      bestScore = s;
+      best = p;
+    }
+  }
+  const out: Record<string, ClubId[]> = {};
+  best.forEach((src, dst) => (out[ids[dst]] = prev[ids[src]]));
+  return out;
 }
 
 /** Kosten einer Zuordnung (assign[i] = Staffelindex) */
@@ -112,15 +163,17 @@ function groupPenalties(c: Ctx, assign: Int32Array): number {
   const str = new Array(c.G).fill(0);
   const cnt = new Array(c.G).fill(0);
   let changes = 0;
+  let misses = 0;
   for (let i = 0; i < c.n; i++) {
     res[assign[i]] += c.reserve[i];
     str[assign[i]] += c.strength[i];
     cnt[assign[i]]++;
     if (c.prevGroup[i] >= 0 && c.prevGroup[i] !== assign[i]) changes++;
+    if (c.anchor[i] >= 0 && c.anchor[i] !== assign[i]) misses++;
   }
   let p = 0;
   for (let g = 0; g < c.G; g++) p += Math.max(0, res[g] - c.maxReserves) * c.wReserve;
-  p += changes * c.wChange;
+  p += changes * c.wChange + misses * c.wAnchor;
   if (c.wBalance > 0) {
     const means = str.map((s, g) => s / Math.max(1, cnt[g]));
     const m = means.reduce((a, b) => a + b, 0) / c.G;
@@ -149,8 +202,10 @@ function initialCluster(c: Ctx, rng: Rng): Int32Array {
       if (c.fixed[i] === g) fixedHere.push(i);
       else if (c.fixed[i] < 0 && c.prevGroup[i] === g) prevHere.push(i);
     }
-    // Vorjahresvereine zuerst: ein per Härtefall fixierter Ausreißer soll die Staffel nicht verschieben
-    const pool = prevHere.length ? prevHere : fixedHere;
+    // Ankervereine zuerst, dann Vorjahresvereine: ein per Härtefall fixierter Ausreißer soll die Staffel nicht verschieben
+    const anchorHere: number[] = [];
+    for (let i = 0; i < c.n; i++) if (c.fixed[i] < 0 && c.anchor[i] === g) anchorHere.push(i);
+    const pool = anchorHere.length ? anchorHere : prevHere.length ? prevHere : fixedHere;
     if (pool.length) centers[g] = pool[rng.int(0, pool.length - 1)];
   }
   if (centers.every((k) => k < 0)) centers[0] = rng.int(0, c.n - 1);
@@ -262,7 +317,7 @@ function localSearch(c: Ctx, assign: Int32Array, passes: number): number {
   let cost = totalCost(c, assign);
   const resCnt = new Array(c.G).fill(0);
   for (let i = 0; i < n; i++) resCnt[assign[i]] += c.reserve[i];
-  const needGroupPen = c.wChange > 0 || c.wBalance > 0;
+  const needGroupPen = c.wChange > 0 || c.wBalance > 0 || c.wAnchor > 0;
   for (let pass = 0; pass < passes; pass++) {
     let improved = false;
     for (let i = 0; i < n; i++) {
@@ -396,13 +451,17 @@ function relabelGroups(groups: Record<string, ClubId[]>, inp: OptimizeInput): Re
     const dx = (centroid[src].lon - lon0) * Math.cos((lat0 * Math.PI) / 180);
     return Math.cos(Math.atan2(dx, dy) - (bearings[dst] * Math.PI) / 180);
   };
+  const anchorOf = anchorGroups(inp.rules);
+  const previous = inp.previous ? alignPrevious(inp) : undefined;
   let best = ids.map((_, i) => i);
   let bestScore = -Infinity;
   for (const p of permutations(ids.map((_, i) => i))) {
     if (fixed.some(([id, g]) => !sets[p[ids.indexOf(g)]]?.has(id))) continue;
     let s = 0;
     p.forEach((src, dst) => {
-      const prev = inp.previous?.groups[ids[dst]];
+      // Ankerregionen vor Vorjahresüberschneidung vor Himmelsrichtung
+      for (const id of lists[src]) if (anchorOf[inp.clubData[id].oberligaId] === dst) s += 100_000;
+      const prev = previous?.[ids[dst]];
       if (prev) for (const id of prev) if (sets[src].has(id)) s += 1000;
       s += geo(src, dst);
     });

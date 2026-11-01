@@ -117,6 +117,20 @@ describe("Staffeleinteilung (Optimierer)", () => {
     // Bezeichnungen folgen den Vereinen: mehr als die Hälfte jeder Staffel stammt aus der gleichnamigen Vorjahresstaffel
     for (const g of Object.keys(a.groups)) expect(a.groups[g].filter((id) => prev.groups[g].includes(id)).length).toBeGreaterThan(10);
   });
+  it("Ankerregionen: verschobene Vorjahresbezeichnungen werden zurück an ihren Ort geholt", () => {
+    const prev = allocate(s, 1);
+    // ein älterer Spielstand, in dem die Bezeichnungen eine Staffel weitergewandert sind
+    const drifted: Allocation = { groups: { Nord: prev.groups.West, Ost: prev.groups.Nord, Süd: prev.groups.Ost, West: prev.groups.Süd }, fixed: [] };
+    const a = optimizeAllocation({ clubs, clubData: s.clubs, derbies: s.derbies, dm, rules: s.rules, seed: 4, previous: drifted });
+    const anchors = s.rules.rl.groupAnchors!;
+    for (const [g, ols] of Object.entries(anchors)) {
+      const own = clubs.filter((id) => ols.includes(s.clubs[id].oberligaId));
+      // Süd kann mehr Ankervereine haben als Plätze
+      expect(own.filter((id) => a.groups[g].includes(id)).length).toBe(Math.min(own.length, 20));
+    }
+    // die Vereine bleiben trotzdem zusammen: kaum echte Staffelwechsel
+    expect(groupChangers(drifted.groups, a.groups).length).toBeLessThan(10);
+  });
   it("hält die Zweitvertretungs-Grenze ein", () => {
     const a = allocate(s);
     for (const list of Object.values(a.groups)) expect(list.filter((id) => s.clubs[id].isReserve).length).toBeLessThanOrEqual(7);
@@ -315,8 +329,16 @@ describe("Headless-Langlauf", () => {
     let s = newGame({ seed: 2026 });
     const goals: number[] = [];
     const home: number[] = [];
+    const anchors = Object.entries(s.rules.rl.groupAnchors!);
+    let anchorMisses = 0;
     for (let i = 0; i < 30 && s.phase !== "GAME_OVER"; i++) {
       s = autoAdvance(s);
+      // Staffeln wandern nicht: Vereine der Ankerregionen spielen in ihrer Ankerstaffel, soweit Platz ist
+      const groups = s.allocation!.groups;
+      for (const [g, ols] of anchors) {
+        const own = Object.values(groups).flat().filter((id) => ols.includes(s.clubs[id].oberligaId));
+        anchorMisses += Math.min(own.length, groups[g].length) - own.filter((id) => groups[g].includes(id)).length;
+      }
       const sum = s.history.seasons[s.history.seasons.length - 1];
       goals.push(sum.goalsPerGame);
       home.push(sum.homeWinRate);
@@ -334,6 +356,8 @@ describe("Headless-Langlauf", () => {
     expect(avg(goals)).toBeLessThan(3.2);
     expect(avg(home)).toBeGreaterThan(0.41);
     expect(avg(home)).toBeLessThan(0.49);
+    // vereinzelt durch gewährte Härtefälle (feste Staffelwünsche)
+    expect(anchorMisses).toBeLessThanOrEqual(3);
     // Lückenlose Historie: jeder Verein hat ab seiner ersten Saison einen Eintrag pro Saison
     const seasons = s.history.seasons.map((x) => x.season);
     const bySeason = new Map<string, Set<number>>();
