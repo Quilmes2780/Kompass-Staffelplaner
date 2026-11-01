@@ -76,7 +76,7 @@ export const LEVEL_ORDER: Level[] = ["BL", "BL2", "L3", "RL", "OL", "VL"];
 
 export interface LeagueRef {
   level: Level;
-  /** RL: Staffel-ID ("West", "Nordost", …; ältere Spielstände "Nord"… bzw. "A".."D"), OL/VL: Oberliga-ID, sonst = level */
+  /** RL: Staffel-ID ("Nord", "Ost", "Süd", "West"; ältere Spielstände auch "A".."D"), OL/VL: Oberliga-ID, sonst = level */
   group: string;
 }
 

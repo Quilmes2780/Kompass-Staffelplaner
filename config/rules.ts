@@ -138,8 +138,8 @@ export const KOMPASS_RULES: RulesConfig = {
   description: "4 Staffeln à 20, 4 direkte Aufsteiger, 16 Absteiger, Kontingente West 4 / Südwest 4 / Nord 3 / Bayern 2,5 / Nordost 2,5.",
   startSeason: 2028,
   rl: {
-    // Richtung = typische Lage des Staffelschwerpunkts; West umfasst Niedersachsen, Hamburg/Bremen und Westfalen
-    groupIds: ["West", "Nordost", "Südost", "Südwest"],
+    // Richtung = typische Lage des Staffelschwerpunkts (Nord umfasst auch Westfalen, West auch Hessen und das Saarland)
+    groupIds: ["Nord", "Ost", "Süd", "West"],
     groupBearings: [350, 75, 170, 260],
     groupSize: 20,
     relegatedPerGroup: 4,

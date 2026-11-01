@@ -3,7 +3,7 @@ import { groupChangers } from "./allocation/matching";
 import { leagueLabel } from "./leagues";
 import type { ClubId, ClubSeasonRecord, Competition, GameState, LeagueRef, Movement, SeasonSummary } from "./types";
 
-/** Schlüssel eines Wettbewerbs: "RL-West", "L3", Oberliga-ID, "BL", … */
+/** Schlüssel eines Wettbewerbs: "RL-Nord", "L3", Oberliga-ID, "BL", … */
 export function compKey(ref: LeagueRef): string {
   return ref.level === "RL" ? `RL-${ref.group}` : ref.level === "OL" ? ref.group : ref.level === "VL" ? `VL-${ref.group}` : ref.level;
 }

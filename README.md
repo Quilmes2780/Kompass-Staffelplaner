@@ -73,7 +73,7 @@ Der komplette Spielstand ist ein JSON-Objekt `GameState` (`engine/types.ts`), oh
 
 | Bereich | Parameter (Standard) |
 |---|---|
-| `rl` | Staffeln `West`, `Nordost`, `Südost`, `Südwest` (mit `groupBearings` für die erste Benennung), `groupSize` 20, `relegatedPerGroup` 4, `promotedToL3` 4, `maxReservesPerGroup` 7 |
+| `rl` | Staffeln `Nord`, `Ost`, `Süd`, `West` (mit `groupBearings` für die erste Benennung), `groupSize` 20, `relegatedPerGroup` 4, `promotedToL3` 4, `maxReservesPerGroup` 7 |
 | `l3` | 20 Teams, 4 Absteiger, 3 Aufsteiger in die 2. BL, vereinfachte Drittliga-Zulassung (Kapazität 5.000, Etat 1,8 Mio. €) |
 | `quotas` | je Gebiet: direkte Plätze (Oberliga-Meister), Aufstiegsrunden, Kandidaten für den halben Platz |
 | `halfSlotPlayoff` | Relegation Bayern/Nordost, Modus `TWO_LEGS` / `SINGLE_NEUTRAL` / `ALTERNATING_SINGLE` |

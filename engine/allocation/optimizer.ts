@@ -375,7 +375,7 @@ function toGroups(c: Ctx, assign: Int32Array, groupIds: string[]): Record<string
 /**
  * Staffelbezeichnungen stabil halten: Die Staffeln werden so benannt, dass jede die Bezeichnung
  * ihrer Vorjahresstaffel mit den meisten gemeinsamen Vereinen trägt. Fixierte Vereine bleiben in
- * ihrer gewünschten Staffel. Ohne Vorjahr entscheidet die Himmelsrichtung (Staffel Nordost liegt im Nordosten …).
+ * ihrer gewünschten Staffel. Ohne Vorjahr entscheidet die Himmelsrichtung (Staffel Nord liegt im Norden …).
  */
 function relabelGroups(groups: Record<string, ClubId[]>, inp: OptimizeInput): Record<string, ClubId[]> {
   const ids = inp.rules.rl.groupIds;
