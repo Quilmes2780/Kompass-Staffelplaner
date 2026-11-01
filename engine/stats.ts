@@ -1,5 +1,31 @@
 // Auswertungen über die Historie: Ewige Tabelle, Rekorde, Vereinsprofile, Dashboard-Reihen.
-import type { ClubId, ClubSeasonRecord, Competition, GameState, SeasonSummary } from "./types";
+import { groupChangers } from "./allocation/matching";
+import { leagueLabel } from "./leagues";
+import type { ClubId, ClubSeasonRecord, Competition, GameState, LeagueRef, Movement, SeasonSummary } from "./types";
+
+/** Schlüssel eines Wettbewerbs: "RL-Nord", "L3", Oberliga-ID, "BL", … */
+export function compKey(ref: LeagueRef): string {
+  return ref.level === "RL" ? `RL-${ref.group}` : ref.level === "OL" ? ref.group : ref.level === "VL" ? `VL-${ref.group}` : ref.level;
+}
+
+/** Auswahl für Auswertungen je Spielklasse: Regionalliga gesamt, einzelne Staffeln, 3. Liga, Oberligen */
+export function statScopes(state: GameState): { id: string; label: string }[] {
+  const seen = new Map<string, LeagueRef>();
+  for (const r of state.history.clubSeasons)
+    if (r.league.level === "RL" || ((r.league.level === "L3" || r.league.level === "OL") && !r.abstract)) seen.set(compKey(r.league), r.league);
+  const rl = [...seen.entries()].filter(([, r]) => r.level === "RL").sort(([a], [b]) => a.localeCompare(b, "de"));
+  return [
+    { id: "RL", label: "Regionalliga (alle Staffeln)" },
+    ...rl.map(([k, r]) => ({ id: k, label: `Regionalliga – Staffel ${r.group}` })),
+    ...(seen.has("L3") ? [{ id: "L3", label: "3. Liga" }] : []),
+    ...state.oberligen.filter((o) => seen.has(o.id)).map((o) => ({ id: o.id, label: o.name })),
+  ];
+}
+
+function inScope(r: ClubSeasonRecord, scope: string): boolean {
+  if (scope === "RL") return r.league.level === "RL";
+  return compKey(r.league) === scope && !r.abstract;
+}
 
 export interface EternalRow {
   clubId: ClubId;
@@ -15,10 +41,11 @@ export interface EternalRow {
   bestRank: number;
 }
 
-export function eternalTable(state: GameState): EternalRow[] {
+/** Ewige Tabelle einer Spielklasse bzw. Staffel (Standard: Regionalliga gesamt) */
+export function eternalTable(state: GameState, scope = "RL"): EternalRow[] {
   const rows = new Map<ClubId, EternalRow>();
   for (const r of state.history.clubSeasons) {
-    if (r.league.level !== "RL") continue;
+    if (!inScope(r, scope)) continue;
     const e = rows.get(r.clubId) ?? { clubId: r.clubId, seasons: 0, played: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, pts: 0, titles: 0, bestRank: 99 };
     e.seasons++;
     e.played += r.played;
@@ -168,4 +195,185 @@ export function dashboardSeries(state: GameState): Record<string, { label: strin
     grade: mk("Saisonnote", "", (s) => s.grade ?? 0),
     goals: mk("Tore pro Spiel", "", (s) => s.goalsPerGame),
   };
+}
+
+// ---------- Staffelwechsler ----------
+
+export interface GroupChangeSeason {
+  season: number;
+  /** Vereine, die in beiden Saisons Regionalliga spielten */
+  eligible: number;
+  changers: { clubId: ClubId; from: string; to: string }[];
+}
+
+/**
+ * Staffelwechsel von einer Saison zur direkt folgenden, nach Vereinsüberschneidung der Staffeln.
+ * Wer zwischendurch auf- oder abgestiegen ist, spielte in einer der beiden Saisons nicht Regionalliga und zählt nicht.
+ */
+export function groupChangeSeasons(state: GameState): GroupChangeSeason[] {
+  const ss = state.history.seasons;
+  const out: GroupChangeSeason[] = [];
+  for (let i = 1; i < ss.length; i++) {
+    const prev = ss[i - 1].allocation;
+    const cur = ss[i].allocation;
+    if (!prev || !cur || ss[i - 1].season !== ss[i].season - 1) continue;
+    const prevGroup: Record<ClubId, string> = {};
+    for (const [g, l] of Object.entries(prev.groups)) for (const id of l) prevGroup[id] = g;
+    const curGroup: Record<ClubId, string> = {};
+    for (const [g, l] of Object.entries(cur.groups)) for (const id of l) curGroup[id] = g;
+    out.push({
+      season: ss[i].season,
+      eligible: Object.keys(curGroup).filter((id) => prevGroup[id]).length,
+      changers: groupChangers(prev.groups, cur.groups).map((id) => ({ clubId: id, from: prevGroup[id], to: curGroup[id] })),
+    });
+  }
+  return out;
+}
+
+export function groupChangeClubs(state: GameState): { clubId: ClubId; changes: number; seasons: number[]; rlSeasons: number }[] {
+  const rlSeasons = new Map<ClubId, number>();
+  for (const r of state.history.clubSeasons) if (r.league.level === "RL") rlSeasons.set(r.clubId, (rlSeasons.get(r.clubId) ?? 0) + 1);
+  const by = new Map<ClubId, number[]>();
+  for (const s of groupChangeSeasons(state)) for (const c of s.changers) by.set(c.clubId, [...(by.get(c.clubId) ?? []), s.season]);
+  return [...by.entries()]
+    .map(([clubId, seasons]) => ({ clubId, changes: seasons.length, seasons, rlSeasons: rlSeasons.get(clubId) ?? 0 }))
+    .sort((a, b) => b.changes - a.changes || a.rlSeasons - b.rlSeasons);
+}
+
+// ---------- Kennzahlen je Saison (wie im Evaluierungsbericht) ----------
+
+export interface SeasonKpiRow {
+  season: number;
+  totalKm?: number;
+  derbiesSplitWeight?: number;
+  groupChanges?: number;
+  strengthSpread?: number;
+  revenue: number;
+  avgAttendanceRL: number;
+  acceptance: number;
+  grade?: number;
+  evaluation: boolean;
+}
+
+export function seasonKpis(state: GameState): SeasonKpiRow[] {
+  const changes = new Map(groupChangeSeasons(state).map((s) => [s.season, s.changers.length]));
+  const evals = new Set(state.history.evaluations.map((e) => e.season));
+  return state.history.seasons.map((s) => ({
+    season: s.season,
+    totalKm: s.metrics?.totalKm,
+    derbiesSplitWeight: s.metrics?.derbiesSplitWeight,
+    // erste Saison ohne Vorjahr: kein Wert; sonst nach Vereinsüberschneidung neu berechnet
+    groupChanges: changes.get(s.season),
+    strengthSpread: s.metrics?.strengthSpread,
+    revenue: s.revenue,
+    avgAttendanceRL: s.avgAttendanceRL,
+    acceptance: s.acceptance,
+    grade: s.grade,
+    evaluation: evals.has(s.season),
+  }));
+}
+
+// ---------- Chronik ----------
+
+export interface ChronicleMove {
+  clubId: ClubId;
+  movement: Movement;
+  /** Ziel (Auf-/Absteiger) bzw. Herkunft (Neulinge) */
+  league?: LeagueRef;
+}
+
+export interface ChronicleEntry {
+  season: number;
+  key: string;
+  label: string;
+  level: LeagueRef["level"];
+  abstract: boolean;
+  teams: number;
+  champion?: { clubId: ClubId; pts: number; gf: number; ga: number };
+  runnerUp?: { clubId: ClubId; pts: number };
+  promoted: ChronicleMove[];
+  relegated: ChronicleMove[];
+  /** sportlich abgestiegen, aber als Nachrücker in der Liga geblieben */
+  reinstated: ChronicleMove[];
+  newcomers: ChronicleMove[];
+  bestAttack?: { clubId: ClubId; gf: number };
+  bestDefense?: { clubId: ClubId; ga: number };
+  goalsPerGame?: number;
+  avgAttendance?: number;
+  topAttendance?: { clubId: ClubId; value: number };
+  totalKm?: number;
+  groupChangersIn?: number;
+  playoffs: { name: string; winner?: ClubId; text: string }[];
+}
+
+const DOWN: Movement[] = ["RELEGATED", "FORCED_RELEGATION", "LICENSE_DENIED", "WITHDRAWN", "INSOLVENT"];
+
+/** Chronik: je Saison und Liga (3. Liga, RL-Staffeln, Oberligen) die wichtigsten Ergebnisse */
+export function chronicle(state: GameState): ChronicleEntry[] {
+  const byKey = new Map<string, ClubSeasonRecord[]>();
+  const recOf = new Map<string, ClubSeasonRecord>();
+  for (const r of state.history.clubSeasons) {
+    recOf.set(`${r.season}|${r.clubId}`, r);
+    if (!["RL", "L3", "OL"].includes(r.league.level)) continue;
+    const k = `${r.season}|${compKey(r.league)}`;
+    byKey.set(k, [...(byKey.get(k) ?? []), r]);
+  }
+  const changes = new Map(groupChangeSeasons(state).map((s) => [s.season, s]));
+  const summaries = new Map(state.history.seasons.map((s) => [s.season, s]));
+  const out: ChronicleEntry[] = [];
+  for (const recs of byKey.values()) {
+    const season = recs[0].season;
+    const ref = recs[0].league;
+    const key = compKey(ref);
+    const table = recs.filter((r) => r.rank > 0).sort((a, b) => a.rank - b.rank);
+    const real = recs.filter((r) => !r.abstract);
+    const abstract = real.length === 0;
+    // Ziel einer Bewegung: die Liga der Folgesaison (mit Staffel), sonst die beim Saisonabschluss vermerkte
+    const dest = (r: ClubSeasonRecord) => recOf.get(`${season + 1}|${r.clubId}`)?.league ?? r.nextLeague;
+    const newcomers: ChronicleMove[] = [];
+    for (const r of recs) {
+      const p = recOf.get(`${season - 1}|${r.clubId}`);
+      if (p && p.league.level !== ref.level) newcomers.push({ clubId: r.clubId, movement: p.movement, league: p.league });
+    }
+    const games = real.reduce((a, r) => a + r.played, 0) / 2;
+    const att = real.filter((r) => r.avgAttendance > 0);
+    const sum = summaries.get(season);
+    const ids = new Set(recs.map((r) => r.clubId));
+    const name = (id: ClubId) => state.clubs[id]?.shortName ?? id;
+    const playoffs = [
+      ...(sum?.playoffs ?? []).filter((t) => ids.has(t.a) || ids.has(t.b)).map((t) => ({ name: t.name, winner: t.winner, text: `${name(t.a)} – ${name(t.b)}` })),
+      ...(sum?.promotionRounds ?? [])
+        .filter((pr) => pr.table.some((row) => ids.has(row.clubId)))
+        .map((pr) => ({ name: pr.name, winner: pr.promoted[0], text: pr.table.map((row) => name(row.clubId)).join(", ") })),
+    ];
+    const top = (f: (r: ClubSeasonRecord) => number) => (real.length ? [...real].sort((a, b) => f(b) - f(a))[0] : undefined);
+    const atk = top((r) => r.gf);
+    const def = top((r) => -r.ga);
+    const topAtt = att.length ? [...att].sort((a, b) => b.avgAttendance - a.avgAttendance)[0] : undefined;
+    const gc = ref.level === "RL" ? changes.get(season) : undefined;
+    out.push({
+      season,
+      key,
+      label: leagueLabel(ref, state),
+      level: ref.level,
+      abstract,
+      teams: recs.length,
+      champion: table[0] && { clubId: table[0].clubId, pts: table[0].pts, gf: table[0].gf, ga: table[0].ga },
+      runnerUp: table[1] && { clubId: table[1].clubId, pts: table[1].pts },
+      promoted: table.filter((r) => r.movement === "PROMOTED").map((r) => ({ clubId: r.clubId, movement: r.movement, league: dest(r) })),
+      relegated: recs.filter((r) => DOWN.includes(r.movement)).sort((a, b) => a.rank - b.rank).map((r) => ({ clubId: r.clubId, movement: r.movement, league: dest(r) })),
+      reinstated: table.filter((r) => r.movement === "REINSTATED").map((r) => ({ clubId: r.clubId, movement: r.movement })),
+      newcomers,
+      bestAttack: atk && !abstract ? { clubId: atk.clubId, gf: atk.gf } : undefined,
+      bestDefense: def && !abstract ? { clubId: def.clubId, ga: def.ga } : undefined,
+      goalsPerGame: games ? real.reduce((a, r) => a + r.gf, 0) / games : undefined,
+      avgAttendance: att.length ? att.reduce((a, r) => a + r.avgAttendance, 0) / att.length : undefined,
+      topAttendance: topAtt && { clubId: topAtt.clubId, value: topAtt.avgAttendance },
+      totalKm: abstract ? undefined : real.reduce((a, r) => a + r.travelKm, 0),
+      groupChangersIn: gc ? gc.changers.filter((c) => `RL-${c.to}` === key).length : undefined,
+      playoffs,
+    });
+  }
+  const order = (e: ChronicleEntry) => (e.level === "L3" ? 0 : e.level === "RL" ? 1 : 2);
+  return out.sort((a, b) => b.season - a.season || order(a) - order(b) || a.label.localeCompare(b.label, "de"));
 }

@@ -2,6 +2,7 @@
 // Intern wird auf einer tiefen Kopie gearbeitet, das Original bleibt unverändert.
 import { MODEL_22_5_RULES, cloneRules, seasonLabel } from "../config/rules";
 import { computeMetrics } from "./allocation/metrics";
+import { groupChangers } from "./allocation/matching";
 import { optimizeAllocation } from "./allocation/optimizer";
 import { applyConcessions, defaultBlocks, FUNDING_COST, required, reversalBlocks, vote } from "./assembly";
 import { distributeRevenue, evolveClubs } from "./economy";
@@ -288,8 +289,9 @@ export function finishSeason(state: GameState): GameState {
     const prevRevenue = s.history.seasons[s.history.seasons.length - 1]?.revenue ?? fin.revenue;
     const out = resolvePromotion(s);
     const oldIdx = leagueIndex(s.leagues);
-    const prevGroup: Record<ClubId, string> = {};
-    if (s.previousAllocation) for (const [g, l] of Object.entries(s.previousAllocation.groups)) for (const id of l) prevGroup[id] = g;
+    // Staffelwechsler nach Vereinsüberschneidung (nur Vereine, die auch in der Vorsaison Regionalliga spielten)
+    const changed = new Set(s.previousAllocation && s.allocation ? groupChangers(s.previousAllocation.groups, s.allocation.groups) : []);
+    const newIdx = leagueIndex(out.leagues);
     // Historie
     for (const [id, ref] of Object.entries(oldIdx)) {
       const compId = ref.level === "RL" ? `RL-${ref.group}` : ref.level === "L3" ? "L3" : ref.level === "OL" ? ref.group : ref.level === "VL" ? `VL-${ref.group}` : ref.level;
@@ -310,6 +312,7 @@ export function finishSeason(state: GameState): GameState {
         ga: row?.ga ?? 0,
         pts: row?.pts ?? 0,
         movement: out.movements[id] ?? "STAYED",
+        nextLeague: newIdx[id],
         title: rank === 0 && ref.level !== "VL",
         playoff: playoffFor(id, out),
         travelKm: Math.round(st?.travelKm ?? 0),
@@ -319,9 +322,9 @@ export function finishSeason(state: GameState): GameState {
         budgetEnd: 0,
         license: s.licenseThisSeason[id] ?? { status: ref.level === "RL" ? "GRANTED" : "NA", conditions: [] },
         hardship: s.hardshipThisSeason[id] ?? [],
-        groupChanged: ref.level === "RL" && !!prevGroup[id] && prevGroup[id] !== ref.group,
+        groupChanged: ref.level === "RL" && changed.has(id),
         derbiesPlayed: st?.derbies ?? 0,
-        abstract: !["L3", "RL"].includes(ref.level),
+        abstract: !s.competitions[compId],
       };
       s.history.clubSeasons.push(rec);
     }

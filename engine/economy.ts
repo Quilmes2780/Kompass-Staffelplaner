@@ -72,7 +72,8 @@ export function evolveClubs(state: GameState, movements: Record<ClubId, Movement
     // Etat
     const target = LEVEL_BUDGET[lvl] * Math.pow(Math.max(100, c.fanPotential) / 1500, 0.35);
     let budget = 0.8 * c.budget + 0.2 * target;
-    if (s) {
+    // Oberligen werden zwar Spiel für Spiel simuliert, ihre Etats folgen aber weiter nur dem Ligaziel
+    if (s && lvl !== "OL") {
       budget += 0.5 * (s.income.guarantee + s.income.distribution);
       budget -= 0.5 * s.travelKm * f.travelCostPerKm;
       budget += 0.25 * (s.income.other - c.fanPotential * 19 * f.ticketPrice);

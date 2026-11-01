@@ -1,4 +1,5 @@
 // Härtefallanträge zur Staffeleinteilung.
+import { matchGroups, groupChangers } from "./allocation/matching";
 import { clubTravelKm } from "./allocation/metrics";
 import { distanceMatrixFor } from "./geo";
 import { rngFor } from "./rng";
@@ -72,18 +73,24 @@ export function generateHardshipRequests(state: GameState, proposal: Allocation)
     });
   }
   // Planungssicherheit: Vereine, die im Vorschlag die Staffel wechseln sollen
-  if (state.previousAllocation) {
+  // Vorjahr = die laufende Einteilung (previousAllocation ist während der Einteilungsphase schon zwei Saisons alt)
+  const last = state.allocation;
+  if (last) {
     const prev: Record<ClubId, string> = {};
-    for (const [g, list] of Object.entries(state.previousAllocation.groups)) for (const c of list) prev[c] = g;
-    const movers = Object.keys(groupOf).filter((c) => prev[c] && prev[c] !== groupOf[c]);
+    for (const [g, list] of Object.entries(last.groups)) for (const c of list) prev[c] = g;
+    // gewünscht ist die Nachfolgerin der Vorjahresstaffel (nach Vereinsüberschneidung)
+    const match = matchGroups(last.groups, proposal.groups);
+    const successor = (g: string) => Object.keys(match).find((k) => match[k] === g);
+    const movers = groupChangers(last.groups, proposal.groups).filter((c) => successor(prev[c]));
     for (const c of rng.shuffle(movers).slice(0, 3)) {
       if (!rng.chance(0.5)) continue;
+      const want = successor(prev[c])!;
       reqs.push({
         id: id(),
         clubId: c,
         reason: "PLANNING",
-        wantsGroup: prev[c],
-        text: `${state.clubs[c].name} möchte in Staffel ${prev[c]} bleiben: Dauerkarten, Sponsorenverträge und Busplanung sind auf die bisherige Staffel ausgelegt.`,
+        wantsGroup: want,
+        text: `${state.clubs[c].name} möchte in Staffel ${want} bleiben: Dauerkarten, Sponsorenverträge und Busplanung sind auf die bisherige Staffel ausgelegt.`,
       });
     }
   }

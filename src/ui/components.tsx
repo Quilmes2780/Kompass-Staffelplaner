@@ -64,6 +64,30 @@ export function Kpi({ label, value, ampel, tip, sub }: { label: string; value: R
   );
 }
 
+/** Tabellenauswahl: Regionalliga-Staffeln und 3. Liga als Reiter, Oberligen im Auswahlfeld */
+export function CompetitionPicker({ g, keys, value, onChange }: { g: GameState; keys: string[]; value: string; onChange: (k: string) => void }) {
+  const tabs = [
+    ...keys.filter((k) => k.startsWith("RL-")).sort().map((k) => ({ id: k, label: `Staffel ${k.slice(3)}` })),
+    ...(keys.includes("L3") ? [{ id: "L3", label: "3. Liga" }] : []),
+  ];
+  const ol = g.oberligen.filter((o) => keys.includes(o.id));
+  return (
+    <div className="row">
+      <Tabs value={value} onChange={onChange} tabs={tabs} />
+      {ol.length > 0 && (
+        <select value={ol.some((o) => o.id === value) ? value : ""} onChange={(e) => e.target.value && onChange(e.target.value)} style={{ marginBottom: 10 }}>
+          <option value="">Oberliga wählen …</option>
+          {ol.map((o) => (
+            <option key={o.id} value={o.id}>
+              {o.name}
+            </option>
+          ))}
+        </select>
+      )}
+    </div>
+  );
+}
+
 export function Tabs<T extends string>({ tabs, value, onChange }: { tabs: { id: T; label: string }[]; value: T; onChange: (t: T) => void }) {
   return (
     <div className="tabs">

@@ -66,7 +66,9 @@ export function resolvePromotion(state: GameState): PromotionOutcome {
   setRanks("BL2", abstractTable(state, old.BL2, 34, rngFor(state.seed, state.season, "abs", "BL2"), 6));
   setRanks("L3", competitionTable(state, "L3"));
   for (const g of Object.keys(old.RL)) setRanks(`RL-${g}`, competitionTable(state, `RL-${g}`));
-  for (const o of state.oberligen) setRanks(o.id, abstractTable(state, old.OL[o.id], 34, rngFor(state.seed, state.season, "abs", o.id), 5));
+  // Oberligen: echte Spiele; abstrakt nur für Spielstände, deren laufende Saison noch ohne Oberliga-Spielplan begann
+  for (const o of state.oberligen)
+    setRanks(o.id, state.competitions[o.id] ? competitionTable(state, o.id) : abstractTable(state, old.OL[o.id], 34, rngFor(state.seed, state.season, "abs", o.id), 5));
   for (const o of state.oberligen) setRanks(`VL-${o.id}`, abstractTable(state, old.VL[o.id], 30, rngFor(state.seed, state.season, "abs", "VL", o.id), 6));
 
   const movements: Record<ClubId, Movement> = {};

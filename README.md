@@ -49,8 +49,9 @@ bei Niederlage Alternativszenario 22/5-Modell). Game over, wenn nach einer Evalu
 **Determinismus:** Gleicher Seed + gleiche Entscheidungen = identischer Spielverlauf (getestet). Der RNG-Zustand muss
 nicht gespeichert werden, weil jeder Zufallswert aus `hash(seed, saison, kontext, …)` abgeleitet wird.
 
-**Simulationstiefe:** 3. Liga und Regionalliga werden Spiel für Spiel simuliert. Bundesliga, 2. Bundesliga, die
-14 Oberligen und ein Verbandsliga-Reservoir je Oberliga werden abstrakt (stärkegewichtete Rangliste) gerechnet.
+**Simulationstiefe:** 3. Liga, Regionalliga und die 14 Oberligen werden Spiel für Spiel simuliert. Die Oberligen
+haben weniger Spieltage und verteilen sie gleichmäßig über die Saison. Bundesliga, 2. Bundesliga und ein
+Verbandsliga-Reservoir je Oberliga werden abstrakt (stärkegewichtete Rangliste) gerechnet.
 Aufstiegsrunden und Relegationen der 5. Ebene sind echte Spiele.
 
 ## Datenmodell
@@ -72,7 +73,7 @@ Der komplette Spielstand ist ein JSON-Objekt `GameState` (`engine/types.ts`), oh
 
 | Bereich | Parameter (Standard) |
 |---|---|
-| `rl` | Staffeln `A–D`, `groupSize` 20, `relegatedPerGroup` 4, `promotedToL3` 4, `maxReservesPerGroup` 7 |
+| `rl` | Staffeln `Nord`, `Ost`, `Süd`, `West` (mit `groupBearings` für die erste Benennung), `groupSize` 20, `relegatedPerGroup` 4, `promotedToL3` 4, `maxReservesPerGroup` 7 |
 | `l3` | 20 Teams, 4 Absteiger, 3 Aufsteiger in die 2. BL, vereinfachte Drittliga-Zulassung (Kapazität 5.000, Etat 1,8 Mio. €) |
 | `quotas` | je Gebiet: direkte Plätze (Oberliga-Meister), Aufstiegsrunden, Kandidaten für den halben Platz |
 | `halfSlotPlayoff` | Relegation Bayern/Nordost, Modus `TWO_LEGS` / `SINGLE_NEUTRAL` / `ALTERNATING_SINGLE` |
@@ -151,6 +152,8 @@ Vereine und generierter Verbandsliga-Vereine) im gleichen Schema herunterladen (
   `{ "format": "kompass-save", "version": 1, "exportedAt": "<ISO>", "state": GameState }`.
   Import prüft Format, Version und Regelwerk-Konsistenz. Export → Import ergibt einen identischen Spielstand (getestet).
 - **Stammdaten:** `{ "format": "kompass-stammdaten", "version": 1, "clubs": Club[], "derbies": Derby[], "oberligen": Oberliga[] }`.
+- **Statistik:** Ewige Tabelle je Spielklasse und Staffel, Chronik je Saison und Liga, Staffelwechsler (nur von einer
+  Saison zur direkt folgenden, nach Vereinsüberschneidung), Kennzahlen des Evaluierungsberichts je Saison.
 - **CSV** (`Statistik → CSV-Export`, Semikolon-getrennt, UTF-8 mit BOM): Vereinshistorie (alle Vereine × Saisons),
   Saisonkennzahlen, Ewige Tabelle, Vereine.
 
@@ -172,5 +175,5 @@ bei jedem Phasenwechsel geschrieben).
 ## Bekannte Grenzen
 
 - Die Karte zeigt Länder-, aber keine Bundeslandgrenzen. Eine Bundesland-GeoJSON kann in `data/geo/` ergänzt und in `src/ui/MapView.tsx` gezeichnet werden.
-- Ober- und Profiligen sind abstrakt simuliert. Für Oberligen gibt es Pools von 10 Teams statt kompletter Ligen.
+- Profiligen sind abstrakt simuliert. Die Oberligen sind Pools von 10 Teams (bis 14 bei Aufstockung) statt kompletter Ligen. Ihre Etats folgen weiter dem Ligaziel, nicht den Spieleinnahmen.
 - Wenn ein Verbandsliga-Reservoir leer ist, werden neue (fiktive) Vereine erzeugt. Sie sind mit `fictional: true` markiert.

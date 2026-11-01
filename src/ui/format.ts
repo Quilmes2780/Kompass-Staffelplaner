@@ -13,7 +13,11 @@ export const GROUP_COLORS: Record<string, string> = {
   E: "var(--g-E)",
   POOL: "var(--g-POOL)",
 };
-export const GROUP_HEX: Record<string, string> = { A: "#0072b2", B: "#e69f00", C: "#009e73", D: "#cc79a7", E: "#56b4e9", POOL: "#8892a0" };
+// Staffelfarben: regionale Namen (aktuelle Regelwerke) und Buchstaben (ältere Spielstände)
+export const GROUP_HEX: Record<string, string> = {
+  Nord: "#0072b2", Ost: "#e69f00", "Süd": "#009e73", West: "#cc79a7", Nordost: "#e69f00", "Südwest": "#56b4e9",
+  A: "#0072b2", B: "#e69f00", C: "#009e73", D: "#cc79a7", E: "#56b4e9", POOL: "#8892a0",
+};
 
 export const LEVEL_COLORS: Record<Level, string> = {
   BL: "#3b1f5e",

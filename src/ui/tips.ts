@@ -15,7 +15,7 @@ export function tips(r: RulesConfig): Record<string, string> {
     distanz: `Distanz = Luftlinie (Haversine) × Straßenfaktor ${fmt(r.allocation.roadFactor, 2)}. Saison-km eines Vereins = Hin- und Rückfahrt zu jedem Staffelgegner.`,
     gini: "Gini-Koeffizient der Saison-Reisewege aller Vereine: 0 = alle reisen gleich weit, 1 = maximal ungleich.",
     derbys: "Rivalitäten aus data/derbies.json mit Gewicht 1–3. Getrennte Derbys kosten Zuschauer, Fan- und Medienzufriedenheit.",
-    wechsler: "Vereine, die gegenüber dem Vorjahr die Staffel wechseln. Viele Wechsel schaden der Planungssicherheit.",
+    wechsler: "Vereine, die gegenüber dem Vorjahr die Staffel wechseln. Maßgeblich ist nicht der Name, sondern ob ein Verein weiter mit der Mehrheit seiner bisherigen Staffelgegner spielt: Jede neue Staffel gilt als Nachfolgerin der Vorjahresstaffel, mit der sie die meisten Vereine teilt. Viele Wechsel schaden der Planungssicherheit.",
     balance: "Streuung der durchschnittlichen Stärke der Staffeln. Hohe Werte = ungleich schwere Staffeln.",
     oberliga: "Prognose, wie viele Absteiger in dieselbe Oberliga fallen könnten (Summe der Abstiegswahrscheinlichkeiten nach Stärke). Hohe Werte drohen eine temporäre Aufstockung auszulösen.",
     co2: "Schätzung: Reisebus mit 1,1 kg CO₂ je km.",

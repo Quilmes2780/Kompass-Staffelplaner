@@ -25,7 +25,7 @@ import { acceptance } from "../../engine/stakeholders";
 import type { DelegateBlock } from "../../engine/assembly";
 import type { Concession, GameState } from "../../engine/types";
 import { useStore } from "../store";
-import { Bar, ClubLink, LeagueTable, NewsFeed, Tabs, Tip } from "../ui/components";
+import { Bar, ClubLink, CompetitionPicker, LeagueTable, NewsFeed, Tip } from "../ui/components";
 import { eur, fmt, GROUP_HEX, pct } from "../ui/format";
 import { tips } from "../ui/tips";
 
@@ -98,6 +98,7 @@ function SeasonRunning({ g }: { g: GameState }) {
   const table = useMemo(() => (comp ? competitionTable(g, tab) : []), [g, tab, comp]);
   const lastResults = comp ? comp.fixtures.filter((f) => f.matchday === comp.played) : [];
   const isRl = tab.startsWith("RL-");
+  const isOl = comp?.level === "OL";
   return (
     <div>
       <div className="card mb">
@@ -134,18 +135,19 @@ function SeasonRunning({ g }: { g: GameState }) {
       </div>
       <div className="grid" style={{ gridTemplateColumns: "minmax(0,2fr) minmax(0,1fr)" }}>
         <div className="card">
-          <Tabs
-            value={tab}
-            onChange={setTab}
-            tabs={[...groupIds.map((gid) => ({ id: `RL-${gid}`, label: `Staffel ${gid}` })), { id: "L3", label: "3. Liga" }]}
-          />
+          <CompetitionPicker g={g} keys={Object.keys(g.competitions)} value={tab} onChange={setTab} />
           {isRl && (
             <div className="small muted mb">
               <span className="chip" style={{ background: GROUP_HEX[tab.slice(3)] }} />
               Platz 1 steigt auf (3. Liga), die letzten {g.rules.rl.relegatedPerGroup} steigen ab. <Tip text={tips(g.rules).aufstieg} />
             </div>
           )}
-          <LeagueTable g={g} rows={table} up={isRl ? 1 : g.rules.l3.promotedToBL2} down={isRl ? g.rules.rl.relegatedPerGroup : g.rules.l3.relegated} />
+          {isOl && (
+            <div className="small muted mb">
+              {g.oberligen.find((o) => o.id === tab)?.name}: {comp?.matchdays} Spieltage, gleichmäßig über die Saison verteilt. Der Aufstieg richtet sich nach dem Kontingent der Region (Meister bzw. Aufstiegsrunde).
+            </div>
+          )}
+          <LeagueTable g={g} rows={table} up={isRl || isOl ? 1 : g.rules.l3.promotedToBL2} down={isRl ? g.rules.rl.relegatedPerGroup : isOl ? 0 : g.rules.l3.relegated} />
         </div>
         <div>
           <div className="card">

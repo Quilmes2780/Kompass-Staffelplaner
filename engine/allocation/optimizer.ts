@@ -5,6 +5,7 @@ import type { RulesConfig } from "../../config/rules";
 import type { DistanceMatrix } from "../geo";
 import { rngFor, type Rng } from "../rng";
 import type { Allocation, Club, ClubId, Derby } from "../types";
+import { permutations } from "./matching";
 
 export interface OptimizeInput {
   clubs: ClubId[];
@@ -138,14 +139,29 @@ function initialCluster(c: Ctx, rng: Rng): Int32Array {
       assign[i] = c.fixed[i];
       count[c.fixed[i]]++;
     }
-  // Zentren per k-means++ über die Distanzen
-  const centers: number[] = [rng.int(0, c.n - 1)];
-  while (centers.length < c.G) {
+  // Zentrum je Staffel aus ihren Vorjahresvereinen bzw. ihren fixierten Vereinen ziehen, damit
+  // die Staffel am selben Ort bleibt wie ihre Vorgängerin; übrige Zentren per k-means++
+  const centers: number[] = new Array(c.G).fill(-1);
+  for (let g = 0; g < c.G; g++) {
+    const fixedHere: number[] = [];
+    const prevHere: number[] = [];
+    for (let i = 0; i < c.n; i++) {
+      if (c.fixed[i] === g) fixedHere.push(i);
+      else if (c.fixed[i] < 0 && c.prevGroup[i] === g) prevHere.push(i);
+    }
+    // Vorjahresvereine zuerst: ein per Härtefall fixierter Ausreißer soll die Staffel nicht verschieben
+    const pool = prevHere.length ? prevHere : fixedHere;
+    if (pool.length) centers[g] = pool[rng.int(0, pool.length - 1)];
+  }
+  if (centers.every((k) => k < 0)) centers[0] = rng.int(0, c.n - 1);
+  for (let g = 0; g < c.G; g++) {
+    if (centers[g] >= 0) continue;
+    const chosen = centers.filter((k) => k >= 0);
     const d2 = new Float64Array(c.n);
     let sum = 0;
     for (let i = 0; i < c.n; i++) {
       let m = Infinity;
-      for (const k of centers) m = Math.min(m, c.D[i * c.n + k]);
+      for (const k of chosen) m = Math.min(m, c.D[i * c.n + k]);
       d2[i] = m * m;
       sum += d2[i];
     }
@@ -158,7 +174,7 @@ function initialCluster(c: Ctx, rng: Rng): Int32Array {
         break;
       }
     }
-    centers.push(pick);
+    centers[g] = pick;
   }
   // Medoid-Iterationen mit Kapazität
   for (let it = 0; it < 6; it++) {
@@ -357,27 +373,38 @@ function toGroups(c: Ctx, assign: Int32Array, groupIds: string[]): Record<string
 }
 
 /**
- * Staffelbezeichnungen stabil halten: Ohne Fixierungen wird so umbenannt, dass möglichst viele
- * Vereine ihre Vorjahresstaffel behalten, sonst geografisch (A = nördlichste … ).
+ * Staffelbezeichnungen stabil halten: Die Staffeln werden so benannt, dass jede die Bezeichnung
+ * ihrer Vorjahresstaffel mit den meisten gemeinsamen Vereinen trägt. Fixierte Vereine bleiben in
+ * ihrer gewünschten Staffel. Ohne Vorjahr entscheidet die Himmelsrichtung (Staffel Nord liegt im Norden …).
  */
 function relabelGroups(groups: Record<string, ClubId[]>, inp: OptimizeInput): Record<string, ClubId[]> {
-  if (inp.fixed && Object.keys(inp.fixed).length) return groups;
   const ids = inp.rules.rl.groupIds;
   const lists = ids.map((g) => groups[g]);
-  const perms = permutations(ids.map((_, i) => i));
-  let best = perms[0];
+  const sets = lists.map((l) => new Set(l));
+  const fixed = Object.entries(inp.fixed ?? {});
+  const all = lists.flat();
+  const lat0 = all.reduce((a, id) => a + inp.clubData[id].lat, 0) / all.length;
+  const lon0 = all.reduce((a, id) => a + inp.clubData[id].lon, 0) / all.length;
+  const centroid = lists.map((l) => ({
+    lat: l.reduce((a, id) => a + inp.clubData[id].lat, 0) / l.length,
+    lon: l.reduce((a, id) => a + inp.clubData[id].lon, 0) / l.length,
+  }));
+  const bearings = inp.rules.rl.groupBearings;
+  const geo = (src: number, dst: number) => {
+    if (!bearings) return centroid[src].lat * (ids.length - dst) * 0.01; // ältere Regelwerke: A = nördlichste
+    const dy = centroid[src].lat - lat0;
+    const dx = (centroid[src].lon - lon0) * Math.cos((lat0 * Math.PI) / 180);
+    return Math.cos(Math.atan2(dx, dy) - (bearings[dst] * Math.PI) / 180);
+  };
+  let best = ids.map((_, i) => i);
   let bestScore = -Infinity;
-  for (const p of perms) {
+  for (const p of permutations(ids.map((_, i) => i))) {
+    if (fixed.some(([id, g]) => !sets[p[ids.indexOf(g)]]?.has(id))) continue;
     let s = 0;
     p.forEach((src, dst) => {
-      const label = ids[dst];
-      if (inp.previous?.groups[label]) {
-        const prev = new Set(inp.previous.groups[label]);
-        for (const id of lists[src]) if (prev.has(id)) s += 1000;
-      }
-      // Tiebreak: geografische Ordnung nach Breitengrad (A nördlich)
-      const lat = lists[src].reduce((a, id) => a + inp.clubData[id].lat, 0) / lists[src].length;
-      s += lat * (ids.length - dst) * 0.01;
+      const prev = inp.previous?.groups[ids[dst]];
+      if (prev) for (const id of prev) if (sets[src].has(id)) s += 1000;
+      s += geo(src, dst);
     });
     if (s > bestScore) {
       bestScore = s;
@@ -386,15 +413,6 @@ function relabelGroups(groups: Record<string, ClubId[]>, inp: OptimizeInput): Re
   }
   const out: Record<string, ClubId[]> = {};
   best.forEach((src, dst) => (out[ids[dst]] = lists[src]));
-  return out;
-}
-
-function permutations(a: number[]): number[][] {
-  if (a.length <= 1) return [a];
-  const out: number[][] = [];
-  a.forEach((x, i) => {
-    for (const p of permutations([...a.slice(0, i), ...a.slice(i + 1)])) out.push([x, ...p]);
-  });
   return out;
 }
 

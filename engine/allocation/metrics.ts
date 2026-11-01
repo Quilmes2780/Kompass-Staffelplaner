@@ -2,6 +2,7 @@
 import type { RulesConfig } from "../../config/rules";
 import type { DistanceMatrix } from "../geo";
 import type { Allocation, AllocationMetrics, Ampel, Club, ClubId, Derby, RuleViolation } from "../types";
+import { groupChangers } from "./matching";
 
 export interface MetricsInput {
   allocation: Allocation;
@@ -124,12 +125,8 @@ export function computeMetrics(inp: MetricsInput): AllocationMetrics {
   }
   marketing *= 1 + 0.01 * kw;
   attendance *= 1 + 0.004 * kw;
-  const changedClubs: ClubId[] = [];
-  if (previous) {
-    const prevGroup: Record<ClubId, string> = {};
-    for (const [g, list] of Object.entries(previous.groups)) for (const id of list) prevGroup[id] = g;
-    for (const [id, g] of Object.entries(groupOf)) if (prevGroup[id] && prevGroup[id] !== g) changedClubs.push(id);
-  }
+  // Wechsel nach Vereinsüberschneidung, nicht nach Bezeichnung (siehe matching.ts)
+  const changedClubs: ClubId[] = previous ? groupChangers(previous.groups, allocation.groups).filter((id) => clubs[id]) : [];
   const strengths = Object.values(avgStrength);
   const meanS = strengths.reduce((a, b) => a + b, 0) / Math.max(1, strengths.length);
   const strengthSpread = Math.sqrt(strengths.reduce((a, x) => a + (x - meanS) ** 2, 0) / Math.max(1, strengths.length));

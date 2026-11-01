@@ -1,11 +1,13 @@
 import { describe, expect, it } from "vitest";
 import { KOMPASS_RULES, MODEL_22_5_RULES, totalQuota } from "../config/rules";
+import { groupChangers } from "../engine/allocation/matching";
 import { computeMetrics } from "../engine/allocation/metrics";
 import { optimizeAllocation, randomAllocation } from "../engine/allocation/optimizer";
 import { autoAdvance, beginAllocation, finishSeason, metricsFor, newGame, publishAllocation, simulate } from "../engine/game";
 import { distanceMatrixFor } from "../engine/geo";
 import { checkLeagueInvariants, rlClubs } from "../engine/leagues";
 import { createRng } from "../engine/rng";
+import { chronicle, eternalTable, groupChangeSeasons, seasonKpis } from "../engine/stats";
 import { computeTable, doubleRoundRobin } from "../engine/schedule";
 import type { Allocation, GameState } from "../engine/types";
 
@@ -78,12 +80,42 @@ describe("Staffeleinteilung (Optimierer)", () => {
     }
   });
   it("respektiert fixierte Vereine", () => {
-    const fixed = { [clubs[0]]: "D", [clubs[1]]: "D", [clubs[2]]: "A" };
+    const fixed = { [clubs[0]]: "West", [clubs[1]]: "West", [clubs[2]]: "Nord" };
     const a = optimizeAllocation({ clubs, clubData: s.clubs, derbies: s.derbies, dm, rules: s.rules, seed: 2, fixed });
     expectValidPartition(a, clubs);
-    expect(a.groups.D).toContain(clubs[0]);
-    expect(a.groups.D).toContain(clubs[1]);
-    expect(a.groups.A).toContain(clubs[2]);
+    expect(a.groups.West).toContain(clubs[0]);
+    expect(a.groups.West).toContain(clubs[1]);
+    expect(a.groups.Nord).toContain(clubs[2]);
+  });
+  it("benennt die Staffeln nach ihrer Lage (Nord, Ost, Süd, West)", () => {
+    const a = allocate(s);
+    const mean = (g: string, k: "lat" | "lon") => a.groups[g].reduce((x, id) => x + s.clubs[id][k], 0) / a.groups[g].length;
+    expect(Object.keys(a.groups).sort()).toEqual(["Nord", "Ost", "Süd", "West"]);
+    expect(mean("Nord", "lat")).toBeGreaterThan(mean("Süd", "lat"));
+    expect(mean("Ost", "lon")).toBeGreaterThan(mean("West", "lon"));
+  });
+  it("zählt Staffelwechsel nach Vereinsüberschneidung, nicht nach Bezeichnung", () => {
+    const prev = allocate(s);
+    const renamed: Allocation = { groups: { Nord: prev.groups.Ost, Ost: prev.groups.Süd, Süd: prev.groups.West, West: prev.groups.Nord }, fixed: [] };
+    expect(groupChangers(prev.groups, renamed.groups)).toEqual([]);
+    const moved: Allocation = structuredClone(renamed);
+    const a = moved.groups.Nord.pop()!;
+    const b = moved.groups.Ost.pop()!;
+    moved.groups.Nord.push(b);
+    moved.groups.Ost.push(a);
+    expect(groupChangers(prev.groups, moved.groups).sort()).toEqual([a, b].sort());
+    expect(computeMetrics({ allocation: moved, previous: prev, expectedClubs: clubs, clubs: s.clubs, derbies: s.derbies, dm, rules: s.rules }).groupChanges).toBe(2);
+  });
+  it("Neuoptimierung mit Härtefällen behält die Staffeln des Vorjahres im Wesentlichen bei", () => {
+    const prev = allocate(s, 1);
+    // gewährte Härtefälle: je ein Verein aus Nord und Süd soll in die Staffel Ost
+    const fixed = { [prev.groups.Nord[0]]: "Ost", [prev.groups.Süd[0]]: "Ost", [prev.groups.West[0]]: "West" };
+    const a = optimizeAllocation({ clubs, clubData: s.clubs, derbies: s.derbies, dm, rules: s.rules, seed: 9, fixed, previous: prev });
+    expect(a.groups.Ost).toContain(prev.groups.Nord[0]);
+    const m = computeMetrics({ allocation: a, previous: prev, expectedClubs: clubs, clubs: s.clubs, derbies: s.derbies, dm, rules: s.rules });
+    expect(m.groupChanges).toBeLessThan(15);
+    // Bezeichnungen folgen den Vereinen: mehr als die Hälfte jeder Staffel stammt aus der gleichnamigen Vorjahresstaffel
+    for (const g of Object.keys(a.groups)) expect(a.groups[g].filter((id) => prev.groups[g].includes(id)).length).toBeGreaterThan(10);
   });
   it("hält die Zweitvertretungs-Grenze ein", () => {
     const a = allocate(s);
@@ -92,8 +124,8 @@ describe("Staffeleinteilung (Optimierer)", () => {
   it("eine ungültige Einteilung lässt sich nicht veröffentlichen und nennt die Regel", () => {
     let g = newGame({ seed: 3 });
     const w = g.allocationDraft!.working;
-    const moved = w.groups.A.pop()!;
-    w.groups.B.push(moved);
+    const moved = w.groups.Nord.pop()!;
+    w.groups.Ost.push(moved);
     expect(metricsFor(g, w).violations.map((v) => v.rule)).toContain("Staffelgröße");
     expect(() => publishAllocation(g)).toThrow(/Staffelgröße/);
     g = newGame({ seed: 3 });
@@ -204,6 +236,77 @@ describe("Saisonsimulation und Auf-/Abstieg", () => {
       return s;
     };
     expect(run()).toEqual(run());
+  });
+});
+
+describe("Oberligen-Simulation und Statistiken", () => {
+  let s = newGame({ seed: 77 });
+  for (let i = 0; i < 4; i++) s = autoAdvance(s);
+  const seasons = s.history.seasons.map((x) => x.season);
+
+  it("spielt die Oberligen Spiel für Spiel, über die ganze Saison verteilt", () => {
+    let g = newGame({ seed: 5 });
+    g = publishAllocation(g);
+    const ol = Object.values(g.competitions).filter((c) => c.level === "OL");
+    expect(ol).toHaveLength(g.oberligen.length);
+    g = simulate(g, "WEEK");
+    g = simulate(g, "WEEK");
+    // nach einigen Spieltagen haben alle Ligen gespielt, die kleinen Oberligen aber noch nicht fertig
+    for (const c of Object.values(g.competitions)) {
+      expect(c.played).toBeGreaterThan(0);
+      expect(c.played).toBeLessThan(c.matchdays);
+    }
+    g = simulate(g, "SEASON");
+    for (const c of Object.values(g.competitions)) expect(c.played).toBe(c.matchdays);
+    const recs = s.history.clubSeasons.filter((r) => r.league.level === "OL");
+    expect(recs.length).toBeGreaterThan(100);
+    expect(recs.every((r) => !r.abstract && r.played > 0)).toBe(true);
+  });
+  it("ewige Tabelle je Staffel, 3. Liga und Oberliga", () => {
+    const rl = eternalTable(s, "RL");
+    const nord = eternalTable(s, "RL-Nord");
+    expect(nord.length).toBeGreaterThan(19);
+    expect(nord.length).toBeLessThan(rl.length);
+    expect(eternalTable(s, "L3").length).toBeGreaterThanOrEqual(20);
+    const ol = s.oberligen[0].id;
+    const t = eternalTable(s, ol);
+    expect(t.length).toBeGreaterThan(5);
+    const ids = new Set(s.history.clubSeasons.filter((r) => r.league.level === "OL" && r.league.group === ol).map((r) => r.clubId));
+    expect(t.every((r) => ids.has(r.clubId))).toBe(true);
+  });
+  it("Staffelwechsler zählen nur Vereine, die in beiden Saisons Regionalliga spielten", () => {
+    const gc = groupChangeSeasons(s);
+    expect(gc.map((x) => x.season)).toEqual(seasons.slice(1));
+    for (const x of gc) {
+      const prev = new Set(s.history.clubSeasons.filter((r) => r.season === x.season - 1 && r.league.level === "RL").map((r) => r.clubId));
+      for (const c of x.changers) expect(prev.has(c.clubId)).toBe(true);
+      // gleiche Zahl wie in den Einteilungskennzahlen der Saison
+      expect(x.changers.length).toBe(s.history.seasons.find((h) => h.season === x.season)!.metrics!.groupChanges);
+    }
+    const flagged = s.history.clubSeasons.filter((r) => r.groupChanged).length;
+    expect(flagged).toBe(gc.reduce((a, x) => a + x.changers.length, 0));
+  });
+  it("Kennzahlen je Saison und Chronik", () => {
+    const k = seasonKpis(s);
+    expect(k.map((r) => r.season)).toEqual(seasons);
+    expect(k[0].groupChanges).toBeUndefined();
+    const last = seasons[seasons.length - 1];
+    const entries = chronicle(s).filter((e) => e.season === last);
+    // 4 Staffeln + 3. Liga + alle Oberligen
+    expect(entries).toHaveLength(4 + 1 + s.oberligen.length);
+    const sum = s.history.seasons[s.history.seasons.length - 1];
+    for (const e of entries.filter((x) => x.level === "RL")) {
+      expect(e.champion?.clubId).toBe(sum.champions[e.key]);
+      // Absteiger plus Nachrücker (bester Absteiger bleibt drin) = Abstiegsplätze
+      expect(e.relegated.length + e.reinstated.length).toBeGreaterThanOrEqual(s.rules.rl.relegatedPerGroup);
+      expect(e.goalsPerGame).toBeGreaterThan(1.5);
+    }
+    const l3 = entries.find((e) => e.level === "L3")!;
+    expect(l3.promoted.map((m) => m.league?.level)).toEqual(["BL2", "BL2", "BL2"].slice(0, l3.promoted.length));
+    // Neulinge der Folgesaison = Absteiger/Aufsteiger der Vorsaison
+    const prevL3 = chronicle(s).find((e) => e.season === last - 1 && e.level === "L3")!;
+    expect(new Set(l3.newcomers.map((m) => m.clubId)).size).toBe(l3.newcomers.length);
+    expect(prevL3.relegated.every((m) => m.league?.level === "RL" || m.league?.level === "OL")).toBe(true);
   });
 });
 

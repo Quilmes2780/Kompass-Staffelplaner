@@ -76,7 +76,7 @@ export const LEVEL_ORDER: Level[] = ["BL", "BL2", "L3", "RL", "OL", "VL"];
 
 export interface LeagueRef {
   level: Level;
-  /** RL: Staffel-ID ("A".."D"), OL/VL: Oberliga-ID, sonst = level */
+  /** RL: Staffel-ID ("Nord", "Ost", …; ältere Spielstände "A".."D"), OL/VL: Oberliga-ID, sonst = level */
   group: string;
 }
 
@@ -301,7 +301,7 @@ export interface ClubSeasonRecord {
   hardship: { reason: HardshipReason; granted: boolean }[];
   groupChanged: boolean;
   derbiesPlayed: number;
-  /** abstrakt simulierte Ligen (BL, BL2, OL, VL) haben keine Einzelspiele */
+  /** abstrakt simulierte Ligen (BL, BL2, VL; Oberligen nur in älteren Spielständen) haben keine Einzelspiele */
   abstract: boolean;
 }
 

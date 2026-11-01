@@ -34,7 +34,10 @@ export interface RulesConfig {
   description: string;
   startSeason: number;
   rl: {
+    /** Staffelbezeichnungen (regional); die Nachfolge einer Staffel bestimmt die Vereinsüberschneidung */
     groupIds: string[];
+    /** Kompassrichtung je Staffel (0 = Nord, im Uhrzeigersinn) für die erste Benennung ohne Vorjahr */
+    groupBearings?: number[];
     groupSize: number;
     relegatedPerGroup: number;
     /** Aufsteiger in die 3. Liga; bei mehr Staffeln als Plätzen spielen überzählige Meister eine Relegation */
@@ -135,7 +138,8 @@ export const KOMPASS_RULES: RulesConfig = {
   description: "4 Staffeln à 20, 4 direkte Aufsteiger, 16 Absteiger, Kontingente West 4 / Südwest 4 / Nord 3 / Bayern 2,5 / Nordost 2,5.",
   startSeason: 2028,
   rl: {
-    groupIds: ["A", "B", "C", "D"],
+    groupIds: ["Nord", "Ost", "Süd", "West"],
+    groupBearings: [0, 90, 180, 270],
     groupSize: 20,
     relegatedPerGroup: 4,
     promotedToL3: 4,
@@ -250,7 +254,7 @@ export const MODEL_22_5_RULES: RulesConfig = {
   id: "MODEL_22_5",
   name: "22/5-Modell",
   description: "5 Staffeln à 18, 4 Aufsteiger (Meister-Rotation + Relegation), 15 Absteiger, 3 Aufsteiger je Gebiet.",
-  rl: { ...KOMPASS_RULES.rl, groupIds: ["A", "B", "C", "D", "E"], groupSize: 18, relegatedPerGroup: 3, maxReservesPerGroup: 6 },
+  rl: { ...KOMPASS_RULES.rl, groupIds: ["Nord", "Nordost", "Südwest", "Süd", "West"], groupBearings: [0, 60, 220, 140, 290], groupSize: 18, relegatedPerGroup: 3, maxReservesPerGroup: 6 },
   quotas: {
     WEST: { slots: 3, direct: [{ oberligaId: "OL-NR", rank: 1 }, { oberligaId: "OL-WF", rank: 1 }, { oberligaId: "OL-MR", rank: 1 }], rounds: [] },
     SUEDWEST: { slots: 3, direct: [{ oberligaId: "OL-HE", rank: 1 }, { oberligaId: "OL-BW", rank: 1 }, { oberligaId: "OL-RPS", rank: 1 }], rounds: [] },
