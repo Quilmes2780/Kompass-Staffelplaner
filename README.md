@@ -4,6 +4,9 @@ Browserbasiertes Management-Spiel zur Regionalliga-Reform des DFB („Kompassmod
 Spielbetrieb der 4. Liga und teilen Jahr für Jahr 80 Teams auf vier Staffeln à 20 auf – nach kurzen Reisewegen,
 aber mit Augenmaß für Derbys, Planungssicherheit, Zweitvertretungen, Oberligen und Stakeholder.
 
+**Online spielen:** https://quilmes2780.github.io/Kompass-Staffelplaner/ (wird bei jedem Push auf `main` per
+GitHub Actions neu gebaut, siehe `.github/workflows/pages.yml`).
+
 ## Schnellstart
 
 ```bash
