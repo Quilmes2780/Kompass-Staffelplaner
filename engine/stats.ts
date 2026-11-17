@@ -240,6 +240,51 @@ export function groupChangeClubs(state: GameState): { clubId: ClubId; changes: n
     .sort((a, b) => b.changes - a.changes || a.rlSeasons - b.rlSeasons);
 }
 
+// ---------- Zeitraffer der Staffelkarte ----------
+
+export interface TimelapseFrame {
+  season: number;
+  groups: Record<string, ClubId[]>;
+  /** neu in der Regionalliga, mit Herkunft aus der Vorsaison (fehlt bei der ersten Saison) */
+  newcomers: { clubId: ClubId; group: string; from?: LeagueRef }[];
+  /** nicht mehr in der Regionalliga: Staffel der Vorsaison und Ziel */
+  departed: { clubId: ClubId; group: string; to?: LeagueRef; movement?: Movement }[];
+  changers: { clubId: ClubId; from: string; to: string }[];
+  /** true, wenn es eine direkt vorangehende Einteilung zum Vergleich gibt */
+  compared: boolean;
+}
+
+/** Einteilungen aller Saisons (einschließlich der laufenden) mit den Veränderungen zur Vorsaison */
+export function timelapseFrames(state: GameState): TimelapseFrame[] {
+  const allocs = state.history.seasons.filter((s) => s.allocation).map((s) => ({ season: s.season, groups: s.allocation!.groups }));
+  // laufende Saison nur, solange sie gespielt wird – vor der Veröffentlichung steht hier noch die Vorjahreseinteilung
+  const running = state.phase === "SEASON" || state.phase === "WRAPUP";
+  if (running && state.allocation && !allocs.some((a) => a.season === state.season)) allocs.push({ season: state.season, groups: state.allocation.groups });
+  const recs = new Map<string, ClubSeasonRecord>();
+  for (const r of state.history.clubSeasons) recs.set(`${r.season}|${r.clubId}`, r);
+  const groupIndex = (groups: Record<string, ClubId[]>) => {
+    const m: Record<ClubId, string> = {};
+    for (const [g, l] of Object.entries(groups)) for (const id of l) m[id] = g;
+    return m;
+  };
+  return allocs.map((a, i) => {
+    const prev = allocs[i - 1];
+    if (!prev || prev.season !== a.season - 1) return { ...a, newcomers: [], departed: [], changers: [], compared: false };
+    const cur = groupIndex(a.groups);
+    const old = groupIndex(prev.groups);
+    const rec = (id: ClubId) => recs.get(`${prev.season}|${id}`);
+    return {
+      ...a,
+      newcomers: Object.keys(cur).filter((id) => !old[id]).map((id) => ({ clubId: id, group: cur[id], from: rec(id)?.league })),
+      departed: Object.keys(old)
+        .filter((id) => !cur[id])
+        .map((id) => ({ clubId: id, group: old[id], to: recs.get(`${a.season}|${id}`)?.league ?? rec(id)?.nextLeague, movement: rec(id)?.movement })),
+      changers: groupChangers(prev.groups, a.groups).map((id) => ({ clubId: id, from: old[id], to: cur[id] })),
+      compared: true,
+    };
+  });
+}
+
 // ---------- Kennzahlen je Saison (wie im Evaluierungsbericht) ----------
 
 export interface SeasonKpiRow {

@@ -1,6 +1,6 @@
 // Offline-Karte (d3-geo, SVG): Zoom/Pan, Vereine als Punkte in Staffelfarben, Drag & Drop zwischen Staffeln.
 import { geoMercator, geoPath, type GeoPermissibleObjects } from "d3-geo";
-import { useMemo, useRef, useState, type PointerEvent as RPointerEvent } from "react";
+import { useMemo, useRef, useState, type PointerEvent as RPointerEvent, type ReactNode } from "react";
 import geo from "../../data/geo/de.json";
 import type { ClubId, GameState } from "../../engine/types";
 import { GROUP_HEX, initials } from "./format";
@@ -54,9 +54,17 @@ export interface MapProps {
   showDerbies?: boolean;
   showHulls?: boolean;
   highlight?: ClubId[];
+  /** Zeitraffer: neue Vereine (grüner Ring) und Staffelwechsler (dunkler Ring) */
+  marks?: Record<ClubId, "new" | "changed">;
+  /** Zeitraffer: Vereine, die die Regionalliga verlassen haben (hohl, Farbe der alten Staffel) */
+  ghosts?: { id: ClubId; group: string; up: boolean }[];
+  /** Zeitraffer: Weg der Staffel-Schwerpunkte über die Saisons (lon/lat) */
+  trails?: Record<string, [number, number][]>;
+  /** ersetzt die Erklärzeile der Legende */
+  legendNote?: ReactNode;
 }
 
-export function MapView({ g, clubs, groupOf, groupIds, selected, fixed = [], onSelect, onDrop, showDerbies = true, showHulls = true, highlight = [] }: MapProps) {
+export function MapView({ g, clubs, groupOf, groupIds, selected, fixed = [], onSelect, onDrop, showDerbies = true, showHulls = true, highlight = [], marks, ghosts, trails, legendNote }: MapProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const [view, setView] = useState({ k: 1, x: 0, y: 0 });
   const [drag, setDrag] = useState<{ id: ClubId; x: number; y: number; moved: boolean; target?: string } | null>(null);
@@ -216,6 +224,43 @@ export function MapView({ g, clubs, groupOf, groupIds, selected, fixed = [], onS
               />
             ) : null,
           )}
+          {trails &&
+            Object.entries(trails).map(([gid, pts]) => {
+              const ps = pts.map(([lon, lat]) => project(lon, lat));
+              const col = GROUP_HEX[gid] ?? "#888";
+              return (
+                <g key={`trail-${gid}`} pointerEvents="none">
+                  {ps.length > 1 && (
+                    <polyline points={ps.map((p) => p.join(",")).join(" ")} fill="none" stroke={col} strokeWidth={2.5 / view.k} strokeOpacity={0.85} strokeLinejoin="round" />
+                  )}
+                  {ps.map((p, i) => (
+                    <circle key={i} cx={p[0]} cy={p[1]} r={(i === ps.length - 1 ? 7 : 2.5) / Math.sqrt(view.k)} fill={i === ps.length - 1 ? "#fff" : col} stroke={col} strokeWidth={2.5 / view.k} />
+                  ))}
+                  {ps.length > 0 && (
+                    <text x={ps[ps.length - 1][0]} y={ps[ps.length - 1][1] + 3.5 / view.k} fontSize={9 / view.k} textAnchor="middle" fontWeight={700} fill={col}>
+                      {gid[0]}
+                    </text>
+                  )}
+                </g>
+              );
+            })}
+          {ghosts?.map(({ id, group, up }) => {
+            const c = g.clubs[id];
+            if (!c) return null;
+            const [x, y] = project(c.lon, c.lat);
+            const col = GROUP_HEX[group] ?? "#888";
+            return (
+              <g key={`ghost-${id}`} transform={`translate(${x},${y})`}>
+                <circle r={r} fill="#fff" fillOpacity={0.6} stroke={col} strokeWidth={1.4 / view.k} strokeDasharray={`${2 / view.k} ${1.5 / view.k}`} />
+                <text y={3 / view.k} fontSize={8 / view.k} textAnchor="middle" fontWeight={700} fill={up ? "#1a8a52" : "#c0392b"} pointerEvents="none">
+                  {up ? "▲" : "▼"}
+                </text>
+                <title>
+                  {c.name} – {up ? "aufgestiegen" : "abgestiegen bzw. ausgeschieden"} (zuvor Staffel {group})
+                </title>
+              </g>
+            );
+          })}
           {clubs.map((id) => {
             const p = pos[id];
             if (!p) return null;
@@ -223,9 +268,11 @@ export function MapView({ g, clubs, groupOf, groupIds, selected, fixed = [], onS
             const color = GROUP_HEX[groupOf[id]] ?? "#888";
             const isSel = selected === id;
             const isDrag = drag?.id === id && drag.moved;
+            const mark = marks?.[id];
             return (
               <g key={id} transform={`translate(${p[0]},${p[1]})`} style={{ cursor: onDrop ? "grab" : "pointer" }} opacity={isDrag ? 0.3 : 1}>
                 {(isSel || highlight.includes(id)) && <circle r={r * 2} fill="none" stroke="#132238" strokeWidth={1.5 / view.k} />}
+                {mark && <circle r={r * 1.9} fill="none" stroke={mark === "new" ? "#1a8a52" : "#132238"} strokeWidth={(mark === "new" ? 2 : 1.6) / view.k} pointerEvents="none" />}
                 {c.isReserve ? (
                   <rect
                     x={-r}
@@ -234,6 +281,7 @@ export function MapView({ g, clubs, groupOf, groupIds, selected, fixed = [], onS
                     height={2 * r}
                     transform="rotate(45)"
                     fill={color}
+                    style={{ transition: "fill 0.5s" }}
                     stroke="#fff"
                     strokeWidth={1 / view.k}
                     onPointerDown={(e) => {
@@ -246,6 +294,7 @@ export function MapView({ g, clubs, groupOf, groupIds, selected, fixed = [], onS
                   <circle
                     r={r}
                     fill={color}
+                    style={{ transition: "fill 0.5s" }}
                     stroke={fixed.includes(id) ? "#132238" : "#fff"}
                     strokeWidth={(fixed.includes(id) ? 2.2 : 1) / view.k}
                     onPointerDown={(e) => {
@@ -290,7 +339,7 @@ export function MapView({ g, clubs, groupOf, groupIds, selected, fixed = [], onS
             Staffel {gid}
           </div>
         ))}
-        <div className="small muted">◆ Zweitvertretung · Linien: Derbys (rot = getrennt)</div>
+        <div className="small muted">{legendNote ?? "◆ Zweitvertretung · Linien: Derbys (rot = getrennt)"}</div>
       </div>
     </div>
   );

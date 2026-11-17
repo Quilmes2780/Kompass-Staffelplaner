@@ -156,7 +156,9 @@ Vereine und generierter Verbandsliga-Vereine) im gleichen Schema herunterladen (
   Import prüft Format, Version und Regelwerk-Konsistenz. Export → Import ergibt einen identischen Spielstand (getestet).
 - **Stammdaten:** `{ "format": "kompass-stammdaten", "version": 1, "clubs": Club[], "derbies": Derby[], "oberligen": Oberliga[] }`.
 - **Statistik:** Ewige Tabelle je Spielklasse und Staffel, Chronik je Saison und Liga, Staffelwechsler (nur von einer
-  Saison zur direkt folgenden, nach Vereinsüberschneidung), Kennzahlen des Evaluierungsberichts je Saison.
+  Saison zur direkt folgenden, nach Vereinsüberschneidung), Kennzahlen des Evaluierungsberichts je Saison,
+  Zeitraffer der Staffelkarte (Einteilungen Saison für Saison abspielen, mit Neulingen, Abgängen, Staffelwechslern
+  und dem Weg der Staffel-Schwerpunkte).
 - **CSV** (`Statistik → CSV-Export`, Semikolon-getrennt, UTF-8 mit BOM): Vereinshistorie (alle Vereine × Saisons),
   Saisonkennzahlen, Ewige Tabelle, Vereine.
 

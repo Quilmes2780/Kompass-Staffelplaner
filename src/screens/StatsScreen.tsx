@@ -24,8 +24,9 @@ import { ClubLink, CompetitionPicker, LeagueTable, LineChart, SortTable, Tabs } 
 import { download, eur, fmt, GROUP_HEX, LEVEL_COLORS } from "../ui/format";
 import { MapView } from "../ui/MapView";
 import { MetricsGrid } from "./AllocationScreen";
+import { Timelapse } from "./Timelapse";
 
-type Tab = "EWIG" | "CHRONIK" | "WECHSLER" | "KENNZAHLEN" | "REKORDE" | "ARCHIV" | "DASHBOARD" | "EXPORT";
+type Tab = "EWIG" | "CHRONIK" | "WECHSLER" | "KENNZAHLEN" | "REKORDE" | "ARCHIV" | "ZEITRAFFER" | "DASHBOARD" | "EXPORT";
 
 export function StatsScreen() {
   const g = useStore((s) => s.game)!;
@@ -43,6 +44,7 @@ export function StatsScreen() {
           { id: "KENNZAHLEN", label: "Kennzahlen je Saison" },
           { id: "REKORDE", label: "Rekorde" },
           { id: "ARCHIV", label: "Staffel-Archiv" },
+          { id: "ZEITRAFFER", label: "Zeitraffer" },
           { id: "DASHBOARD", label: "Liga-Dashboard" },
           { id: "EXPORT", label: "CSV-Export" },
         ]}
@@ -57,6 +59,7 @@ export function StatsScreen() {
           {tab === "KENNZAHLEN" && <Kpis g={g} />}
           {tab === "REKORDE" && <Records g={g} />}
           {tab === "ARCHIV" && <Archive g={g} />}
+          {tab === "ZEITRAFFER" && <Timelapse g={g} />}
           {tab === "DASHBOARD" && <Dashboard g={g} />}
           {tab === "EXPORT" && <Export g={g} />}
         </>

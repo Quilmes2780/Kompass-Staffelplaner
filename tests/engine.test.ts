@@ -7,7 +7,7 @@ import { autoAdvance, beginAllocation, finishSeason, metricsFor, newGame, publis
 import { distanceMatrixFor } from "../engine/geo";
 import { checkLeagueInvariants, rlClubs } from "../engine/leagues";
 import { createRng } from "../engine/rng";
-import { chronicle, eternalTable, groupChangeSeasons, seasonKpis } from "../engine/stats";
+import { chronicle, eternalTable, groupChangeSeasons, seasonKpis, timelapseFrames } from "../engine/stats";
 import { computeTable, doubleRoundRobin } from "../engine/schedule";
 import type { Allocation, GameState } from "../engine/types";
 
@@ -299,6 +299,33 @@ describe("Oberligen-Simulation und Statistiken", () => {
     }
     const flagged = s.history.clubSeasons.filter((r) => r.groupChanged).length;
     expect(flagged).toBe(gc.reduce((a, x) => a + x.changers.length, 0));
+  });
+  it("Zeitraffer: Neulinge, Abgänge und Wechsler je Saison passen zusammen", () => {
+    const frames = timelapseFrames(s);
+    // vor der Veröffentlichung: nur abgeschlossene Saisons (state.allocation ist noch die Vorjahreseinteilung)
+    expect(s.phase).toBe("ALLOCATION");
+    expect(frames.map((f) => f.season)).toEqual(seasons);
+    // nach der Veröffentlichung kommt die laufende Saison dazu
+    const live = publishAllocation(s);
+    const lf = timelapseFrames(live);
+    expect(lf.map((f) => f.season)).toEqual([...seasons, live.season]);
+    expect(lf[lf.length - 1].groups).toEqual(live.allocation!.groups);
+    expect(frames[0].compared).toBe(false);
+    const gc = groupChangeSeasons(s);
+    for (let i = 1; i < frames.length; i++) {
+      const prev = new Set(Object.values(frames[i - 1].groups).flat());
+      const cur = new Set(Object.values(frames[i].groups).flat());
+      const f = frames[i];
+      expect(f.compared).toBe(true);
+      // Vorjahr − Abgänge + Neulinge = aktuelle Regionalliga
+      const rebuilt = new Set([...prev].filter((id) => !f.departed.some((d) => d.clubId === id)));
+      for (const n of f.newcomers) rebuilt.add(n.clubId);
+      expect([...rebuilt].sort()).toEqual([...cur].sort());
+      expect(f.newcomers.every((n) => n.from && n.from.level !== "RL")).toBe(true);
+      expect(f.departed.every((d) => d.to && d.to.level !== "RL")).toBe(true);
+      const same = gc.find((x) => x.season === f.season);
+      if (same) expect(f.changers).toEqual(same.changers);
+    }
   });
   it("Kennzahlen je Saison und Chronik", () => {
     const k = seasonKpis(s);

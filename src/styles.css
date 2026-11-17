@@ -152,6 +152,14 @@ table.t tr.zone-down td:first-child { box-shadow: inset 3px 0 0 var(--bad); }
 .tutorial .btn { background: transparent; color: #fff; border-color: rgba(255,255,255,.4); }
 .tutorial .btn.primary { background: var(--g-B); border-color: var(--g-B); color: #111; }
 
+.timelapse-ctl { display: grid; gap: 8px; }
+.timelapse-ctl input[type="range"] { width: 100%; }
+.timelapse-ctl label { display: inline-flex; align-items: center; gap: 4px; }
+.timelapse-season { font-size: 18px; margin-left: 6px; font-variant-numeric: tabular-nums; }
+.tl-kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tl-list { list-style: none; padding: 0; margin: 4px 0 12px; display: grid; gap: 3px; }
+.nowrap { white-space: nowrap; }
+
 @media (max-width: 1100px) {
   .alloc { grid-template-columns: 1fr; }
   .g4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -163,6 +171,9 @@ table.t tr.zone-down td:first-child { box-shadow: inset 3px 0 0 var(--bad); }
   .topbar { gap: 10px; padding: 0 8px; }
   .brand small { display: none; }
   .tutorial { right: 8px; left: 8px; bottom: 8px; width: auto; }
+  /* Kartenlegende unter statt über der Karte, sonst verdeckt sie den Süden */
+  .maplegend { position: static; display: flex; flex-wrap: wrap; gap: 2px 10px; border-radius: 0; border-top: 1px solid var(--border); }
+  .maplegend .small { flex-basis: 100%; }
   /* Hinweise am Bildschirmrand würden die Seite sonst seitlich verbreitern */
   .tip .tiptext { position: fixed; top: 60px; bottom: auto; left: 16px; right: 16px; width: auto; transform: none; }
 }
